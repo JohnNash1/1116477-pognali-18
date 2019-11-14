@@ -17,10 +17,10 @@
               <a href="#">О сервисе</a>
             </li>
             <li class="site-list__item">
-              <a href="source/form.html">Направления</a>
+              <a href="form.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="source/catalog.html">Попутчики</a>
+              <a href="catalog.html">Попутчики</a>
             </li>
           </ul>
           <ul class="main-navigation__list user-list">
@@ -111,11 +111,11 @@
           <img class="companions-card__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
           <p class="companions-card__text">Таня Фирсова</p>
           <p class="companions-card__text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <ul class="companions-card__list">
-            <li>самолёт</li>
-            <li>автобус</li>
-            <li>велосипед</li>
-            <li>бег</li>
+          <ul class="companions-card__list transport-list">
+            <li class="transport-list__item">самолёт</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">велосипед</li>
+            <li class="transport-list__item">бег</li>
           </ul>
         </div>
         <div class="companions-card">
@@ -123,10 +123,10 @@
           <p class="companions-card__text">Петя Демин</p>
           <p class="companions-card__text">#бургер #бар #футбол #концерт #крафт</p>
           <ul class="companions-card__list transport-list">
-            <li class="transport-list-item">самолёт</li>
-            <li class="transport-list-item">автобус</li>
-            <li class="transport-list-item">велосипед</li>
-            <li class="transport-list-item">бег</li>
+            <li class="transport-list__item">самолёт</li>
+            <li class="transport-list__item">автобус</li>
+            <li class="transport-list__item">велосипед</li>
+            <li class="transport-list__item">бег</li>
           </ul>
         </div>
         <a class="companions-card__button button" href="catalog.html">Показать всех</a>
@@ -148,6 +148,36 @@
           </li>
         </ul>
         <a class="adding-profile__anchor" href="#">Показать тарифы для бизнеса</a>
+      </section>
+      <section class="registation">
+        <h2 class="registation__title">Заинтересовались?</h2>
+        <p class="registation__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы?
+          Тогда скорее <a class="registation__login" href="login.html">авторизуйтесь.</a></p>
+        <form class="registation__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <input class="registation__field" type="email" name="email" required>
+          <button class="registation__submit" type="submit">отправить</button>
+        </form>
+        <p class="registation__text">Остались вопросы? Мы с радостью на них ответим!</p>
+        <ul class="registation__list">
+          <li class="registation__list-item">
+            <a class="registation__anchor" href="tel:+88005558628">8 800 555-86-28</a>
+          </li>
+          <li class="registation__list-item">
+            <a class="registation__anchor" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+      </section>
+      <section class="address">
+        <h2 class="visually-hidden">Наш адрес</h2>
+        <ul class="address__list">
+          <li class="address__list-item">ул. Большая Конюшенная, 19/8</li>
+          <li class="address__list-item">
+            <button class="address-button" type="button">Проложить маршрут</button>
+          </li>
+        </ul>
+        <a href="#">
+          <img src="https://via.placeholder.com/320x546" width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
+        </a>
       </section>
     </main>
     <footer class="page-footer">
