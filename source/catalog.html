@@ -17,10 +17,10 @@
               <a href="#">О сервисе</a>
             </li>
             <li class="site-list__item">
-              <a href="source/form.html">Направления</a>
+              <a href="form.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="source/catalog.html">Попутчики</a>
+              <a href="catalog.html">Попутчики</a>
             </li>
           </ul>
           <ul class="main-navigation__list user-list">
@@ -52,6 +52,107 @@
     </header>
     <main class="catalog-main">
       <h1 class="catalog-main__title">Попутчики</h1>
+      <section class="catalog-filter">
+        <div class="catalog-filter__wrapper">
+          <h2 class="catalog-filter__title">Фильтрация по странам</h2>
+          <button class="catalog-filter__button" type="button">Открыть</button>
+        </div>
+        <ul class="catalog-filter__list">
+          <li class="catalog-filter__list-item">
+            <a>Европа</a>
+          </li>
+          <li class="catalog-filter__list-item">
+            <a>Азия</a>
+          </li>
+          <li class="catalog-filter__list-item">
+            <a>Америка</a>
+          </li>
+          <li class="catalog-filter__list-item">
+            <a>Острова</a>
+          </li>
+        </ul>
+        <div class="catalog-filter__buttons">
+          <button class="catalog-filter__button" type="button">А</button>
+          <button class="catalog-filter__button" type="button">Б</button>
+          <button class="catalog-filter__button" type="button">В</button>
+          <button class="catalog-filter__button" type="button">Г</button>
+          <button class="catalog-filter__button" type="button">Д</button>
+          <button class="catalog-filter__button" type="button">Е</button>
+          <button class="catalog-filter__button" type="button">З</button>
+          <button class="catalog-filter__button" type="button">И</button>
+          <button class="catalog-filter__button" type="button">К</button>
+          <button class="catalog-filter__button" type="button">Л</button>
+          <button class="catalog-filter__button" type="button">М</button>
+          <button class="catalog-filter__button" type="button">Н</button>
+          <button class="catalog-filter__button" type="button">О</button>
+          <button class="catalog-filter__button" type="button">П</button>
+          <button class="catalog-filter__button" type="button">Р</button>
+          <button class="catalog-filter__button" type="button">С</button>
+          <button class="catalog-filter__button" type="button">Т</button>
+          <button class="catalog-filter__button" type="button">У</button>
+          <button class="catalog-filter__button" type="button">Ф</button>
+          <button class="catalog-filter__button" type="button">Х</button>
+          <button class="catalog-filter__button" type="button">Ч</button>
+          <button class="catalog-filter__button" type="button">Ш</button>
+          <button class="catalog-filter__button" type="button">Э</button>
+          <button class="catalog-filter__button" type="button">Ю</button>
+          <button class="catalog-filter__button" type="button">Я</button>
+        </div>
+        <ul class="catalog-filter__list">
+          <li class="catalog-filter__list-item">Афганистан</li>
+          <li class="catalog-filter__list-item">Албания</li>
+          <li class="catalog-filter__list-item">Алжир</li>
+          <li class="catalog-filter__list-item">Андорра</li>
+          <li class="catalog-filter__list-item">Аргентина</li>
+          <li class="catalog-filter__list-item">Армения</li>
+          <li class="catalog-filter__list-item">Австралия</li>
+          <li class="catalog-filter__list-item">Австрия</li>
+          <li class="catalog-filter__list-item">Азербайджан</li>
+        </ul>
+        <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <p class="catalog-filter__text">Подберите идеального попутчика</p>
+          <fieldset class="filter-group">
+            <legend class="filter-group__title">Хобби</legend>
+            <button class="filter-group__button" type="button">Открыть</button>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-group__title">Музыка</legend>
+            <button class="filter-group__button" type="button">Открыть</button>
+            <input type="checkbox" value="hardrock" id="hardrock" checked>
+            <label for="hardrock">Тяжёлый Рок</label>
+            <input type="checkbox" value="rusrap" id="rusrap">
+            <label for="rusrap">Русский рэп</label>
+            <input type="checkbox" value="eurodance" id="eurodance">
+            <label for="eurodance">Евродэнс</label>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-group__title">Еда</legend>
+            <button class="filter-group__button" type="button">Открыть</button>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-group__title">Транспорт</legend>
+            <button class="filter-group__button" type="button">Открыть</button>
+            <input type="checkbox" value="plane" id="plane" checked>
+            <label for="plane">Самолёт</label>
+            <input type="checkbox" value="bus" id="bus" checked>
+            <label for="bus">Автобус</label>
+            <input type="checkbox" value="bicycle" id="bicycle">
+            <label for="bicycle">Велосипед</label>
+            <input type="checkbox" value="running" id="running" checked>
+            <label for="running">Бег</label>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-group__title">Левел</legend>
+            <button class="filter-group__button" type="button">Открыть</button>
+            <input type="number" name="levelfrom" value="30">
+            <input type="number" name="levelto" value="100">
+            <input type="range" name="range">
+          </fieldset>
+          <button class="catalog-filter__submit" type="submit">Отправить</button>
+
+        </form>
+
+      </section>
       <section class="catalog-companions">
         <h2 class="visually-hidden">Профили попутчиков</h2>
         <div class="catalog-companions__card">
@@ -59,20 +160,20 @@
           <p>Таня Фирсова</p>
           <p>1,5 m</p>
           <p>#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <p class="subtitle">хочет посетить:</p>
+          <p class="catalog-companions__subtitle">хочет посетить:</p>
           <ul class="catalog-companions__list wishes-list">
             <li class="wishes-list__item">Шри-Ланка</li>
             <li class="wishes-list__item">Таиланд</li>
             <li class="wishes-list__item">Сейшелы</li>
           </ul>
-          <p class="subtitle">транспорт:</p>
+          <p class="catalog-companions__subtitle">транспорт:</p>
           <ul class="catalog-companions__list transport-list">
             <li class="transport-list__item">самолёт</li>
             <li class="transport-list__item">автобус</li>
             <li class="transport-list__item">велосипед</li>
             <li class="transport-list__item">бег</li>
           </ul>
-          <p class="subtitle">левел:</p>
+          <p class="catalog-companions__subtitle">левел:</p>
           <p>99</p>
           <button class="catalog-companions__button button" type="button">Позвать</button>
         </div>
@@ -81,19 +182,19 @@
           <p>Петя Демин</p>
           <p>150</p>
           <p>#бургер #бар #футбол #концерт #крафт</p>
-          <p class="subtitle">хочет посетить:</p>
+          <p class="catalog-companions__subtitle">хочет посетить:</p>
           <ul class="catalog-companions__list wishes-list">
             <li class="wishes-list__item">Бельгия</li>
             <li class="wishes-list__item">Чехия</li>
           </ul>
-          <p class="subtitle">транспорт:</p>
+          <p class="catalog-companions__subtitle">транспорт:</p>
           <ul class="catalog-companions__list transport-list">
             <li class="transport-list__item">самолёт</li>
             <li class="transport-list__item">автобус</li>
             <li class="transport-list__item">велосипед</li>
             <li class="transport-list__item">бег</li>
           </ul>
-          <p class="subtitle">левел:</p>
+          <p class="catalog-companions__subtitle">левел:</p>
           <p>80</p>
           <button class="catalog-companions__button button" type="button">Позвать</button>
         </div>
@@ -102,20 +203,20 @@
           <p>Марк Смолов</p>
           <p>1700</p>
           <p>#рэп #тату #хайпбист #кроссовки #суприм</p>
-          <p class="subtitle">хочет посетить:</p>
+          <p class="catalog-companions__subtitle">хочет посетить:</p>
           <ul class="catalog-companions__list wishes-list">
             <li class="wishes-list__item">США</li>
             <li class="wishes-list__item">Австралия</li>
             <li class="wishes-list__item">Доминикана</li>
           </ul>
-          <p class="subtitle">транспорт:</p>
+          <p class="catalog-companions__subtitle">транспорт:</p>
           <ul class="catalog-companions__list transport-list">
             <li class="transport-list__item">самолёт</li>
             <li class="transport-list__item">автобус</li>
             <li class="transport-list__item">велосипед</li>
             <li class="transport-list__item">бег</li>
           </ul>
-          <p class="subtitle">левел:</p>
+          <p class="catalog-companions__subtitle">левел:</p>
           <p>25</p>
           <button class="catalog-companions__button button" type="button">Позвать</button>
         </div>
@@ -124,19 +225,19 @@
           <p>Лариса Роговая</p>
           <p>23</p>
           <p>#образование #карьера #учеба #линкедин</p>
-          <p class="subtitle">хочет посетить:</p>
+          <p class="catalog-companions__subtitle">хочет посетить:</p>
           <ul class="catalog-companions__list wishes-list">
             <li class="wishes-list__item">Великобритания</li>
             <li class="wishes-list__item">Германия</li>
           </ul>
-          <p class="subtitle">транспорт:</p>
+          <p class="catalog-companions__subtitle">транспорт:</p>
           <ul class="catalog-companions__list transport-list">
             <li class="transport-list__item">самолёт</li>
             <li class="transport-list__item">автобус</li>
             <li class="transport-list__item">велосипед</li>
             <li class="transport-list__item">бег</li>
           </ul>
-          <p class="subtitle">левел:</p>
+          <p class="catalog-companions__subtitle">левел:</p>
           <p>50</p>
           <button class="catalog-companions__button button" type="button">Позвать</button>
         </div>
