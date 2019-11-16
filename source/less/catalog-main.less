@@ -1,0 +1,30 @@
+.catalog-main {
+  position: relative;
+  width: @mobile-width;
+  background-color: @grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: -97px;
+    width: @mobile-width;
+    height: 143px;
+    background-color: @dark-blue;
+    border-radius: 0 0 20px 20px;
+    z-index: -1;
+  }
+  z-index: -2;
+}
+
+.catalog-main__title {
+  font-family: @font;
+  font-size: 36px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: normal;
+  text-align: left;
+  color: @white;
+  margin-left: 27px;
+}
