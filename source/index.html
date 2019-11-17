@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo">
-        <img class="page-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Погнали">
+        <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали">
       </a>
       <nav class="main-navigation">
         <button class="main-navigation__toggle" type="button">Меню</button>
@@ -51,29 +52,31 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
-      <img class="page-main__image" src="https://via.placeholder.com/192x255" width="192" height="255" alt="Турист">
-      <ul class="page-main__list contacts-list--flex">
-        <li class="page-main__list-item">
-          <a href="tel:+88005558628">телефон</a>
-        </li>
-        <li class="page-main__list-item">
-          <a href="mailto:mail@htmlacademy.ru">e-mail</a>
-        </li>
-        <li class="page-main__list-item">
-          <a href="login.html">Авторизация</a>
-        </li>
-      </ul>
+      <div class="page-main__wrapper">
+        <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
+        <img class="page-main__image" src="img/traveller-illustration-mobile@1x.png" width="192" height="255" alt="Турист">
+        <ul class="page-main__list site-list">
+          <li class="page-main__list-item">
+            <a href="tel:+88005558628">телефон</a>
+          </li>
+          <li class="page-main__list-item">
+            <a href="mailto:mail@htmlacademy.ru">e-mail</a>
+          </li>
+          <li class="page-main__list-item">
+            <a href="login.html">Авторизация</a>
+          </li>
+        </ul>
+      </div>
       <section class="review">
         <h2 class="visually-hidden">Отзыв</h2>
         <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
         <p class="review__text review__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
       </section>
-      <ul class="actions__list">
-        <li class="actions__list-item">Выберите направление <span>1</span></li>
-        <li class="actions__list-item">Изучите идеи путешественников <span>2</span></li>
-        <li class="actions__list-item">Находите тех, кто похож на вас <span>3</span></li>
-        <li class="actions__list-item">Путешествуйте вместе! <span>4</span></li>
+      <ul class="actions-list site-list">
+        <li class="actions-list__item"><span class="actions-list__text">Выберите направление</span><span class="actions-list__number">1</span></li>
+        <li class="actions-list__item"><span class="actions-list__text">Изучите идеи путешественников</span><span class="actions-list__number">2</span></li>
+        <li class="actions-list__item"><span class="actions-list__text">Находите тех, кто похож на вас</span><span class="actions-list__number">3</span></li>
+        <li class="actions-list__item"><span class="actions-list__text">Путешествуйте вместе!</span><span class="actions-list__number">4</span></li>
       </ul>
       <section class="about-service">
         <h2 class="about-service__title">О сервисе</h2>
@@ -83,22 +86,28 @@
       </section>
       <section class="directions">
         <h2 class="directions__title">Направления</h2>
-        <p>Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+        <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
           куда хотели бы отправиться и чем можно там заняться.</p>
         <div class="travel-card">
-          <img class="travel-card__image travel-card__image--thailand" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Таиланд">
-          <p class="travel-card__text travel-card__text--fist-line">Таиланд <span>18321</span></p>
-          <p class="travel-card__text">Джунгли зовут!</p>
+          <img class="travel-card__image travel-card__image--thailand" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Таиланд">
+          <div class="travel-card__wrapper">
+            <p class="travel-card__text travel-card__text--fist-line">Таиланд <span class="travel-card__text">Джунгли зовут!</span></p>
+            <p class="travel-card__text travel-card__number">18321</p>
+          </div>
         </div>
         <div class="travel-card">
-          <img class="travel-card__image travel-card__image--france" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Франция">
-          <p class="travel-card__text travel-card__text--fist-line">Таиланд <span>12518</span></p>
-          <p class="travel-card__text">Трэ бьен, манифик!</p>
+          <img class="travel-card__image travel-card__image--france" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
+          <div class="travel-card__wrapper">
+            <p class="travel-card__text travel-card__text--fist-line">Франция <span class="travel-card__text">Трэ бьен, манифик!</span></p>
+            <p class="travel-card__text travel-card__number">12518</p>
+          </div>
         </div>
         <div class="travel-card">
-          <img class="travel-card__image travel-card__image--czechia" src="https://via.placeholder.com/270x110" width="270" height="110" alt="Чехия">
-          <p class="travel-card__text travel-card__text--fist-line">Таиланд <span>5326</span></p>
-          <p class="travel-card__text">Закоулки старой Европы</p>
+          <img class="travel-card__image travel-card__image--czechia" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
+          <div class="travel-card__wrapper">
+            <p class="travel-card__text travel-card__text--fist-line">Чехия <span class="travel-card__text">Закоулки старой Европы</span></p>
+            <p class="travel-card__text travel-card__number">5326</p>
+          </div>
         </div>
         <a class="directions__button button" href="source/form.html">Показать все</a>
       </section>
@@ -108,32 +117,36 @@
           а другому маршрут для хайкинга.</p>
         <p class="companions__text companions__text--bold">Теперь можно легко найти единомышленников!</p>
         <div class="companions-card">
-          <img class="companions-card__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Таня Фирсова">
-          <p class="companions-card__text">Таня Фирсова</p>
-          <p class="companions-card__text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-          <ul class="companions-card__list transport-list">
-            <li class="transport-list__item">самолёт</li>
-            <li class="transport-list__item">автобус</li>
-            <li class="transport-list__item">велосипед</li>
-            <li class="transport-list__item">бег</li>
-          </ul>
+          <img class="companions-card__image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
+          <div class="companions-card__wrapper">
+            <p class="companions-card__text companions-card__text--bold">Таня Фирсова</p>
+            <p class="companions-card__text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <ul class="companions-card__list transport-list site-list">
+              <li class="transport-list__item">самолёт</li>
+              <li class="transport-list__item">автобус</li>
+              <li class="transport-list__item">велосипед</li>
+              <li class="transport-list__item">бег</li>
+            </ul>
+          </div>
         </div>
         <div class="companions-card">
-          <img class="companions-card__image" src="https://via.placeholder.com/270x270" width="270" height="270" alt="Петя Демин">
-          <p class="companions-card__text">Петя Демин</p>
-          <p class="companions-card__text">#бургер #бар #футбол #концерт #крафт</p>
-          <ul class="companions-card__list transport-list">
-            <li class="transport-list__item">самолёт</li>
-            <li class="transport-list__item">автобус</li>
-            <li class="transport-list__item">велосипед</li>
-            <li class="transport-list__item">бег</li>
-          </ul>
+          <img class="companions-card__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
+          <div class="companions-card__wrapper">
+            <p class="companions-card__text companions-card__text--bold">Петя Демин</p>
+            <p class="companions-card__text">#бургер #бар #футбол #концерт #крафт</p>
+            <ul class="companions-card__list transport-list site-list">
+              <li class="transport-list__item">самолёт</li>
+              <li class="transport-list__item">автобус</li>
+              <li class="transport-list__item">велосипед</li>
+              <li class="transport-list__item">бег</li>
+            </ul>
+          </div>
         </div>
         <a class="companions-card__button button" href="catalog.html">Показать всех</a>
       </section>
       <section class="adding-profile">
         <h2 class="adding-profile__title">Добавьте свой профиль</h2>
-        <ul class="adding-profile__list">
+        <ul class="adding-profile__list site-list">
           <li class="adding-profile__list-item">
             <p class="adding-profile__text">Базовое размещение</p>
             <p class="adding-profile__text">Бесплатно</p>
@@ -182,16 +195,16 @@
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Погнали">
+        <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" width="96" height="18" alt="Погнали">
       </a>
-      <ul class="page-footer__list">
+      <ul class="page-footer__list page-footer__list--social site-list">
         <li class="page-footer__list-item">fb</li>
         <li class="page-footer__list-item">вк</li>
         <li class="page-footer__list-item">инстаграм</li>
       </ul>
-      <ul class="page-footer__list">
+      <ul class="page-footer__list page-footer__list--develop site-list">
         <li class="page-footer__list-item"><p class="page-footer__text">Разработано</p></li>
-        <li class="page-footer__list-item"><a href="#"><img src="https://via.placeholder.com/27x34" width="27" height="34" alt="html-академия"></a></li>
+        <li class="page-footer__list-item"><a href="#"><img src="img/htmlacademy.svg" width="27" height="34" alt="html-академия"></a></li>
       </ul>
     </footer>
   </body>
