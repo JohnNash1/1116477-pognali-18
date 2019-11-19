@@ -1,6 +1,6 @@
 .catalog-main {
   position: relative;
-  width: @mobile-width;
+  width: 100%;
   background-color: @grey;
 
   &::before {
@@ -24,4 +24,10 @@
   text-align: left;
   color: @white;
   margin-left: 27px;
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-main__wrapper {
+    display: flex;
+  }
 }

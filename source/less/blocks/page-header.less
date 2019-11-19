@@ -6,3 +6,26 @@
   align-items: center;
   outline: 1px solid red;
 }
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    width: 100%;
+    height: 132px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid red;
+    background-color: @page-color;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid red;
+  }
+}

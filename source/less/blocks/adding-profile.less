@@ -1,4 +1,6 @@
 .adding-profile {
+  display: flex;
+  flex-direction: column;
   min-height: 399px;
   background-color: @grey;
   padding-top: 82px;
@@ -32,4 +34,46 @@
   line-height: 22px;
   text-align: left;
   color: #444444;
+}
+
+@media (min-width: @tablet-width) {
+  .adding-profile {
+    min-height: 738px;
+  }
+
+  .adding-profile__title {
+    width: 478px;
+    margin: 0 auto;
+  }
+
+  .adding-profile__list {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .adding-profile__list-item {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .adding-profile {
+    min-height: 830px;
+  }
+
+  .adding-profile__title {
+    width: 478px;
+    margin: 0 auto;
+  }
+
+  .adding-profile__list {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .adding-profile__list-item {
+    display: flex;
+    justify-content: space-between;
+  }
 }

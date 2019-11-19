@@ -1,4 +1,6 @@
 .companions {
+  display: flex;
+  flex-direction: column;
   position: relative;
   min-height: 1369px;
   background-color: @page-color;
@@ -47,12 +49,12 @@
   margin-bottom: 60px;
 }
 
-.companions-card__image {
+.companions__card-image {
   border-radius: 10px 10px 0 0;
   margin: 0 25px;
 }
 
-.companions-card__wrapper {
+.companions__card-wrapper {
   width: 270px;
   height: 147px;
   background-color: @white;
@@ -62,7 +64,7 @@
   border-radius: 0 0 10px 10px;
 }
 
-.companions-card__text {
+.companions__card-text {
   width: 180px;
   font-family: @font;
   font-size: 16px;
@@ -72,9 +74,34 @@
   margin: 15px 47px;
 }
 
-.companions-card__text--bold {
+.companions__card-text--bold {
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
   color: #1d2e5b;
+}
+
+@media (min-width: @tablet-width) {
+  .companions__text-wrapper {
+    width: 618px;
+    margin: 0 auto;
+  }
+
+  .companions__cards {
+    width: 618px;
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .companions__button {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .companions {
+    min-height: 840px;
+    display: flex;
+    flex-direction: row;
+  }
 }
