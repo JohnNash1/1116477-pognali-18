@@ -1,4 +1,5 @@
 .catalog-companions__card {
+  position: relative;
   width: 270px;
   min-height: 415px;
   margin: 10px 25px;
@@ -42,8 +43,8 @@
 }
 
 .catalog-companions__tags {
-  margin-top: 16px;
-  margin-left: 26px;
+  margin-top: 50px;
+  margin-left: -60px;
   width: 168px;
   font-size: 15px;
   line-height: 18px;
@@ -73,8 +74,52 @@
   text-transform: uppercase;
 }
 
+.catalog-companions__attributes-wrapper {
+  display: flex;
+}
+
+.catalog-companions__level {
+  margin-left: 26px;
+  border: 3px solid #ff8d30;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+
+  &::before {
+    content: "99";
+    display: block;
+    font-family: @font, @font-secondary;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    color: @dark-blue;
+    margin-top: 15px;
+  }
+}
+
+.catalog-companions__heart {
+  width: 31px;
+  height: 31px;
+  background-color: #f9eaea;
+  border-radius: 50%;
+  background-image: url("../img/heart-active.svg");
+  background-repeat: no-repeat;
+  background-size: 13px 11px;
+  background-position: 9px 10px;
+}
+
+.catalog-companions__heart-wrapper {
+  display: flex;
+  position: absolute;
+  top: 55px;
+  left: 65px;
+}
+
 @media (min-width: @tablet-width) {
   .catalog-companions__card {
+    display: flex;
+    flex-wrap: wrap;
     width: 688px;
     min-height: 332px;
   }
@@ -82,10 +127,45 @@
   .catalog-companions__username {
     width: 187px;
   }
+
+  .catalog-companions__attributes-wrapper {
+    flex-direction: column;
+    margin-left: 150px;
+  }
+
+  .catalog-companions__button {
+    position: absolute;
+    top: 160px;
+    left: 180px;
+  }
+
+  .catalog-companions__text-wrapper {
+    margin-left: 80px;
+  }
+
+  .catalog-companions__tags {
+    margin-left: 26px;
+  }
+
+  .catalog-companions__heart-wrapper {
+    top: 155px;
+    left: 260px;
+  }
+
+  .catalog-companions__subtitle-hidden {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .catalog-companions {
-    order: 1;
+  .catalog-companions__card {
+    width: 950px;
+  }
+
+  .catalog-companions__attributes-wrapper {
+    order: 4;
+    margin-left: 360px;
+    margin-top: -100px;
+    flex-direction: row;
   }
 }
