@@ -1,0 +1,16 @@
+.wishes-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .wishes-list {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .wishes-list {
+    flex-direction: column;
+  }
+}

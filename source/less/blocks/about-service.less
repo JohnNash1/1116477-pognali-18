@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 33px;
+  outline: 1px solid red;
 }
 
 .about-service__title {
@@ -30,4 +31,36 @@
 
 .about-service__text--bold {
   font-weight: bold;
+}
+
+.about-service__image {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .about-service {
+    min-height: 920px;
+    background-image: url("../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  .about-service__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 688px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-service {
+    min-height: 840px;
+  }
+
+  .about-service__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 609px;
+  }
 }

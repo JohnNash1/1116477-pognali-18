@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
     <header class="page-header">
@@ -15,21 +17,21 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list site-list">
             <li class="site-list__item">
-              <a href="#">О сервисе</a>
+              <a class="main-navigation__anchor">О сервисе</a>
             </li>
             <li class="site-list__item">
-              <a href="form.html">Направления</a>
+              <a class="main-navigation__anchor" href="form.html">Направления</a>
             </li>
             <li class="site-list__item">
-              <a href="catalog.html">Попутчики</a>
+              <a class="main-navigation__anchor" href="catalog.html">Попутчики</a>
             </li>
           </ul>
-          <ul class="main-navigation__list user-list">
+          <ul class="main-navigation__list user-list site-list">
             <li class="user-list__item">
               <a class="user-list__login" href="login.html">Авторизация</a>
             </li>
           </ul>
-          <ul class="main-navigation__list contacts-list">
+          <ul class="main-navigation__list contacts-list site-list">
             <li class="contacts-list__item">
               <a href="tel:+88005558628">8 800 555-86-28</a>
             </li>
@@ -37,7 +39,7 @@
               <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
-          <ul class="main-navigation__list social-list">
+          <ul class="main-navigation__list social-list site-list">
             <li class="social-list__item">
               <a href="#">fb</a>
             </li>
@@ -79,70 +81,81 @@
         <li class="actions-list__item"><span class="actions-list__text">Путешествуйте вместе!</span><span class="actions-list__number">4</span></li>
       </ul>
       <section class="about-service">
-        <h2 class="about-service__title">О сервисе</h2>
-        <p class="about-service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
-          Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
-        <p class="about-service__text about-service__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        <div class="about-service__text-wrapper">
+          <h2 class="about-service__title">О сервисе</h2>
+          <p class="about-service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
+            Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
+          <p class="about-service__text about-service__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        </div>
+        <img class="about-service__image" src="img/about-tablet@1x.png" width="348" height="548" alt="О сервисе">
       </section>
       <section class="directions">
-        <h2 class="directions__title">Направления</h2>
-        <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
-          куда хотели бы отправиться и чем можно там заняться.</p>
-        <div class="travel-card">
-          <img class="travel-card__image travel-card__image--thailand" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Таиланд">
-          <div class="travel-card__wrapper">
-            <p class="travel-card__text travel-card__text--fist-line">Таиланд <span class="travel-card__text">Джунгли зовут!</span></p>
-            <p class="travel-card__text travel-card__number">18321</p>
+        <div class="directions_text-wrapper">
+          <h2 class="directions__title">Направления</h2>
+          <p class="directions__text">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
+            куда хотели бы отправиться и чем можно там заняться.</p>
+          <a class="directions__button button" href="source/form.html">Показать все</a>
+        </div>
+        <div class="directions_card-wrapper">
+          <div class="travel-card">
+            <img class="travel-card__image travel-card__image--thailand" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Таиланд">
+            <div class="travel-card__wrapper">
+              <p class="travel-card__text travel-card__text--fist-line">Таиланд <span class="travel-card__text">Джунгли зовут!</span></p>
+              <p class="travel-card__text travel-card__number">18321</p>
+            </div>
+          </div>
+          <div class="travel-card">
+            <img class="travel-card__image travel-card__image--france" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
+            <div class="travel-card__wrapper">
+              <p class="travel-card__text travel-card__text--fist-line">Франция <span class="travel-card__text">Трэ бьен, манифик!</span></p>
+              <p class="travel-card__text travel-card__number">12518</p>
+            </div>
+          </div>
+          <div class="travel-card">
+            <img class="travel-card__image travel-card__image--czechia" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
+            <div class="travel-card__wrapper">
+              <p class="travel-card__text travel-card__text--fist-line">Чехия <span class="travel-card__text">Закоулки старой Европы</span></p>
+              <p class="travel-card__text travel-card__number">5326</p>
+            </div>
           </div>
         </div>
-        <div class="travel-card">
-          <img class="travel-card__image travel-card__image--france" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
-          <div class="travel-card__wrapper">
-            <p class="travel-card__text travel-card__text--fist-line">Франция <span class="travel-card__text">Трэ бьен, манифик!</span></p>
-            <p class="travel-card__text travel-card__number">12518</p>
-          </div>
-        </div>
-        <div class="travel-card">
-          <img class="travel-card__image travel-card__image--czechia" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
-          <div class="travel-card__wrapper">
-            <p class="travel-card__text travel-card__text--fist-line">Чехия <span class="travel-card__text">Закоулки старой Европы</span></p>
-            <p class="travel-card__text travel-card__number">5326</p>
-          </div>
-        </div>
-        <a class="directions__button button" href="source/form.html">Показать все</a>
       </section>
       <section class="companions">
-        <h2 class="companions__title">Попутчики</h2>
-        <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,
-          а другому маршрут для хайкинга.</p>
-        <p class="companions__text companions__text--bold">Теперь можно легко найти единомышленников!</p>
-        <div class="companions-card">
-          <img class="companions-card__image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
-          <div class="companions-card__wrapper">
-            <p class="companions-card__text companions-card__text--bold">Таня Фирсова</p>
-            <p class="companions-card__text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <ul class="companions-card__list transport-list site-list">
-              <li class="transport-list__item">самолёт</li>
-              <li class="transport-list__item">автобус</li>
-              <li class="transport-list__item">велосипед</li>
-              <li class="transport-list__item">бег</li>
-            </ul>
+        <div class="companions__text-wrapper">
+          <h2 class="companions__title">Попутчики</h2>
+          <p class="companions__text">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль,
+            а другому маршрут для хайкинга.</p>
+          <p class="companions__text companions__text--bold">Теперь можно легко найти единомышленников!</p>
+        </div>
+        <div class="companions__cards">
+          <div class="companions__card">
+            <img class="companions__card-image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
+            <div class="companions__card-wrapper">
+              <p class="companions__card-text companions__card-text--bold">Таня Фирсова</p>
+              <p class="companions__card-text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              <ul class="companions__list transport-list site-list">
+                <li class="transport-list__item">самолёт</li>
+                <li class="transport-list__item">автобус</li>
+                <li class="transport-list__item">велосипед</li>
+                <li class="transport-list__item">бег</li>
+              </ul>
+            </div>
+          </div>
+          <div class="companions__card">
+            <img class="companions__card-image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
+            <div class="companions__card-wrapper">
+              <p class="companions__card-text companions-card__text--bold">Петя Демин</p>
+              <p class="companions__card-text">#бургер #бар #футбол #концерт #крафт</p>
+              <ul class="companions__list transport-list site-list">
+                <li class="transport-list__item">самолёт</li>
+                <li class="transport-list__item">автобус</li>
+                <li class="transport-list__item">велосипед</li>
+                <li class="transport-list__item">бег</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="companions-card">
-          <img class="companions-card__image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
-          <div class="companions-card__wrapper">
-            <p class="companions-card__text companions-card__text--bold">Петя Демин</p>
-            <p class="companions-card__text">#бургер #бар #футбол #концерт #крафт</p>
-            <ul class="companions-card__list transport-list site-list">
-              <li class="transport-list__item">самолёт</li>
-              <li class="transport-list__item">автобус</li>
-              <li class="transport-list__item">велосипед</li>
-              <li class="transport-list__item">бег</li>
-            </ul>
-          </div>
-        </div>
-        <a class="companions-card__button button" href="catalog.html">Показать всех</a>
+        <a class="companions__button button" href="catalog.html">Показать всех</a>
       </section>
       <section class="adding-profile">
         <h2 class="adding-profile__title">Добавьте свой профиль</h2>
@@ -159,8 +172,10 @@
             <p class="adding-profile__text">Кастомный цвет карточки</p>
             <p class="adding-profile__text">59 руб./мес</p>
           </li>
+          <li class="adding-profile__list-item">
+            <a class="adding-profile__anchor" href="#">Показать тарифы для бизнеса</a>
+          </li>
         </ul>
-        <a class="adding-profile__anchor" href="#">Показать тарифы для бизнеса</a>
       </section>
       <section class="registation">
         <h2 class="registation__title">Заинтересовались?</h2>
