@@ -1,12 +1,15 @@
 .page-header {
   position: relative;
   width: @mobile-width;
-  height: 568px;
+  min-height: 73px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: @dark-blue;
-  outline: 1px solid red;
+}
+
+.page-header--menu-opened {
+  background-color: #ffffff;
 }
 
 .page-header__logo {
@@ -21,7 +24,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid red;
     background-color: @page-color;
   }
 }
@@ -33,6 +35,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid red;
   }
 }

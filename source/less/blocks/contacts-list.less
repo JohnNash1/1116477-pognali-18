@@ -1,0 +1,44 @@
+.contacts-list__item a {
+  position: relative;
+  display: block;
+  height: 45px;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: left;
+  color: @page-color;
+  text-transform: uppercase;
+}
+
+.contacts-list__item a::before {
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 45px;
+    background-color: #121936;
+    border-radius: 50%;
+}
+
+.contacts-list__tel,
+.contacts-list__mail {
+  width: 209px;
+  padding-left: 61px;
+}
+
+.contacts-list__tel::before,
+.contacts-list__mail::before {
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 0;
+  top: -11px;
+}
+
+.contacts-list__tel::before {
+  background-image: url("../img/contacts-phone.svg");
+}
+
+.contacts-list__mail::before {
+  background-image: url("../img/contacts-mail.svg");
+}
