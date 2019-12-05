@@ -1,10 +1,36 @@
 .about-service {
-  min-height: 352px;
-  background-color: @page-color;
+  position: relative;
+  height: 322px;
+  // background-color: @page-color;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
   padding-top: 33px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -6px;
+    display: block;
+    width: 113px;
+    height: 132px;
+    border-radius: 10px;
+    background-color: @dark-blue;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: @page-color;
+    border-radius: 0 0 30px 30px;
+    z-index: -2;
+  }
 }
 
 .about-service__title {

@@ -4,19 +4,9 @@
 
 .page-main__wrapper {
   position: relative;
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   width: @mobile-width;
-  //   height: calc(100% + 73px);
-  //   top: -73px;
-  //   left: 0;
-  //   background-color: @page-color;
-  //   z-index: -1;
-  //   background-image: url("../img/globe-back-mobile@1x.jpg");
-  //   background-repeat: no-repeat;
-  // }
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -93px;
 }
 
 .page-main__title {
@@ -37,6 +27,43 @@
 
 .page-main__list {
   display: flex;
+  position: absolute;
+  bottom: -20px;
+  left: 26px;
+}
+
+.page-main__tel,
+.page-main__e-mail {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #ff8d30;
+  border-radius: 50%;
+  background-image: url("../img/topmenu-phone.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-main__e-mail {
+  background-color: #ffbd30;
+  background-image: url("../img/topmenu-mail.svg");
+}
+
+.page-main__login {
+  display: block;
+  width: 189px;
+  height: 33px;
+  padding-top: 7px;
+  background-color: #ffd74b;
+  border-radius: 20px;
+  font-family: @font, @font-secondary;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  color: @dark-blue;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {

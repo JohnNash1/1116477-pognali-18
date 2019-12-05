@@ -1,4 +1,5 @@
 .actions-list {
+  height: 277px;
   padding: 0 25px;
   background-color: @page-color;
 }
@@ -27,32 +28,37 @@
 }
 
 .actions-list__item {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 268px;
-  height: 78px;
-  border-radius: 10px;
+  height: 80px;
+  border-radius: 10px 10px 0 0;
 }
 
 .actions-list__item:first-child {
   background-color: @dark-orange;
-  border: 1px solid @dark-orange;
+  height: 90px;
+  top: -80px;
 }
 
 .actions-list__item:nth-child(2) {
   background-color: @orange;
-  border: 1px solid @orange;
+  top: -90px;
+  height: 90px;
 }
 
 .actions-list__item:nth-child(3) {
   background-color: @dark-yellow;
-  border: 1px solid @dark-yellow;
+  top: -100px;
+  height: 90px;
 }
 
 .actions-list__item:nth-child(4) {
   background-color: @yellow;
-  border: 1px solid @yellow;
+  border-radius: 10px;
+  top: -110px;
 }
 
 @media (min-width: @tablet-width) {
