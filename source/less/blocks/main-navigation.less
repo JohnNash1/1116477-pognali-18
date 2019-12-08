@@ -61,11 +61,31 @@
     width: @tablet-width;
     height: 910px;
   }
+
+  .main-navigation--nojs .main-navigation__wrapper,
+  .main-navigation--opened .main-navigation__wrapper {
+    margin-top: 82px;
+  }
+
+  .main-navigation--closed .main-navigation__toggle {
+    top: 61px;
+    left: 384px;
+  }
+
+  .main-navigation--opened .main-navigation__toggle {
+    top: 54px;
+    left: 372px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .main-navigation__wrapper {
+    display: flex;
     width: @desktop-width;
     height: 400px;
+  }
+
+  .main-navigation__toggle {
+    display: none;
   }
 }

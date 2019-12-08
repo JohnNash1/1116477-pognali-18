@@ -1,7 +1,6 @@
 .about-service {
   position: relative;
   height: 322px;
-  // background-color: @page-color;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -41,10 +40,11 @@
   text-align: left;
   color: @dark-orange;
   margin-left: 50px;
+  margin-top: 0;
 }
 
 .about-service__text {
-  width: 208px;
+  width: 210px;
   font-family: @font, @font-secondary;
   font-size: 16px;
   font-weight: 300;
@@ -65,16 +65,49 @@
 @media (min-width: @tablet-width) {
   .about-service {
     min-height: 920px;
-    background-image: url("../img/about-tablet@1x.png");
-    background-repeat: no-repeat;
-    background-position: right;
+    display: flex;
+    background-image: none;
+
+    &::before {
+      width: 688px;
+      height: 213px;
+      top: 236px;
+      left: 40px;
+      border-radius: 20px;
+      background-color: #141b3b;
+    }
+  }
+
+  .about-service__image {
+    display: block;
+    margin-top: 254px;
   }
 
   .about-service__text-wrapper {
     display: flex;
     flex-direction: column;
     width: 688px;
-    margin: 0 auto;
+    margin: 243px auto;
+  }
+
+  .about-service__title {
+    font-size: 45px;
+    line-height: 45px;
+    margin-bottom: 0;
+  }
+
+  .about-service__text {
+    width: 300px;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 43px;
+    margin-bottom: 0;
+  }
+
+  .about-service__text--bold {
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 38px;
   }
 }
 

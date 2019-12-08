@@ -1,10 +1,17 @@
 .directions {
   position: relative;
+  top: -20px;
   display: flex;
   flex-direction: column;
   min-height: 950px;
   background-color: @grey;
+  border-radius: 0 0 30px 30px;
   padding-top: 72px;
+  z-index: -3;
+}
+
+.directions_card-wrapper {
+  margin-top: 45px;
 }
 
 .directions__title {
@@ -30,7 +37,7 @@
 
 .directions__button {
   position: absolute;
-  bottom: 120px;
+  bottom: 30px;
   left: 25px;
 }
 
