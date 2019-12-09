@@ -79,10 +79,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-navigation__wrapper {
+  .main-navigation .main-navigation__wrapper {
     display: flex;
-    width: @desktop-width;
+    flex-direction: row;
+    background-color: @white;
     height: 400px;
+    z-index: 10;
+  }
+
+  .main-navigation__anchor {
+    // color: @white;
   }
 
   .main-navigation__toggle {

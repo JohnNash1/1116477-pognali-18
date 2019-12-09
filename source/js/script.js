@@ -4,7 +4,6 @@ var header = document.querySelector(".page-header");
 var logo = document.querySelector(".page-header__logo-image");
 
 menu.classList.remove("main-navigation--nojs");
-menu.classList.add("main-navigation--closed");
 menuButton.addEventListener("click", function () {
   if (menu.classList.contains("main-navigation--closed")) {
     menu.classList.remove("main-navigation--closed");
