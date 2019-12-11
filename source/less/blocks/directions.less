@@ -44,16 +44,53 @@
 @media (min-width: @tablet-width) {
   .directions {
     wisth: 653px;
-    min-height: 1397px;
+    min-height: 1030px;
+    background-image: url("../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: 440px 110px;
+    border-radius: 0 0 60px 60px;
   }
 
   .directions_card-wrapper {
+    position: relative;
     margin: 0 auto;
+    margin-top: 65px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: -10px;
+      display: block;
+      width: 141px;
+      height: 141px;
+      border-radius: 20px;
+      background-color: #e2e5f2;
+      z-index: -1;
+    }
   }
 
   .directions__button {
-    top: 640px;
-    left: 205px;
+    font-size: 24px;
+    line-height: 24px;
+    top: 945px;
+    left: 9.7%;
+    width: 570px;
+    height: 26px;
+    padding-top: 31px;
+    border-radius: 20px;
+  }
+
+  .directions__title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .directions__text {
+    width: 340px;
+    font-size: 28px;
+    line-height: 33px;
+    margin-top: 55px;
   }
 }
 

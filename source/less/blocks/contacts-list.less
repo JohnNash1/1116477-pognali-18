@@ -42,3 +42,46 @@
 .contacts-list__mail::before {
   background-image: url("../img/contacts-mail.svg");
 }
+
+@media (min-width: @desktop-width) {
+  .contacts-list__text {
+    display: none;
+  }
+
+  .contacts-list {
+    width: 100px;
+    order: 2;
+  }
+
+  .contacts-list__tel,
+  .contacts-list__mail {
+    width: 100px;
+    padding: 0;
+    margin-top: 6px;
+  }
+
+  .contacts-list__mail {
+    margin-left: -50px;
+  }
+
+  .contacts-list__item a::before {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contacts-list__item:first-child a::before {
+    background-color: @dark-orange;
+  }
+
+  .contacts-list__item:nth-child(2) a::before {
+    background-color: @dark-yellow;
+  }
+
+  .contacts-list__tel::before {
+    background-image: url("../img/topmenu-phone.svg");
+  }
+
+  .contacts-list__mail::before {
+    background-image: url("../img/topmenu-mail.svg");
+  }
+}

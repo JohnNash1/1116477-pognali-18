@@ -19,14 +19,14 @@
       <nav class="main-navigation main-navigation--nojs main-navigation--closed">
         <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list site-list">
-            <li class="site-list__item">
+          <ul class="main-navigation__list main-navigation__list--menu site-list">
+            <li class="main-navigation__list-item">
               <a class="main-navigation__anchor">О сервисе</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-navigation__list-item">
               <a class="main-navigation__anchor" href="form.html">Направления</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-navigation__list-item">
               <a class="main-navigation__anchor" href="catalog.html">Попутчики</a>
             </li>
           </ul>
@@ -37,10 +37,10 @@
           </ul>
           <ul class="main-navigation__list contacts-list site-list">
             <li class="contacts-list__item">
-              <a class="contacts-list__tel" href="tel:+88005558628">8 800 555-86-28</a>
+              <a class="contacts-list__tel" href="tel:+88005558628"><span class="contacts-list__text">8 800 555-86-28</span></a>
             </li>
             <li class="contacts-list__item">
-              <a class="contacts-list__mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts-list__mail" href="mailto:mail@htmlacademy.ru"><span class="contacts-list__text">mail@htmlacademy.ru</span></a>
             </li>
           </ul>
           <ul class="main-navigation__list social-list site-list">
@@ -61,6 +61,7 @@
       <div class="page-main__wrapper">
         <h1 class="page-main__title">В путешествие с крутыми попутчиками!</h1>
         <picture>
+          <source media="(min-width: 1200px)" srcset="img/traveller-illustration-desktop@1x.png">
           <source media="(min-width: 768px)" srcset="img/traveller-illustration-tablet@1x.png">
           <img class="page-main__image" src="img/traveller-illustration-mobile@1x.png" alt="Турист">
         </picture>
@@ -79,7 +80,7 @@
       <section class="review">
         <h2 class="visually-hidden">Отзыв</h2>
         <p class="review__text">«Лучшее приложение, что я видел в жизни!»</p>
-        <p class="review__text review__text--bold">Мурат Эльтазин главный редактор газеты «гаджетлайф»</p>
+        <p class="review__text review__text--bold">Мурат Эльтазин<br> главный редактор газеты «гаджетлайф»</p>
       </section>
       <ul class="actions-list site-list">
         <li class="actions-list__item"><span class="actions-list__text">Выберите направление</span><span class="actions-list__number">1</span></li>
@@ -91,8 +92,9 @@
         <div class="about-service__text-wrapper">
           <h2 class="about-service__title">О сервисе</h2>
           <p class="about-service__text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
-            Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
+            Делитесь своими идеями путешествий<br> и черпайте вдохновение в чужих. </p>
           <p class="about-service__text about-service__text--bold">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+          <a class="about-service__button button" href="">Подробнее</a>
         </div>
         <img class="about-service__image" src="img/about-tablet@1x.png" width="348" height="548" alt="О сервисе">
       </section>
@@ -105,23 +107,32 @@
         </div>
         <div class="directions_card-wrapper">
           <div class="travel-card">
-            <img class="travel-card__image travel-card__image--thailand" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Таиланд">
+            <picture class="travel-card__picture">
+              <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg">
+              <img class="travel-card__image travel-card__image--thailand" src="img/thailand-mobile@1x.jpg" alt="Таиланд">
+            </picture>
             <div class="travel-card__wrapper">
-              <p class="travel-card__text travel-card__text--fist-line">Таиланд <span class="travel-card__text">Джунгли зовут!</span></p>
+              <p class="travel-card__text travel-card__text--fist-line">Таиланд<br><span class="travel-card__text">Джунгли зовут!</span></p>
               <p class="travel-card__text travel-card__number">18321</p>
             </div>
           </div>
           <div class="travel-card">
-            <img class="travel-card__image travel-card__image--france" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Франция">
+            <picture class="travel-card__picture">
+              <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg">
+              <img class="travel-card__image travel-card__image--france" src="img/france-mobile@1x.jpg" alt="Франция">
+            </picture>
             <div class="travel-card__wrapper">
-              <p class="travel-card__text travel-card__text--fist-line">Франция <span class="travel-card__text">Трэ бьен, манифик!</span></p>
+              <p class="travel-card__text travel-card__text--fist-line">Франция<br><span class="travel-card__text">Трэ бьен, манифик!</span></p>
               <p class="travel-card__text travel-card__number">12518</p>
             </div>
           </div>
           <div class="travel-card">
-            <img class="travel-card__image travel-card__image--czechia" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Чехия">
+            <picture class="travel-card__picture">
+              <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg">
+              <img class="travel-card__image travel-card__image--czechia" src="img/czech-mobile@1x.jpg" alt="Чехия">
+            </picture>
             <div class="travel-card__wrapper">
-              <p class="travel-card__text travel-card__text--fist-line">Чехия <span class="travel-card__text">Закоулки старой Европы</span></p>
+              <p class="travel-card__text travel-card__text--fist-line">Чехия<br><span class="travel-card__text">Закоулки старой Европы</span></p>
               <p class="travel-card__text travel-card__number">5326</p>
             </div>
           </div>

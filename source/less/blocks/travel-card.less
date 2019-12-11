@@ -19,9 +19,9 @@
 }
 
 .travel-card__text {
-  width: 168px;
+  width: 175px;
   margin: 0;
-  font-family: @font;
+  font-family: @font, @font-secondary;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
@@ -30,25 +30,64 @@
 }
 
 .travel-card__text--fist-line {
-  font-family: @font;
+  font-family: @font, @font-secondary;
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
-  text-align: left;
   color: #161c35;
 }
 
 .travel-card__number {
   line-height: 30px;
   text-align: right;
+  width: 60px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: 0 8px;
 }
 
 @media (min-width: @tablet-width) {
   .travel-card {
     display: flex;
+    margin-top: 10px;
+  }
+
+  .travel-card__picture {
+    order: 1;
   }
 
   .travel-card__image {
-    order: 1;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .travel-card__wrapper {
+    position: static;
+    flex-direction: column;
+    width: 400px;
+    height: 108px;
+    padding-top: 32px;
+    padding-left: 30px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .travel-card__text {
+    width: 215px;
+    font-size: 20px;
+    line-height: 17.7px;
+  }
+
+  .travel-card__text--fist-line {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .travel-card__number {
+    text-align: left;
+    margin-top: 16px;
+    padding-top: 5px;
+    padding-left: 30px;
+    background-size: 21px 20px;
+    background-position: 0 0;
   }
 }

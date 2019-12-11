@@ -89,15 +89,8 @@
     margin-top: 38px;
   }
 
-  .page-main__tel,
-  .page-main__e-mail {
+  .page-main__list {
     display: none;
-  }
-
-  .page-main__login {
-    position: absolute;
-    top: -970px;
-    left: 540px;
   }
 
   .page-main__image {
@@ -109,5 +102,26 @@
 @media (min-width: @desktop-width) {
   .page-main {
     width: 100%;
+  }
+
+  .page-main__wrapper {
+    display: flex;
+    min-height: 610px;
+    background-color: @dark-blue;
+    background-image: url("../img/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: -160px -125px;
+  }
+
+  .page-main__title {
+    margin: 0;
+    margin-top: 127px;
+    margin-left: 130px;
+  }
+
+  .page-main__image {
+    margin-top: -25px;
+    margin-left: 75px;
+    margin-right: 28%;
   }
 }
