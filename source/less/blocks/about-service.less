@@ -1,6 +1,6 @@
 .about-service {
   position: relative;
-  height: 322px;
+  min-height: 322px;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -32,6 +32,10 @@
   }
 }
 
+.about-service__text-wrapper {
+  margin-left: 50px;
+}
+
 .about-service__title {
   font-family: @font, @font-secondary;
   font-size: 24px;
@@ -39,7 +43,6 @@
   line-height: 24px;
   text-align: left;
   color: @dark-orange;
-  margin-left: 50px;
   margin-top: 0;
 }
 
@@ -51,7 +54,6 @@
   line-height: 22px;
   text-align: left;
   color: @white;
-  margin-left: 50px;
 }
 
 .about-service__text--bold {
@@ -91,7 +93,8 @@
     display: flex;
     flex-direction: column;
     width: 688px;
-    margin: 243px auto;
+    margin-top: 243px;
+    margin-left: 75px;
   }
 
   .about-service .about-service__button {
@@ -102,7 +105,6 @@
     line-height: 24px;
     padding: 30px 34px;
     margin-top: 53px;
-    margin-left: 75px;
     border-radius: 20px;
   }
 
@@ -110,7 +112,6 @@
     font-size: 45px;
     line-height: 45px;
     margin-bottom: 0;
-    margin-left: 75px;
   }
 
   .about-service__text {
@@ -119,7 +120,6 @@
     line-height: 33px;
     margin-top: 43px;
     margin-bottom: 0;
-    margin-left: 75px;
   }
 
   .about-service__text--bold {
@@ -132,11 +132,38 @@
 @media (min-width: @desktop-width) {
   .about-service {
     min-height: 840px;
+    padding: 0;
+
+    &::before {
+      width: 213px;
+      top: 175px;
+      left: 60px;
+    }
   }
 
   .about-service__text-wrapper {
     display: flex;
     flex-direction: column;
     width: 609px;
+    margin-left: 133px;
+  }
+
+  .about-service__image {
+    margin-top: 175px;
+    margin-left: 10px;
+  }
+
+  .about-service__text {
+    width: 620px;
+    margin-top: 61px;
+  }
+
+  .about-service__text--bold {
+    width: 410px;
+    margin-top: 44px;
+  }
+
+  .about-service .about-service__button {
+    margin-top: 86px;
   }
 }

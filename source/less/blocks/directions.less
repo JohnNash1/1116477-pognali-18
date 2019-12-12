@@ -14,6 +14,10 @@
   margin-top: 45px;
 }
 
+.directions_text-wrapper {
+  margin-left: 51px;
+}
+
 .directions__title {
   font-family: @font;
   font-size: 24px;
@@ -21,7 +25,6 @@
   line-height: 24px;
   text-align: left;
   color: @dark-orange;
-  margin-left: 51px;
 }
 
 .directions__text {
@@ -32,18 +35,15 @@
   line-height: 22px;
   text-align: left;
   color: #444444;
-  margin-left: 51px;
 }
 
 .directions__button {
-  position: absolute;
-  bottom: 30px;
-  left: 25px;
+  margin-left: 25px;
+  margin-top: 15px;
 }
 
 @media (min-width: @tablet-width) {
   .directions {
-    wisth: 653px;
     min-height: 1030px;
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 
   .directions_card-wrapper {
     position: relative;
-    margin: 0 auto;
+    margin-left: 50px;
     margin-top: 65px;
 
     &::before {
@@ -79,6 +79,12 @@
     height: 26px;
     padding-top: 31px;
     border-radius: 20px;
+    margin-left: 75px;
+    margin-top: 47px;
+  }
+
+  .directions_text-wrapper {
+    margin-left: 75px;
   }
 
   .directions__title {
@@ -97,14 +103,39 @@
 @media (min-width: @desktop-width) {
   .directions {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    wisth: 1320px;
-    min-height: 840px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 705px;
+    align-content: flex-start;
+    background-position: 1100px 110px;
   }
 
   .directions__button {
+    box-sizing: border-box;
+    width: 274px;
+    height: 81px;
     position: static;
     bottom: 0;
+    order: 3;
+    margin: 0;
+    margin-left: 870px;
+    margin-top: -80px;
+  }
+
+  .directions_card-wrapper {
+    margin-left: 120px;
+    margin-top: 110px;
+
+    &::before {
+      top: -72px;
+      left: -45px;
+    }
+  }
+
+  .directions_text-wrapper {
+    margin-top: 80px;
+    margin-left: 145px;
+    order: 2;
+    align-self: flex-start;
   }
 }
