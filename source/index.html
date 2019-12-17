@@ -205,43 +205,57 @@
       </section>
       <section class="registation">
         <h2 class="registation__title">Заинтересовались?</h2>
-        <p class="registation__text">Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы?
-          Тогда скорее <a class="registation__login" href="login.html">авторизуйтесь.</a></p>
+        <div class="registation__text-wrapper">
+          <p class="registation__text">Зарегистрируйтесь,</p>
+          <p class="registation__text">это быстро и бесплатно!</p>
+          <p class="registation__text">Уже зарегистрированы? Тогда скорее <a class="registation__login" href="login.html">авторизуйтесь</a>.</p>
+        </div>
         <form class="registation__form" action="https://echo.htmlacademy.ru/courses" method="post">
-          <input class="registation__field" type="email" name="email" required>
-          <button class="registation__submit" type="submit">отправить</button>
+          <input class="registation__field" type="email" name="email" placeholder="E-mail" required>
+          <button class="registation__submit button" type="submit"><sapn class="registation__submit-text">отправить</sapn></button>
         </form>
-        <p class="registation__text">Остались вопросы? Мы с радостью на них ответим!</p>
-        <ul class="registation__list">
-          <li class="registation__list-item">
-            <a class="registation__anchor" href="tel:+88005558628">8 800 555-86-28</a>
+        <div class="registation__text-wrapper registation__text-wrapper--bottom">
+          <p class="registation__text">Остались вопросы?</p>
+          <p class="registation__text">Мы с радостью на них ответим!</p>
+        </div>
+        <ul class="registation__list contacts-list site-list">
+          <li class="registation__list-item contacts-list__item">
+            <a class="contacts-list__tel" href="tel:+88005558628"><span class="registation__list-text contacts-list__text">8 800 555-86-28</span></a>
           </li>
-          <li class="registation__list-item">
-            <a class="registation__anchor" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          <li class="registation__list-item contacts-list__item">
+            <a class="contacts-list__mail" href="mailto:mail@htmlacademy.ru"><span class="registation__list-text contacts-list__text">mail@htmlacademy.ru</span></a>
           </li>
         </ul>
       </section>
       <section class="address">
         <h2 class="visually-hidden">Наш адрес</h2>
-        <ul class="address__list">
-          <li class="address__list-item">ул. Большая Конюшенная, 19/8</li>
+        <ul class="address__list site-list">
           <li class="address__list-item">
-            <button class="address-button" type="button">Проложить маршрут</button>
+            <p class="address__list-text">ул. Большая Конюшенная, 19/8</p>
+          </li>
+          <li class="address__list-item">
+            <button class="address-button button" type="button">Проложить маршрут</button>
           </li>
         </ul>
-        <a href="#">
-          <img src="https://via.placeholder.com/320x546" width="320" height="546" alt="ул. Большая Конюшенная, 19/8">
-        </a>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3038775512186!2d30.322282459772726!3d59.93865064598841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1576612841798!5m2!1sru!2sru" width="320" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
       <a class="page-footer__logo">
-        <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" width="96" height="18" alt="Погнали">
+        <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Погнали">
       </a>
       <ul class="page-footer__list page-footer__list--social site-list">
-        <li class="page-footer__list-item">fb</li>
-        <li class="page-footer__list-item">вк</li>
-        <li class="page-footer__list-item">инстаграм</li>
+        <li class="page-footer__list-item">
+          <a class="page-footer__anchor page-footer__anchor--fb" href="#"></a>
+        </li>
+        <li class="page-footer__list-item">
+          <a class="page-footer__anchor page-footer__anchor--vk" href="#"></a>
+        </li>
+        <li class="page-footer__list-item">
+          <a class="page-footer__anchor page-footer__anchor--instagram" href="#"></a>
+        </li>
       </ul>
       <ul class="page-footer__list page-footer__list--develop site-list">
         <li class="page-footer__list-item"><p class="page-footer__text">Разработано</p></li>

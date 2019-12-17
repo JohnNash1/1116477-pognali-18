@@ -1,13 +1,17 @@
 .adding-profile {
   position: relative;
-  top: -85px;
+  top: -120px;
   display: flex;
   flex-direction: column;
-  min-height: 364px;
+  min-height: 430px;
   background-color: @grey;
   padding-top: 58px;
   z-index: -5;
   border-radius: 0 0 30px 30px;
+  background-image: url("../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-size: 99px 99px;
+  background-position: 195px 75px;
 }
 
 .adding-profile__title {
@@ -18,21 +22,82 @@
   line-height: 24px;
   text-align: left;
   color: #ff8d30;
+  margin: 0;
   margin-left: 50px;
+  margin-top: 35px;
 }
 
 .adding-profile__list {
-  margin-top: 59px;
+  position: relative;
+  margin-top: 40px;
 }
 
 .adding-profile__list-item {
+  width: 200px;
   margin-left: 50px;
-  padding: 14px 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(68, 68, 68, 0.05);
+}
+
+.adding-profile__list-item:nth-child(3) {
+  border-bottom: 1px solid rgba(68, 68, 68, 0.05);
+}
+
+.adding-profile__list-item:last-child {
+  width: 219px;
+  border: 0;
+  margin-top: 22px;
+}
+
+.adding-profile__list-item::after {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+  width: 34px;
+  height: 34px;
+  padding-top: 12px;
+  border-radius: 50%;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 14px;
+  text-align: center;
+  color: @white;
+}
+
+.adding-profile__list-item:nth-child(1)::after {
+  top: 3px;
+  right: 26px;
+  content: "1";
+  background-color: @orange;
+}
+
+.adding-profile__list-item:nth-child(2)::after {
+  top: 70px;
+  right: 26px;
+  content: "2";
+  background-color: @dark-yellow;
+}
+
+.adding-profile__list-item:nth-child(3)::after {
+  top: 135px;
+  right: 26px;
+  content: "3";
+  background-color: @yellow;
+}
+
+.adding-profile__anchor {
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 16px;
+  text-align: left;
+  color: @page-color;
 }
 
 .adding-profile__text {
   margin: 0;
-  font-family: @font;
+  font-family: @font, @font-secondary;
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -42,42 +107,146 @@
 
 @media (min-width: @tablet-width) {
   .adding-profile {
-    min-height: 738px;
+    top: -160px;
+    min-height: 578px;
+    border-radius: 0 0 60px 60px;
+    background-image: none;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 198px;
+      height: 285px;
+      background-color: #e2e5f2;
+      border-radius: 20px;
+      top: 230px;
+      left: 530px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 99px;
+      height: 99px;
+      background-image: url("../img/rates@1x.png");
+      background-repeat: no-repeat;
+      background-size: 99px 99px;
+      top: 490px;
+      left: 582px;
+    }
   }
 
   .adding-profile__title {
-    width: 478px;
-    margin: 0 auto;
+    width: 490px;
+    margin-left: 145px;
+    margin-top: 95px;
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .adding-profile__text {
+    font-size: 28px;
+    line-height: 33px;
   }
 
   .adding-profile__list {
     width: 100%;
-    margin: 0 auto;
+    margin-top: 74px;
   }
 
   .adding-profile__list-item {
     display: flex;
     justify-content: space-between;
+    width: 562px;
+    padding: 16px 0;
+    margin-left: 131px;
+  }
+
+  .adding-profile__list-item:last-child {
+    width: 300px;
+    border: 0;
+    margin-top: 37px;
+  }
+
+  .adding-profile__anchor {
+    font-size: 20px;
+    line-height: 20px;
+    color: #132576;
+  }
+
+  .adding-profile__list-item:last-child::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 67px;
+    height: 67px;
+    background-color: #e2e5f2;
+    border-radius: 50%;
+    left: 39px;
+    top: 234px;
+    background-image: url("../img/business.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 21px;
+    background-position: center 22px;
+  }
+
+  .adding-profile__list-item::after {
+    width: 67px;
+    height: 67px;
+    font-size: 28px;
+    line-height: 28px;
+    padding-top: 22px;
+  }
+
+  .adding-profile__list-item:nth-child(1)::after {
+    top: 0;
+    left: 39px;
+  }
+
+  .adding-profile__list-item:nth-child(2)::after {
+    top: 67px;
+    left: 39px;
+  }
+
+  .adding-profile__list-item:nth-child(3)::after {
+    top: 134px;
+    left: 39px;
   }
 }
 
-@media (min-width: @tablet-width) {
+@media (min-width: @desktop-width) {
   .adding-profile {
-    min-height: 830px;
+    min-height: 780px;
+
+    &::before {
+      width: 444px;
+      height: 300px;
+      top: 307px;
+      left: 730px;
+    }
+
+    &::after {
+      width: 198px;
+      height: 198px;
+      background-size: 198px 198px;
+      top: 357px;
+      left: 1082px;
+    }
   }
 
   .adding-profile__title {
-    width: 478px;
     margin: 0 auto;
+    margin-top: 120px;
   }
 
   .adding-profile__list {
-    width: 100%;
-    margin: 0 auto;
+    margin-top: 134px;
+    margin-left: 81px;
   }
 
   .adding-profile__list-item {
-    display: flex;
-    justify-content: space-between;
+    width: 813px;
   }
 }
