@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  min-height: 150px;
+}
+
+.pagination__button {
+  box-sizing: border-box;
+  padding: 0;
+  width: 135px;
+  height: 50px;
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-size: 10px 20px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.pagination__button--left {
+  border-radius: 20px 0 0 20px;
+  margin-left: 25px;
+  background-image: url("../img/triangle-arrow-left.svg");
+}
+
+.pagination__button--right {
+  border-radius: 0 20px 20px 0;
+  margin-left: 1px;
+  background-image: url("../img/triangle-arrow-right.svg");
+}

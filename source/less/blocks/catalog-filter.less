@@ -1,3 +1,48 @@
-// @media (min-width: @desktop-width) {
-//
-// }
+.catalog-filter {
+  width: @mobile-width;
+}
+
+.catalog-filter__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+  background-color: #e2e5f2;
+  border-radius: 0 0 20px 20px;
+}
+
+.catalog-filter__title {
+  margin: 0;
+  padding-left: 52px;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: left;
+  text-transform: uppercase;
+  color: @page-color;
+  background-image: url("../img/filter.svg");
+  background-repeat: no-repeat;
+  background-size: 15px 10px;
+  background-position: 25px 5px;
+}
+
+.catalog-filter__button {
+  border: none;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  background-image: url("../img/dots.svg");
+  background-repeat: no-repeat;
+  background-size: 17px 3px;
+  background-position: center 11px;
+  margin-right: 25px;
+  margin-top: -3px;
+}
+
+.catalog-filter__button--opened {
+  background-image: url("../img/filter-close.svg");
+  background-size: 12px 12px;
+  background-position: center 6px;
+  margin-top: -3px;
+}

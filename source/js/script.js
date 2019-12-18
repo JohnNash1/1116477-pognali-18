@@ -21,3 +21,17 @@ menuButton.addEventListener("click", function () {
     logoTablet.setAttribute("srcset", "img/logo-tablet-white@1x.png");
   };
 });
+
+var filterButton = document.querySelector(".catalog-filter__button");
+var filterMenu = document.querySelector(".catalog-filter__countries-wrapper");
+
+filterButton.addEventListener("click", function () {
+  if (filterMenu.classList.contains("visually-hidden")) {
+    filterMenu.classList.remove("visually-hidden");
+    filterButton.classList.add("catalog-filter__button--opened");
+  }
+  else {
+    filterMenu.classList.add("visually-hidden");
+    filterButton.classList.remove("catalog-filter__button--opened");
+  }
+});

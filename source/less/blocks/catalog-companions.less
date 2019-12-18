@@ -52,11 +52,20 @@
 }
 
 .catalog-companions__subtitle {
+  font-family: @font, @font-secondary;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: left;
+  color: #444444;
   margin-top: 20px;
   margin-left: 26px;
   font-size: 15px;
   line-height: 18px;
   color: #444444;
+}
+
+.catalog-companions__subtitle--level {
+  margin-left: 50px;
 }
 
 .catalog-companions__list {
@@ -79,7 +88,10 @@
 }
 
 .catalog-companions__level {
-  margin-left: 26px;
+  box-sizing: border-box;
+  margin: 0;
+  margin-top: -10px;
+  margin-left: 46px;
   border: 3px solid #ff8d30;
   border-radius: 50%;
   width: 45px;
@@ -94,19 +106,24 @@
     line-height: 18px;
     text-align: center;
     color: @dark-blue;
-    margin-top: 15px;
+    margin-top: 13px;
   }
 }
 
 .catalog-companions__heart {
   width: 31px;
   height: 31px;
-  background-color: #f9eaea;
+  background-color: #edeff6;
   border-radius: 50%;
-  background-image: url("../img/heart-active.svg");
+  background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
   background-size: 13px 11px;
   background-position: 9px 10px;
+}
+
+.catalog-companions__heart--active {
+  background-color: #f9eaea;
+  background-image: url("../img/heart-active.svg");
 }
 
 .catalog-companions__heart-wrapper {
@@ -114,6 +131,40 @@
   position: absolute;
   top: 55px;
   left: 65px;
+}
+
+.catalog-companions__button {
+  box-sizing: border-box;
+  width: 230px;
+  height: 40px;
+  padding: 0;
+  padding-left: 79px;
+  padding-top: 5px;
+  border: none;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  color: @dark-blue;
+  text-transform: uppercase;
+  border-radius: 30px;
+  margin-left: 20px;
+  margin-top: 14px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.catalog-companions__button--all {
+  margin-top: 5px;
+  font-family: @font, @font-secondary;
+  text-align: left;
+  font-weight: bold;
+  color: #1d2e5b;
+  background-image: url("../img/show-more-plus.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 45px center;
 }
 
 @media (min-width: @tablet-width) {
