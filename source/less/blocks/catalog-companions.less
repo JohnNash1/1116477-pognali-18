@@ -1,7 +1,7 @@
 .catalog-companions__card {
   position: relative;
   width: 270px;
-  min-height: 415px;
+  height: 415px;
   margin: 10px 25px;
   background-color: @white;
   border-radius: 20px;
@@ -9,6 +9,25 @@
 
 .catalog-companions__wrapper {
   display: flex;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 23px;
+    right: 22px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #f97676;
+  }
+}
+
+.catalog-companions__wrapper--online {
+  &::before {
+    background-color: #81e31e;
+  }
 }
 
 .catalog-companions__image {
@@ -42,13 +61,17 @@
   color: #161c35;
 }
 
+.catalog-companions-font() {
+  font-size: 15px;
+  line-height: 18px;
+  color: #444444;
+}
+
 .catalog-companions__tags {
   margin-top: 50px;
   margin-left: -60px;
   width: 168px;
-  font-size: 15px;
-  line-height: 18px;
-  color: #444444;
+  .catalog-companions-font();
 }
 
 .catalog-companions__subtitle {
@@ -59,9 +82,7 @@
   color: #444444;
   margin-top: 20px;
   margin-left: 26px;
-  font-size: 15px;
-  line-height: 18px;
-  color: #444444;
+  .catalog-companions-font();
 }
 
 .catalog-companions__subtitle--level {
@@ -155,16 +176,22 @@
   }
 }
 
-.catalog-companions__button--all {
+.catalog-companions__button--more {
   margin-top: 5px;
+  margin-bottom: 15px;
   font-family: @font, @font-secondary;
   text-align: left;
   font-weight: bold;
   color: #1d2e5b;
+  background-color: transparent;
   background-image: url("../img/show-more-plus.svg");
   background-repeat: no-repeat;
   background-size: 18px 18px;
   background-position: 45px center;
+}
+
+.catalog-companions__list-item--opacity {
+  opacity: 0.15;
 }
 
 @media (min-width: @tablet-width) {
@@ -172,55 +199,237 @@
     display: flex;
     flex-wrap: wrap;
     width: 688px;
-    min-height: 332px;
+    height: 332px;
+    margin: 40px;
+  }
+
+  .catalog-companions__wrapper {
+    &::before {
+      display: none;
+      top: 44px;
+      right: 8px;
+      width: 7px;
+      height: 7px;
+    }
+  }
+
+  .catalog-companions__image {
+    border-radius: 20px;
+    margin-left: 35px;
+    margin-top: 35px;
+  }
+
+  .catalog-companions__text-wrapper {
+    margin-left: 0;
   }
 
   .catalog-companions__username {
-    width: 187px;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    font-size: 30px;
+    line-height: 30px;
+    margin-left: 33px;
+    margin-top: 34px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #f97676;
+      margin-left: 23px;
+    }
+  }
+
+  .catalog-companions__username--online {
+    &::after {
+      background-color: #81e31e;
+    }
+  }
+
+  .catalog-companions__tags {
+    width: 225px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 36px;
+    margin-top: 20px;
   }
 
   .catalog-companions__attributes-wrapper {
     flex-direction: column;
-    margin-left: 150px;
+    margin-left: auto;
+    width: 100px;
   }
 
   .catalog-companions__button {
+    font-size: 20px;
+    line-height: 30px;
+    width: 148px;
+    height: 50px;
+    padding-left: 32px;
+  }
+
+  .catalog-companions__button--more {
+    width: 250px;
+    padding-left: 79px;
+    background-size: 27px 27px;
+    background-position: 30px center;
+    margin-left: 257px;
+  }
+
+  .catalog-companions__button--absolute {
     position: absolute;
-    top: 160px;
-    left: 180px;
-  }
-
-  .catalog-companions__text-wrapper {
-    margin-left: 80px;
-  }
-
-  .catalog-companions__tags {
-    margin-left: 26px;
+    top: 155px;
+    left: 240px;
   }
 
   .catalog-companions__heart-wrapper {
-    top: 155px;
-    left: 260px;
+    top: 170px;
+    left: 408px;
   }
 
-  .catalog-companions__subtitle-hidden {
+  .catalog-companions__heart {
+    width: 50px;
+    height: 50px;
+    background-size: 20px 17px;
+    background-position: center;
+  }
+
+  .catalog-companions__distance {
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 8px;
+  }
+
+  .catalog-companions__subtitle--hidden {
     display: none;
+  }
+
+  .catalog-companions__transport-wrapper {
+    margin-left: auto;
+    margin-right: 37px;
+    margin-top: 25px;
+  }
+
+  .catalog-companions__list {
+    margin: 0;
+  }
+
+  .catalog-companions__list-item {
+    background-color: transparent;
+    background-size: 19px 21px;
+  }
+
+  .catalog-companions__list-item:nth-child(2) {
+    background-size: 17px 21px;
+    background-position: 10px 8px;
+  }
+
+  .catalog-companions__list-item:nth-child(3) {
+    background-size: 24px 21px;
+  }
+
+  .catalog-companions__list-item:nth-child(4) {
+    background-size: 20px 21px;
   }
 
   .catalog-companions__wishes-wrapper {
     order: 3;
+    margin-left: 9px;
+  }
+
+  .catalog-companions__wishes-wrapper p {
+    margin: 0;
+    margin-left: 74px;
+  }
+
+  .catalog-companions__level-wrapper {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .catalog-companions__level {
+    margin: 0;
+    margin-left: auto;
+    margin-right: 25px;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .catalog-companions__card {
     width: 950px;
+    height: 285px;
+    margin: 30px 60px;
+  }
+
+  .catalog-companions__image {
+    border-radius: 25px 0 0 25px;
+    margin: 0;
   }
 
   .catalog-companions__attributes-wrapper {
+    width: 300px;
     order: 4;
-    margin-left: 360px;
-    margin-top: -100px;
+    margin-left: auto;
+    margin-top: -120px;
     flex-direction: row;
+  }
+
+  .catalog-companions__text-wrapper {
+    margin-left: 0;
+  }
+
+  .catalog-companions__username {
+    width: 280px;
+    margin-left: 0;
+    margin-top: 48px;
+
+    &::after {
+      order: -1;
+      margin-right: 18px;
+      margin-left: 34px;
+    }
+  }
+
+  .catalog-companions__tags {
+    margin-left: 59px;
+  }
+
+  .catalog-companions__wishes-wrapper {
+    margin: 0;
+    height: 160px;
+  }
+
+  .catalog-companions__subtitle--wishes {
+    display: none;
+  }
+
+  .catalog-companions__level-wrapper {
+    width: 60px;
+    margin-right: 44px;
+  }
+
+  .catalog-companions__level {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .catalog-companions__button--absolute {
+    top: 175px;
+    left: 325px;
+  }
+
+  .catalog-companions__heart-wrapper {
+    top: 189px;
+    left: 493px;
+  }
+
+  .catalog-companions__button--more {
+    margin-left: 382px;
+    margin-top: 20px;
   }
 }
