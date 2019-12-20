@@ -1,23 +1,14 @@
 .page-main {
+  position: relative;
   width: @mobile-width;
+  z-index: 0;
 }
 
 .page-main__wrapper {
   position: relative;
-  outline: 1px solid yellow;
-
-  // &::before {
-  //   position: absolute;
-  //   content: "";
-  //   width: @mobile-width;
-  //   height: calc(100% + 73px);
-  //   top: -73px;
-  //   left: 0;
-  //   background-color: @page-color;
-  //   z-index: -1;
-  //   background-image: url("../img/globe-back-mobile@1x.jpg");
-  //   background-repeat: no-repeat;
-  // }
+  background-image: url("../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 -93px;
 }
 
 .page-main__title {
@@ -38,6 +29,43 @@
 
 .page-main__list {
   display: flex;
+  position: absolute;
+  bottom: -20px;
+  left: 26px;
+}
+
+.page-main__tel,
+.page-main__e-mail {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #ff8d30;
+  border-radius: 50%;
+  background-image: url("../img/topmenu-phone.svg");
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.page-main__e-mail {
+  background-color: #ffbd30;
+  background-image: url("../img/topmenu-mail.svg");
+}
+
+.page-main__login {
+  display: block;
+  width: 189px;
+  height: 33px;
+  padding-top: 7px;
+  background-color: #ffd74b;
+  border-radius: 20px;
+  font-family: @font, @font-secondary;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  color: @dark-blue;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
@@ -53,15 +81,50 @@
     background-color: @page-color;
     background-image: url("../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat;
+    background-position: -350px bottom;
+  }
 
-    // &::before {
-    //   display: none;
-    // }
+  .page-main__title {
+    width: 400px;
+    font-size: 60px;
+    line-height: 70px;
+    margin-top: 38px;
+  }
+
+  .page-main__list {
+    display: none;
+  }
+
+  .page-main__image {
+    margin-top: 30px;
+    margin-left: 290px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main {
     width: 100%;
+  }
+
+  .page-main__wrapper {
+    display: flex;
+    min-height: 610px;
+    background-color: @dark-blue;
+    background-image: url("../img/globe-back-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: -160px -125px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .page-main__title {
+    margin: 0;
+    margin-top: 127px;
+    margin-left: 130px;
+  }
+
+  .page-main__image {
+    margin-top: -25px;
+    margin-left: 75px;
+    margin-right: 28%;
   }
 }

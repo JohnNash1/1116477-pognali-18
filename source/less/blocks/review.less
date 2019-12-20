@@ -1,8 +1,7 @@
 .review {
-  min-height: 235px;
-  padding-top: 50px;
+  min-height: 255px;
+  padding-top: 30px;
   background-color: @dark-blue;
-  outline: 1px solid green;
 }
 
 .review__text {
@@ -24,8 +23,30 @@
 @media (min-width: @tablet-width) {
   .review {
     position: absolute;
-    top: 0;
+    top: 250px;
     background-color: transparent;
-    outline: 1px solid green;
+  }
+
+  .review__text {
+    width: 260px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .review__text--bold {
+    width: 245px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    top: 20px;
+    left: 1055px;
+  }
+
+  .review__text--bold {
+    margin-top: 45px;
   }
 }

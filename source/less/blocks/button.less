@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  width: 222px;
+  height: 14px;
+  padding: 24px;
+  background-color: #ffd74b;
+  font-family: @font, @font-secondary;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: left;
+  color: #1d2e5b;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+  }
+}

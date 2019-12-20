@@ -1,0 +1,56 @@
+.address {
+  position: relative;
+  min-height: 546px;
+  z-index: 0;
+}
+
+.address__list {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 255px;
+  background-color: @yellow;
+  margin-top: -50px;
+  padding-top: 80px;
+  z-index: 0;
+  border-radius: 0 0 30px 30px;
+}
+
+.address__list-item:first-child {
+  display: flex;
+  margin-left: 25px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #121936;
+    margin-top: 14px;
+    background-image: url("../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-size: 14px 22px;
+    background-position: center 13px;
+  }
+}
+
+.address__list-text {
+  display: flex;
+  width: 143px;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: left;
+  color: @page-color;
+  text-transform: uppercase;
+  margin-left: 16px;
+}
+
+.address-button {
+  width: 270px;
+  height: 62px;
+  padding-top: 20px;
+  border: 3px solid @page-color;
+  margin-left: 25px;
+}
