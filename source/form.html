@@ -9,11 +9,11 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png">
-          <source class="page-header__logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png">
-          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" alt="Погнали">
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+          <source class="page-header__logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Погнали">
         </picture>
       </a>
       <nav class="main-navigation main-navigation--nojs main-navigation--closed">
@@ -230,9 +230,9 @@
     <footer class="page-footer">
       <a href="index.html" class="page-footer__logo">
         <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" alt="Погнали">
+          <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Погнали">
         </picture>
       </a>
       <ul class="page-footer__list page-footer__list--social site-list">
@@ -247,8 +247,14 @@
         </li>
       </ul>
       <ul class="page-footer__list page-footer__list--develop site-list">
-        <li class="page-footer__list-item"><p class="page-footer__text">Разработано</p></li>
-        <li class="page-footer__list-item"><a href="#"><img src="img/htmlacademy.svg" width="27" height="34" alt="html-академия"></a></li>
+        <li class="page-footer__list-item">
+          <p class="page-footer__text">Разработано</p>
+        </li>
+        <li class="page-footer__list-item">
+          <a href="https://htmlacademy.ru/intensive/adaptive">
+            <img src="img/htmlacademy.svg" width="27" height="34" alt="html-академия">
+          </a>
+        </li>
       </ul>
     </footer>
     <script src="js/script.js"></script>
