@@ -4,8 +4,15 @@
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-color: @page-color;
+  border-radius: 0 0 30px 30px;
   padding-top: 33px;
   z-index: 5;
+
+  @media (min-resolution: @retina) {
+    background-image: url("../img/about-mobile@2x.png");
+    background-size: 292px 352px;
+  }
 
   &::before {
     content: "";
@@ -20,17 +27,17 @@
     z-index: -1;
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    background-color: @page-color;
-    border-radius: 0 0 30px 30px;
-    z-index: -2;
-  }
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 0;
+  //   display: block;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: @page-color;
+  //   border-radius: 0 0 30px 30px;
+  //   z-index: -2;
+  // }
 }
 
 .about-service__text-wrapper {
@@ -88,6 +95,8 @@
   .about-service__image {
     display: block;
     margin-top: 254px;
+    width: 376px;
+    height: 548px;
   }
 
   .about-service__text-wrapper {
@@ -150,6 +159,8 @@
   }
 
   .about-service__image {
+    width: 630px;
+    height: 665px;
     margin-top: 175px;
     margin-left: 10px;
   }
