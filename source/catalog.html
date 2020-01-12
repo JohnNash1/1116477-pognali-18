@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalize.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header page-header--catalog">
       <a href="index.html" class="page-header__logo">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
@@ -21,13 +21,13 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list main-navigation__list--menu site-list">
             <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor">О сервисе</a>
+              <a class="main-navigation__anchor" href="index.html">О сервисе</a>
             </li>
             <li class="main-navigation__list-item">
               <a class="main-navigation__anchor" href="form.html">Направления</a>
             </li>
             <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor" href="catalog.html">Попутчики</a>
+              <a class="main-navigation__anchor">Попутчики</a>
             </li>
           </ul>
           <ul class="main-navigation__list main-navigation__list--hidden user-list site-list">
@@ -64,24 +64,25 @@
     </header>
     <main class="catalog-main">
       <h1 class="catalog-main__title">Попутчики</h1>
+      <a class="catalog-main__back" href="index.html">На главную</a>
         <section class="catalog-filter">
-          <div class="catalog-filter__wrapper">
+          <div class="catalog-filter__wrapper catalog-filter__wrapper--closed">
             <h2 class="catalog-filter__title">Фильтрация по странам</h2>
-            <button class="catalog-filter__button" type="button"></button>
-          </div>
-          <div class="catalog-filter__countries-wrapper visually-hidden">
-            <ul class="catalog-filter__list site-list">
+            <button class="catalog-filter__button" type="button">
+              <!-- <span class="catalog-filter__button--text">Показать все</span> -->
+            </button>
+            <ul class="catalog-filter__list catalog-filter__list--continents site-list">
               <li class="catalog-filter__list-item">
-                <a>Европа</a>
+                <a class="catalog-filter__continent">Европа</a>
               </li>
               <li class="catalog-filter__list-item">
-                <a>Азия</a>
+                <a class="catalog-filter__continent">Азия</a>
               </li>
               <li class="catalog-filter__list-item">
-                <a>Америка</a>
+                <a class="catalog-filter__continent">Америка</a>
               </li>
               <li class="catalog-filter__list-item">
-                <a>Острова</a>
+                <a class="catalog-filter__continent">Острова</a>
               </li>
             </ul>
             <div class="catalog-filter__letters">
@@ -111,17 +112,18 @@
               <button class="catalog-filter__letter" type="button">Ю</button>
               <button class="catalog-filter__letter" type="button">Я</button>
             </div>
-            <ul class="catalog-filter__list">
-              <li class="catalog-filter__list-item">Афганистан</li>
-              <li class="catalog-filter__list-item">Албания</li>
-              <li class="catalog-filter__list-item">Алжир</li>
-              <li class="catalog-filter__list-item">Андорра</li>
-              <li class="catalog-filter__list-item">Аргентина</li>
-              <li class="catalog-filter__list-item">Армения</li>
-              <li class="catalog-filter__list-item">Австралия</li>
-              <li class="catalog-filter__list-item">Австрия</li>
-              <li class="catalog-filter__list-item">Азербайджан</li>
+            <ul class="catalog-filter__list catalog-filter__list--country site-list">
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Афганистан</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Албания</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Алжир</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Андорра</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Аргентина</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Армения</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Австралия</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Австрия</li>
+              <li class="catalog-filter__list-item catalog-filter__list-item--country">Азербайджан</li>
             </ul>
+            <button class="catalog-filter__close-button button" type="button">Свернуть</button>
           </div>
         </section>
         <div class="catalog-main__wrapper">
@@ -129,42 +131,51 @@
             <p class="catalog-main__text">Подберите идеального попутчика</p>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Хобби</legend>
-              <button class="filter-group__button" type="button">Открыть</button>
+              <button class="filter-group__button" type="button"></button>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Музыка</legend>
-              <button class="filter-group__button" type="button">Открыть</button>
-              <input type="checkbox" value="hardrock" id="hardrock" checked>
-              <label for="hardrock">Тяжёлый Рок</label>
-              <input type="checkbox" value="rusrap" id="rusrap">
-              <label for="rusrap">Русский рэп</label>
-              <input type="checkbox" value="eurodance" id="eurodance">
-              <label for="eurodance">Евродэнс</label>
+              <button class="filter-group__button" type="button"></button>
+              <input class="visually-hidden" type="checkbox" value="hardrock" id="hardrock" checked>
+              <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
+              <input class="visually-hidden" type="checkbox" value="rusrap" id="rusrap">
+              <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
+              <input class="visually-hidden" type="checkbox" value="eurodance" id="eurodance">
+              <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Еда</legend>
-              <button class="filter-group__button" type="button">Открыть</button>
+              <button class="filter-group__button" type="button"></button>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Транспорт</legend>
-              <button class="filter-group__button" type="button">Открыть</button>
-              <input type="checkbox" value="plane" id="plane" checked>
-              <label for="plane">Самолёт</label>
-              <input type="checkbox" value="bus" id="bus" checked>
-              <label for="bus">Автобус</label>
-              <input type="checkbox" value="bicycle" id="bicycle">
-              <label for="bicycle">Велосипед</label>
-              <input type="checkbox" value="running" id="running" checked>
-              <label for="running">Бег</label>
+              <button class="filter-group__button" type="button"></button>
+              <div class="filter-group__transport-wrapper">
+                <input class="visually-hidden" type="checkbox" value="plane" id="plane" checked>
+                <label class="filter-group__label-transport filter-group__label-transport--plane" for="plane"></label>
+                <input class="visually-hidden" type="checkbox" value="bus" id="bus" checked>
+                <label class="filter-group__label-transport filter-group__label-transport--bus" for="bus"></label>
+                <input class="visually-hidden" type="checkbox" value="bicycle" id="bicycle">
+                <label class="filter-group__label-transport filter-group__label-transport--bicycle" for="bicycle"></label>
+                <input class="visually-hidden" type="checkbox" value="running" id="running" checked>
+                <label class="filter-group__label-transport filter-group__label-transport--running" for="running"></label>
+              </div>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Левел</legend>
-              <button class="filter-group__button" type="button">Открыть</button>
-              <input type="number" name="levelfrom" value="30">
-              <input type="number" name="levelto" value="100">
-              <input type="range" name="range">
+              <button class="filter-group__button" type="button"></button>
+              <div class="filter-group__number-wrapper">
+                <input class="filter-group__number" type="number" name="levelfrom" value="30">
+                <div class="filter-group__slash-wrapper">
+                  <div class="filter-group__slash"></div>
+                </div>
+                <input class="filter-group__number" type="number" name="levelto" value="100">
+              </div>
+              <div class="filter-group__range-full">
+                <div class="filter-group__range-slider filter-group__range-slider--left" tabindex="0"></div><div class="filter-group__range-part"></div><div class="filter-group__range-slider filter-group__range-slider--right" tabindex="0"></div>
+              </div>
             </fieldset>
-            <button class="catalog-main__submit" type="submit">Отправить</button>
+            <button class="catalog-main__submit button" type="submit">Показать</button>
           </form>
           <section class="catalog-companions">
             <h2 class="visually-hidden">Профили попутчиков</h2>

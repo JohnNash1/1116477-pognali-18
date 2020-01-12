@@ -23,15 +23,27 @@ menuButton.addEventListener("click", function () {
 });
 
 var filterButton = document.querySelector(".catalog-filter__button");
-var filterMenu = document.querySelector(".catalog-filter__countries-wrapper");
+var filterMenu = document.querySelector(".catalog-filter__wrapper");
 
 filterButton.addEventListener("click", function () {
-  if (filterMenu.classList.contains("visually-hidden")) {
-    filterMenu.classList.remove("visually-hidden");
-    filterButton.classList.add("catalog-filter__button--opened");
+  if (filterMenu.classList.contains("catalog-filter__wrapper--closed")) {
+    filterMenu.classList.remove("catalog-filter__wrapper--closed");
+    filterMenu.classList.add("catalog-filter__wrapper--opened");
   }
   else {
-    filterMenu.classList.add("visually-hidden");
-    filterButton.classList.remove("catalog-filter__button--opened");
+    filterMenu.classList.remove("catalog-filter__wrapper--opened");
+    filterMenu.classList.add("catalog-filter__wrapper--closed");
   }
 });
+
+var filterCloseButton = document.querySelector(".catalog-filter__close-button");
+
+filterCloseButton.addEventListener("click", function () {
+  filterMenu.classList.remove("catalog-filter__wrapper--opened");
+  filterMenu.classList.add("catalog-filter__wrapper--closed");
+});
+// var filterCloseButton = document.querySelector(".catalog-filter__close-button");
+//
+// filterCloseButton.addEventListener("click", function () {
+//   filterMenu.classList.add("visually-hidden");
+// });

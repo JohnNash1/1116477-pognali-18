@@ -36,6 +36,19 @@
   margin: 0;
 }
 
+.registation__text--first {
+  width: 160px;
+  text-indent: 16px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.registation__text--bottom {
+  width: 212px;
+  text-indent: 59px;
+  text-align: left;
+}
+
 .registation__login {
   color: @yellow;
   text-decoration: underline;
@@ -84,4 +97,134 @@
 .registation__list {
   margin-left: 25px;
   margin-top: 36px;
+}
+
+@media (min-width: @tablet-width) {
+  .registation {
+    min-height: 785px;
+    margin-top: -220px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .registation__title {
+    font-size: 45px;
+    line-height: 45px;
+    padding-top: 100px;
+  }
+
+  .registation__text-wrapper {
+    margin-left: 80px;
+    margin-top: 60px;
+  }
+
+  .registation__text {
+    width: 610px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .registation__text--bottom {
+    width: 610px;
+    text-indent: 0;
+    text-align: left;
+  }
+
+  .registation__form {
+    margin-top: 67px;
+    margin-left: 50px;
+  }
+
+  .registation__field {
+    width: 536px;
+    height: 81px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .registation__submit {
+    width: 82px;
+    height: 81px;
+    margin-left: 0;
+    border-radius: 0 20px 20px 0;
+    padding: 0 36px;
+  }
+
+  .registation__list {
+    margin-left: 75px;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .registation {
+    min-height: 810px;
+  }
+
+  .registation__title {
+    padding-top: 126px;
+  }
+
+  .registation__text-wrapper {
+    margin-left: 416px;
+    margin-top: 58px;
+  }
+
+  .registation__text-wrapper--bottom {
+    margin-top: 66px;
+  }
+
+  .registation__form {
+    margin-top: 60px;
+    margin-left: 107px;
+  }
+
+  .registation__field {
+    width: 850px;
+  }
+
+  .registation__submit {
+    width: 323px;
+  }
+
+  .registation__submit-text {
+    display: inline;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .registation__list-item a::before {
+    top: -20px;
+    background-color: #121936;
+    width: 90px;
+    height: 90px;
+    background-size: 36px 36px;
+  }
+
+  .registation__tel::before {
+    background-image: url("../img/contacts-phone.svg");
+  }
+
+  .registation__mail::before {
+    background-image: url("../img/contacts-mail.svg");
+  }
+
+  .registation__list {
+    display: flex;
+    margin-top: 58px;
+    margin-left: 283px;
+  }
+  .registation__mail {
+    margin-left: 40px;
+  }
+
+  .registation__list-text {
+    display: inline;
+  }
+
+  .registation__tel,
+  .registation__mail {
+    width: 360px;
+    padding-left: 122px;
+  }
 }

@@ -3,12 +3,30 @@
 }
 
 .catalog-filter__wrapper {
+  box-sizing: border-box;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
-  height: 52px;
+  align-content: flex-start;
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
+  margin-top: -30px;
+  padding-top: 44px;
+}
+
+.catalog-filter__wrapper--closed {
+  height: 81px;
+  padding-bottom: 15px;
+}
+
+.catalog-filter__wrapper--closed .catalog-filter__list,
+.catalog-filter__wrapper--closed .catalog-filter__letters,
+.catalog-filter__wrapper--closed .catalog-filter__close-button {
+  display: none;
+}
+
+.catalog-filter__wrapper--opened {
+  height: 775px;
 }
 
 .catalog-filter__title {
@@ -24,7 +42,7 @@
   background-image: url("../img/filter.svg");
   background-repeat: no-repeat;
   background-size: 15px 10px;
-  background-position: 25px 5px;
+  background-position: 25px 6px;
 }
 
 .catalog-filter__button {
@@ -40,9 +58,239 @@
   margin-top: -3px;
 }
 
-.catalog-filter__button--opened {
+.catalog-filter__button--text {
+  display: none;
+}
+
+.catalog-filter__wrapper--opened .catalog-filter__button {
   background-image: url("../img/filter-close.svg");
   background-size: 12px 12px;
   background-position: center 6px;
-  margin-top: -3px;
+  margin-top: -2px;
+}
+
+.catalog-filter__list--continents {
+  margin-top: 25px;
+}
+
+.catalog-filter__continent {
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  text-align: left;
+  color: rgba(25, 33, 68, 0.3);
+  text-transform: uppercase;
+}
+
+.catalog-filter__list-item:first-child .catalog-filter__continent {
+  color: @page-color;
+}
+
+.catalog-filter__list-item {
+  margin-top: 5px;
+  margin-left: 50px;
+}
+
+.catalog-filter__letters {
+  display: flex;
+  flex-wrap: wrap;
+  width: 225px;
+  height: 210px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.catalog-filter__letter {
+  box-sizing: padding-box;
+  width: 45px;
+  height: 42px;
+  background-color: @white;
+  font-family: @font, @font-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 1.4px;
+  text-align: center;
+  color: #1d2e5b;
+  border: none;
+  border-right: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+}
+
+.catalog-filter__letter:nth-child(5n+1) {
+  border-left: 1px solid #cbced9;
+}
+
+.catalog-filter__letter:nth-child(-n+5) {
+  border-top: 1px solid #cbced9;
+}
+
+.catalog-filter__letter:first-child {
+  background-color: #1d2e5b;
+  color: @white;
+}
+
+.catalog-filter__list--country {
+  margin-top: 60px;
+}
+
+.catalog-filter__list-item--country {
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #444444;
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.catalog-filter__close-button {
+  border: none;
+  box-sizing: border-box;
+  width: 270px;
+  height: 40px;
+  font-size: 16.5px;
+  line-height: 29.5px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: #d6daed;
+  padding: 0;
+  padding-left: 109px;
+  background-image: url("../img/filter-close.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  background-position: 85px center;
+  margin-left: 25px;
+  margin-top: 24px;
+
+  &::after {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-filter {
+    width: 100%;
+  }
+
+  .catalog-filter__wrapper {
+    padding-top: 87px;
+    margin-top: -60px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .catalog-filter__wrapper--closed {
+    height: 197px;
+  }
+
+  .catalog-filter__title {
+    display: none;
+  }
+
+  .catalog-filter__wrapper--closed .catalog-filter__list--continents,
+  .catalog-filter__wrapper--opened .catalog-filter__list--continents {
+    display: flex;
+    margin-left: 49px;
+    order: 0;
+  }
+
+  .catalog-filter__button {
+    display: flex;
+    order: 1;
+    width: 176px;
+    background-position: right center;
+    background-size: 27px 5px;
+    padding-left: 0;
+    margin-right: 75px;
+    margin-top: 28px;
+
+    &::before {
+      content: "Показать все";
+      font-family: @font, @font-secondary;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+      text-align: left;
+      color: @page-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .catalog-filter__wrapper--opened .catalog-filter__button {
+    background-size: 19px 19px;
+    background-position: right center;
+    margin-top: 28px;
+
+    &::before {
+      content: "Свернуть";
+    }
+  }
+
+  .catalog-filter__letters {
+    order: 2;
+  }
+
+  .catalog-filter__list--country {
+    order: 3;
+  }
+
+  .catalog-filter__close-button {
+    order: 4;
+  }
+
+  .catalog-filter__continent {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .catalog-filter__list-item {
+    margin-top: 5px;
+    margin-left: 25px;
+  }
+
+  .catalog-filter__list--continents .catalog-filter__list-item:nth-child(3) {
+    margin-left: 29px;
+    margin-right: 5px;
+  }
+
+  .catalog-filter__letters {
+    width: 385px;
+    height: 415px;
+    margin-top: 47px;
+    margin-left: 54px;
+  }
+
+  .catalog-filter__letter {
+    width: 77px;
+    height: 83px;
+    background-color: transparent;
+    font-size: 60px;
+    line-height: 24px;
+    font-weight: bold;
+    color: rgba(25, 33, 68, 0.2);
+    border: none;
+  }
+
+  .catalog-filter__letter:first-child {
+    background-color: transparent;
+    color: #1d2e5b;
+  }
+
+  .catalog-filter__letter:nth-child(5n+1) {
+    border: none;
+  }
+
+  .catalog-filter__letter:nth-child(-n+5) {
+    border: none;
+  }
+
+  .catalog-filter__list-item--country {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 }
