@@ -68,9 +68,7 @@
         <section class="catalog-filter">
           <div class="catalog-filter__wrapper catalog-filter__wrapper--closed">
             <h2 class="catalog-filter__title">Фильтрация по странам</h2>
-            <button class="catalog-filter__button" type="button">
-              <!-- <span class="catalog-filter__button--text">Показать все</span> -->
-            </button>
+            <button class="catalog-filter__button" type="button"></button>
             <ul class="catalog-filter__list catalog-filter__list--continents site-list">
               <li class="catalog-filter__list-item">
                 <a class="catalog-filter__continent">Европа</a>
@@ -131,39 +129,57 @@
             <p class="catalog-main__text">Подберите идеального попутчика</p>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Хобби</legend>
-              <button class="filter-group__button" type="button"></button>
+              <button class="filter-group__button filter-group__hobby-button" type="button"></button>
+              <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
+                <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
+                <label class="filter-group__label-text" for="sport">Спортзал</label>
+                <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+                <label class="filter-group__label-text" for="hookah">Кальян</label>
+                <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
+                <label class="filter-group__label-text" for="sofa">Диван</label>
+              </div>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Музыка</legend>
-              <button class="filter-group__button" type="button"></button>
-              <input class="visually-hidden" type="checkbox" value="hardrock" id="hardrock" checked>
-              <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
-              <input class="visually-hidden" type="checkbox" value="rusrap" id="rusrap">
-              <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
-              <input class="visually-hidden" type="checkbox" value="eurodance" id="eurodance">
-              <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
+              <button class="filter-group__button filter-group__music-button filter-group__button--opened" type="button"></button>
+              <div class="filter-group__music-wrapper">
+                <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
+                <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
+                <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
+                <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
+                <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
+              </div>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Еда</legend>
-              <button class="filter-group__button" type="button"></button>
+              <button class="filter-group__button filter-group__food-button" type="button"></button>
+              <div class="filter-group__food-wrapper filter-group__wrapper--closed">
+                <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                <label class="filter-group__label-text" for="meat">Мясоед</label>
+                <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
+                <label class="filter-group__label-text" for="proper-nutrition">Сидит на ПП</label>
+                <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
+                <label class="filter-group__label-text" for="vegan">Веган-сыроед</label>
+              </div>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Транспорт</legend>
-              <button class="filter-group__button" type="button"></button>
+              <button class="filter-group__button filter-group__button--opened" type="button"></button>
               <div class="filter-group__transport-wrapper">
-                <input class="visually-hidden" type="checkbox" value="plane" id="plane" checked>
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
                 <label class="filter-group__label-transport filter-group__label-transport--plane" for="plane"></label>
-                <input class="visually-hidden" type="checkbox" value="bus" id="bus" checked>
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
                 <label class="filter-group__label-transport filter-group__label-transport--bus" for="bus"></label>
-                <input class="visually-hidden" type="checkbox" value="bicycle" id="bicycle">
+                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
                 <label class="filter-group__label-transport filter-group__label-transport--bicycle" for="bicycle"></label>
-                <input class="visually-hidden" type="checkbox" value="running" id="running" checked>
+                <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
                 <label class="filter-group__label-transport filter-group__label-transport--running" for="running"></label>
               </div>
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-group__title">Левел</legend>
-              <button class="filter-group__button" type="button"></button>
+              <button class="filter-group__button filter-group__button--opened" type="button"></button>
               <div class="filter-group__number-wrapper">
                 <input class="filter-group__number" type="number" name="levelfrom" value="30">
                 <div class="filter-group__slash-wrapper">
@@ -202,11 +218,11 @@
               <div class="catalog-companions__attributes-wrapper">
                 <div class="catalog-companions__transport-wrapper">
                   <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list site-list">
+                  <ul class="catalog-companions__list transport-list transport-list--firsova site-list">
                     <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item catalog-companions__list-item--opacity transport-list__item"></li>
-                    <li class="catalog-companions__list-item catalog-companions__list-item--opacity transport-list__item"></li>
-                    <li class="catalog-companions__list-item catalog-companions__list-item--opacity transport-list__item"></li>
+                    <li class="catalog-companions__list-item transport-list__item"></li>
+                    <li class="catalog-companions__list-item transport-list__item"></li>
+                    <li class="catalog-companions__list-item transport-list__item"></li>
                   </ul>
                 </div>
                 <div class="catalog-companions__level-wrapper">
@@ -242,7 +258,7 @@
               <div class="catalog-companions__attributes-wrapper">
                 <div class="catalog-companions__transport-wrapper">
                   <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list site-list">
+                  <ul class="catalog-companions__list transport-list transport-list--demin site-list">
                     <li class="catalog-companions__list-item transport-list__item"></li>
                     <li class="catalog-companions__list-item transport-list__item"></li>
                     <li class="catalog-companions__list-item transport-list__item"></li>
@@ -283,7 +299,7 @@
               <div class="catalog-companions__attributes-wrapper">
                 <div class="catalog-companions__transport-wrapper">
                   <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list site-list">
+                  <ul class="catalog-companions__list transport-list transport-list--smolov site-list">
                     <li class="catalog-companions__list-item transport-list__item"></li>
                     <li class="catalog-companions__list-item transport-list__item"></li>
                     <li class="catalog-companions__list-item transport-list__item"></li>
@@ -323,7 +339,7 @@
               <div class="catalog-companions__attributes-wrapper">
                 <div class="catalog-companions__transport-wrapper">
                   <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list site-list">
+                  <ul class="catalog-companions__list transport-list transport-list--rogovaya site-list">
                     <li class="catalog-companions__list-item transport-list__item"></li>
                     <li class="catalog-companions__list-item transport-list__item"></li>
                     <li class="catalog-companions__list-item transport-list__item"></li>
@@ -363,7 +379,7 @@
                     <a class="pagination__button pagination__button--left button" href=""></a>
                   </li>
                   <li>
-                    <a href="" class="pagination__button pagination__button--right button" href=""></a>
+                    <a class="pagination__button pagination__button--right button" href=""></a>
                   </li>
                 </ul>
               </div>

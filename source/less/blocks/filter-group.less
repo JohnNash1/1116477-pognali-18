@@ -33,6 +33,14 @@
   cursor: pointer;
 }
 
+.filter-group__button--opened {
+  transform: rotate(180deg);
+}
+
+.filter-group__wrapper--closed {
+  display: none;
+}
+
 .filter-group__label-text {
   display: flex;
   align-items: center;
@@ -156,9 +164,9 @@ input:checked + .filter-group__label-transport--running {
   border-radius: 0 5px 5px 0;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
   margin: 0;
 }
 
@@ -201,4 +209,21 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 50%;
   cursor: pointer;
   margin-top: -4px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-group {
+    display: flex;
+  }
+
+  .filter-group__wrapper--closed,
+  .filter-group__hobby-wrapper,
+  .filter-group__music-wrapper,
+  .filter-group__food-wrapper {
+    display: flex;
+  }
+
+  .filter-group__button {
+    display: none;
+  }
 }

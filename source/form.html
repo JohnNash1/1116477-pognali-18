@@ -21,10 +21,10 @@
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list main-navigation__list--menu site-list">
             <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor">О сервисе</a>
+              <a class="main-navigation__anchor" href="index.html">О сервисе</a>
             </li>
             <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor" href="form.html">Направления</a>
+              <a class="main-navigation__anchor">Направления</a>
             </li>
             <li class="main-navigation__list-item">
               <a class="main-navigation__anchor" href="catalog.html">Попутчики</a>
@@ -63,37 +63,42 @@
       </ul>
     </header>
     <main class="form-main">
+      <h1 class="form-main__title">Направления</h1>
       <section class="my-card">
         <h2 class="visually-hidden">Карточка профиля</h2>
         <div class="my-card__wrapper">
           <div class="my-card__level">
-            <p>80</p>
-            <p>level</p>
+            <p class="my-card__number">80</p>
+            <p class="my-card__caption">level</p>
           </div>
-          <img class="my-card__photo" src="https://via.placeholder.com/99x100" width="99" height="100" alt="аватар">
+          <img class="my-card__photo" src="img/demin-tablet@1x.jpg" alt="аватар">
         </div>
-        <button class="my-card__button" type="button">Сменить фото</button>
-        <p class="my-card__text">Тэги</p>
-        <p class="my-card__text">#бургер #бар #футбол #концерт #крафт</p>
-        <p class="my-card__text">Транспорт</p>
-        <ul class="my-card__list transport-list">
-          <li class="transport-list__item">самолёт</li>
-          <li class="transport-list__item">автобус</li>
-          <li class="transport-list__item">велосипед</li>
-          <li class="transport-list__item">бег</li>
-        </ul>
+        <button class="my-card__button button" type="button">Сменить фото</button>
+        <div class="my-card__text-wrapper">
+          <p class="my-card__text my-card__text--bald">Тэги</p>
+          <p class="my-card__text">#бургер #бар #футбол #концерт #крафт</p>
+        </div>
+        <div class="my-card__text-wrapper my-card__transport-wrapper">
+          <p class="my-card__text my-card__transport-text my-card__text--bald">Транспорт</p>
+          <ul class="my-card__list transport-list transport-list--demin site-list">
+            <li class="my-card__list-item transport-list__item"></li>
+            <li class="my-card__list-item transport-list__item"></li>
+            <li class="my-card__list-item transport-list__item"></li>
+            <li class="my-card__list-item transport-list__item"></li>
+          </ul>
+        </div>
       </section>
       <section class="plans">
-        <h2 class="plans__title">Мои планы</h2>
-        <ul class="plans__list">
+        <h2 class="plans__title">Мои планы:</h2>
+        <ul class="plans__list site-list">
           <li class="plans__list-item">
-            <p class="plans__text plans__text--bold">1.Франция, Италия</p>
+            <p class="plans__text plans__text--bold"><span class="plans__text--digit">1.</span>Франция, Италия</p>
             <p class="plans__text">3 попутчика</p>
             <p class="plans__text">26 мар — 29 мар</p>
             <a class="plans__button" href="#">Изменить</a>
           </li>
           <li class="plans__list-item">
-            <p class="plans__text plans__text--bold">2.Таиланд, Индонезия</p>
+            <p class="plans__text plans__text--bold"><span class="plans__text--digit">2.</span>Таиланд, Индонезия</p>
             <p class="plans__text">1 попутчик</p>
             <p class="plans__text">1 июл — 15 июл</p>
             <a class="plans__button" href="#">Изменить</a>

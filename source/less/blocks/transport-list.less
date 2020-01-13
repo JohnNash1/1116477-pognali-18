@@ -4,7 +4,7 @@
 
 .transport-list__item {
   width: 33px;
-  height: 32px;
+  height: 33px;
   border-radius: 50%;
   background-color: #edeff6;
   background-size: 14px 16px;
@@ -29,6 +29,23 @@
 .transport-list__item:nth-child(4) {
   background-image: url("../img/run.svg");
   background-size: 15px 17px;
+}
+
+.transport-list--firsova .transport-list__item:nth-child(2),
+.transport-list--smolov .transport-list__item:nth-child(2) {
+  background-image: url("../img/bus-opacity.svg");
+}
+
+.transport-list--firsova .transport-list__item:nth-child(3),
+.transport-list--demin .transport-list__item:nth-child(3),
+.transport-list--rogovaya .transport-list__item:nth-child(3) {
+  background-image: url("../img/bike-opacity.svg");
+}
+
+.transport-list--firsova .transport-list__item:nth-child(4),
+.transport-list--smolov .transport-list__item:nth-child(4),
+.transport-list--rogovaya .transport-list__item:nth-child(4) {
+  background-image: url("../img/run-opacity.svg");
 }
 
 @media (min-width: @tablet-width) {
