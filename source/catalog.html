@@ -128,67 +128,77 @@
           <form class="catalog-main__form" action="https://echo.htmlacademy.ru/courses" method="post">
             <p class="catalog-main__text">Подберите идеального попутчика</p>
             <fieldset class="filter-group">
-              <legend class="filter-group__title">Хобби</legend>
-              <button class="filter-group__button filter-group__hobby-button" type="button"></button>
-              <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
-                <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
-                <label class="filter-group__label-text" for="sport">Спортзал</label>
-                <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
-                <label class="filter-group__label-text" for="hookah">Кальян</label>
-                <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
-                <label class="filter-group__label-text" for="sofa">Диван</label>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <legend class="filter-group__title">Музыка</legend>
-              <button class="filter-group__button filter-group__music-button filter-group__button--opened" type="button"></button>
-              <div class="filter-group__music-wrapper">
-                <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
-                <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
-                <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
-                <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
-                <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
-                <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <legend class="filter-group__title">Еда</legend>
-              <button class="filter-group__button filter-group__food-button" type="button"></button>
-              <div class="filter-group__food-wrapper filter-group__wrapper--closed">
-                <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
-                <label class="filter-group__label-text" for="meat">Мясоед</label>
-                <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
-                <label class="filter-group__label-text" for="proper-nutrition">Сидит на ПП</label>
-                <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
-                <label class="filter-group__label-text" for="vegan">Веган-сыроед</label>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <legend class="filter-group__title">Транспорт</legend>
-              <button class="filter-group__button filter-group__button--opened" type="button"></button>
-              <div class="filter-group__transport-wrapper">
-                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
-                <label class="filter-group__label-transport filter-group__label-transport--plane" for="plane"></label>
-                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
-                <label class="filter-group__label-transport filter-group__label-transport--bus" for="bus"></label>
-                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
-                <label class="filter-group__label-transport filter-group__label-transport--bicycle" for="bicycle"></label>
-                <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
-                <label class="filter-group__label-transport filter-group__label-transport--running" for="running"></label>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <legend class="filter-group__title">Левел</legend>
-              <button class="filter-group__button filter-group__button--opened" type="button"></button>
-              <div class="filter-group__number-wrapper">
-                <input class="filter-group__number" type="number" name="levelfrom" value="30">
-                <div class="filter-group__slash-wrapper">
-                  <div class="filter-group__slash"></div>
+              <div class="filter-group__wrapper">
+                <legend class="filter-group__title">Хобби</legend>
+                <button class="filter-group__button filter-group__hobby-button" type="button"></button>
+                <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
+                  <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
+                  <label class="filter-group__label-text" for="sport">Спортзал</label>
+                  <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+                  <label class="filter-group__label-text" for="hookah">Кальян</label>
+                  <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
+                  <label class="filter-group__label-text" for="sofa">Диван</label>
                 </div>
-                <input class="filter-group__number" type="number" name="levelto" value="100">
               </div>
-              <div class="filter-group__range-full">
-                <div class="filter-group__range-slider filter-group__range-slider--left" tabindex="0"></div><div class="filter-group__range-part"></div><div class="filter-group__range-slider filter-group__range-slider--right" tabindex="0"></div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <div class="filter-group__wrapper">
+                <legend class="filter-group__title">Музыка</legend>
+                <button class="filter-group__button filter-group__music-button filter-group__button--opened" type="button"></button>
+                <div class="filter-group__music-wrapper">
+                  <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
+                  <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
+                  <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
+                  <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
+                  <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                  <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <div class="filter-group__wrapper">
+                <legend class="filter-group__title">Еда</legend>
+                <button class="filter-group__button filter-group__food-button" type="button"></button>
+                <div class="filter-group__food-wrapper filter-group__wrapper--closed">
+                  <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                  <label class="filter-group__label-text" for="meat">Мясоед</label>
+                  <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
+                  <label class="filter-group__label-text" for="proper-nutrition">Сидит на ПП</label>
+                  <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
+                  <label class="filter-group__label-text" for="vegan">Веган-сыроед</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <div class="filter-group__wrapper">
+                <legend class="filter-group__title">Транспорт</legend>
+                <button class="filter-group__button filter-group__button--opened" type="button"></button>
+                <div class="filter-group__transport-wrapper">
+                  <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                  <label class="filter-group__label-transport filter-group__label-transport--plane" for="plane"></label>
+                  <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                  <label class="filter-group__label-transport filter-group__label-transport--bus" for="bus"></label>
+                  <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                  <label class="filter-group__label-transport filter-group__label-transport--bicycle" for="bicycle"></label>
+                  <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
+                  <label class="filter-group__label-transport filter-group__label-transport--running" for="running"></label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter-group">
+              <div class="filter-group__wrapper">
+                <legend class="filter-group__title">Левел</legend>
+                <button class="filter-group__button filter-group__button--opened" type="button"></button>
+                <div class="filter-group__number-wrapper">
+                  <input class="filter-group__number" type="number" name="levelfrom" value="30">
+                  <div class="filter-group__slash-wrapper">
+                    <div class="filter-group__slash"></div>
+                  </div>
+                  <input class="filter-group__number" type="number" name="levelto" value="100">
+                </div>
+                <div class="filter-group__range-full">
+                  <div class="filter-group__range-slider filter-group__range-slider--left" tabindex="0"></div><div class="filter-group__range-part"></div><div class="filter-group__range-slider filter-group__range-slider--right" tabindex="0"></div>
+                </div>
               </div>
             </fieldset>
             <button class="catalog-main__submit button" type="submit">Показать</button>

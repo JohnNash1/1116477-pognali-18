@@ -68,7 +68,7 @@
   padding: 0;
   padding-left: 76px;
   background-color: @white;
-  border-radius: 50px;
+  border-radius: 25px;
   margin-left: 20px;
   margin-top: 21px;
 
@@ -104,14 +104,29 @@
 
   .catalog-main__form {
     width: 688px;
+    min-height: 530px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 618px;
+      height: 1px;
+      background-color: #f3c72b;
+      margin-top: -86px;
+      margin-left: 35px;
+    }
   }
 
   .catalog-main__text {
-    width: 460px;
+    width: 618px;
     font-size: 30px;
     line-height: 30px;
-    padding-top: 37px;
-    padding-left: 35px;
+    padding-top: 34px;
+    padding-left: 0;
+    padding-bottom: 37px;
+    margin-left: 33px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f3c72b;
   }
 
   .catalog-main__back {
@@ -131,6 +146,15 @@
     background-repeat: no-repeat;
     background-size: 32px 16px;
     background-position: right center;
+  }
+
+  .catalog-main__submit {
+    width: 618px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 262px;
+    margin-left: 35px;
+    margin-top: 65px;
   }
 }
 

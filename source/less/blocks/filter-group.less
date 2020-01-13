@@ -58,7 +58,7 @@
     width: 18px;
     height: 18px;
     background-color: @white;
-    border-radius: 5px;
+    border-radius: 4px;
     margin-right: 10px;
   }
 }
@@ -194,6 +194,7 @@ input[type="number"]::-webkit-outer-spin-button {
   background-color: rgba(29, 46, 91, 0.2);
   margin-left: 15px;
   margin-top: 24px;
+  border-radius: 0.5px;
 }
 
 .filter-group__range-part {
@@ -212,8 +213,127 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (min-width: @tablet-width) {
-  .filter-group {
+  .filter-group__wrapper {
     display: flex;
+  }
+
+  .filter-group__title {
+    width: 100px;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    padding-top: 11px;
+    margin-left: 18px;
+
+    &::after {
+      content: ":"
+    }
+  }
+
+  .filter-group__label-text {
+    width: 153px;
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 11px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+    }
+  }
+
+  .filter-group__label-text:nth-child(2) {
+    margin-left: 30px;
+  }
+
+  .filter-group__label-text:last-child {
+    margin-bottom: 0;
+    margin-left: 20px;
+  }
+
+  input:checked + .filter-group__label-text::before {
+    background-size: 12px 12px;
+  }
+
+  .filter-group:nth-child(5) .filter-group__wrapper {
+    margin-top: 5px;
+  }
+
+  .filter-group__transport-wrapper {
+    margin-left: 21px;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .filter-group__label-transport {
+    width: 43px;
+    height: 43px;
+    margin-right: 12px;
+  }
+
+  .filter-group__label-transport--plane {
+    background-size: 19px 21px;
+    background-position: 11px center;
+  }
+
+  .filter-group__label-transport--bus {
+    background-size: 17px 21px;
+  }
+
+  .filter-group__label-transport--bicycle {
+    background-size: 24px 21px;
+  }
+
+  .filter-group__label-transport--running {
+    background-size: 20px 21px;
+  }
+
+  .filter-group__range-full {
+    width: 277px;
+    height: 3px;
+    margin-left: 30px;
+    border-radius: 1.5px;
+  }
+
+  .filter-group__range-part {
+    width: 175px;
+    height: 3px;
+  }
+
+  .filter-group__range-slider {
+    width: 13px;
+    height: 13px;
+    margin-top: -5px;
+  }
+
+  .filter-group__number-wrapper {
+    order: 1;
+    margin-left: 61px;
+    margin-top: 3px;
+  }
+
+  .filter-group__number {
+    width: 75px;
+    height: 46px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  .filter-group__slash-wrapper {
+    top: 15px;
+    left: 64px;
+    width: 21px;
+    height: 15px;
+    background-color: @white;
+  }
+
+  .filter-group__slash {
+    width: 21px;
+    height: 1px;
+    background-color: #cbced9;
+    margin-top: 7px;
   }
 
   .filter-group__wrapper--closed,
