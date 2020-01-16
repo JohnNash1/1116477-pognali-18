@@ -1,33 +1,45 @@
-.calendar {
-  width: 218px;
+.calendar__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 220px;
   margin-left: 25px;
   margin-top: 21px;
-  border-collapse: collapse;
 }
 
 .calendar__month {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 221px;
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  margin-left: 25px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.calendar__month-text {
   font-family: @font, @font-secondary;
   font-size: 20px;
   font-weight: bold;
   line-height: 20px;
   text-align: center;
   color: #1d2e5b;
-  border-top: 1px solid #cbced9;
-  border-bottom: 1px solid #cbced9;
-  padding-top: 10px;
-  padding-bottom: 12px;
-  margin-bottom: 21px;
 }
 
 .calendar__weekday {
+  box-sizing: border-box;
+  width: 31px;
+  height: 30px;
   font-family: @font, @font-secondary;
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
   text-align: center;
   color: #444444;
-  padding-bottom: 7px;
+  padding-top: 4px;
+  border-bottom: 1px solid #cbced9;
 }
 
 .calendar__weekday--red {
@@ -35,18 +47,32 @@
 }
 
 .calendar__day {
+  width: 31px;
   height: 30px;
   padding: 0;
   font-family: @font, @font-secondary;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
   line-height: 18px;
   text-align: center;
+  border: none;
+  border-right: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+}
+
+.calendar__day--wider,
+.calendar__weekday--wider {
+  width: 32px;
+}
+
+.calendar__day:nth-child(even) {}
+
+.calendar__day:nth-child(7n+1) {
+  border-left: 1px solid #cbced9;
+}
+
+.calendar__day:disabled {
   color: rgba(68, 68, 68, 0.3);
-  border: 1px solid #cbced9;
+  background-color: @white;
 }
 
 .calendar__day--active {
@@ -54,18 +80,9 @@
   color: @white;
 }
 
-.calendar__day--current {
-  position: relative;
-
-  &::after {
-    position: absolute;
-    top: 0;
-    content: "";
-    display: block;
-    width: 27px;
-    height: 26px;
-    border: 2px solid #ff5c23;
-  }
+.calendar__day--current,
+.calendar__day:hover {
+  border: 2px solid #ff5c23;
 }
 
 .calendar__day--free {
@@ -74,9 +91,6 @@
 }
 
 .calendar__month-switch {
-  position: absolute;
-  top: 13px;
-  left: 0;
   width: 9px;
   height: 17px;
   opacity: 0.3;
