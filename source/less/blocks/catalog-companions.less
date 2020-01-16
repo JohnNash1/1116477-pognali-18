@@ -109,26 +109,66 @@
 }
 
 .catalog-companions__level {
+  position: relative;
   box-sizing: border-box;
+  width: 45px;
+  height: 45px;
+  background-image:
+    linear-gradient(260deg, transparent 50%, #ff8d30 50%),
+    linear-gradient(90deg, #ffffff 50%, #ff8d30 50%);
+  border-radius: 50%;
   margin: 0;
   margin-top: -10px;
   margin-left: 46px;
-  border: 3px solid #ff8d30;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
 
-  &::before {
-    content: "99";
+  &::after {
+    height: 39px;
+    width: 39px;
+    content: "";
     display: block;
-    font-family: @font, @font-secondary;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 18px;
-    text-align: center;
-    color: @dark-blue;
-    margin-top: 13px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    background-color: @white;
+    border-radius: 50%;
   }
+}
+
+.catalog-companions__level--demin {
+  background-image:
+    linear-gradient(210deg, transparent 50%, #ff8d30 50%),
+    linear-gradient(90deg, #ffffff 50%, #ff8d30 50%);
+}
+
+.catalog-companions__level--smolov {
+  background-image:
+    linear-gradient(270deg, transparent 50%, #ffffff 50%),
+    linear-gradient(180deg, #ff8d30 50%, #ffffff 50%);
+}
+
+.catalog-companions__level--rogovaya {
+  background-image: linear-gradient(90deg, #ffffff 50%, #ff8d30 50%);
+}
+
+.catalog-companions__number {
+  .my-card__number();
+  top: -7px;
+  left: 10px;
+  font-size: 24px;
+  line-height: 18px;
+  color: #1d2e5b;
+}
+
+.catalog-companions__caption {
+  display: none;
+  .my-card__caption();
+  left: 0;
+  bottom: 9px;
+  width: 31px;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(68, 68, 68, 0.4);
+  border-top: 1px solid rgba(68, 68, 68, 0.4);
 }
 
 .catalog-companions__heart {
@@ -356,10 +396,32 @@
     margin-right: 25px;
     width: 60px;
     height: 60px;
+
+    &::after {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  .catalog-companions__number {
+    top: -7px;
+    left: 17px;
+    line-height: 24px;
+    color: #1d2e5b;
+  }
+
+  .catalog-companions__caption {
+    display: inline;
+    left: -10px;
+    bottom: 9px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-companions {
+    margin-top: 47px;
+  }
+
   .catalog-companions__card {
     width: 950px;
     height: 285px;

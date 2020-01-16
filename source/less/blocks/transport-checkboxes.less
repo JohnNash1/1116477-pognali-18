@@ -1,0 +1,55 @@
+.transport-checkboxes {
+  display: flex;
+}
+
+.transport-checkboxes__label-transport {
+  display: block;
+  width: 33px;
+  height: 33px;
+  background-color: @white;
+  border-radius: 50%;
+}
+
+.transport-checkboxes__label-transport--plane {
+  background-image: url("../img/plane-opacity.svg");
+  background-size: 14px 16px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+}
+
+input:checked + .transport-checkboxes__label-transport--plane {
+  background-image: url("../img/plane.svg");
+}
+
+.transport-checkboxes__label-transport--bus {
+  background-image: url("../img/bus-opacity.svg");
+  background-size: 13px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .transport-checkboxes__label-transport--bus {
+  background-image: url("../img/bus.svg");
+}
+
+.transport-checkboxes__label-transport--bicycle {
+  background-image: url("../img/bike-opacity.svg");
+  background-size: 19px 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .transport-checkboxes__label-transport--bicycle {
+  background-image: url("../img/bike.svg");
+}
+
+.transport-checkboxes__label-transport--running {
+  background-image: url("../img/run-opacity.svg");
+  background-size: 15px 17px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .transport-checkboxes__label-transport--running {
+  background-image: url("../img/run.svg");
+}

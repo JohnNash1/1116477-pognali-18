@@ -63,66 +63,90 @@
       </ul>
     </header>
     <main class="form-main">
-      <h1 class="form-main__title">Направления</h1>
-      <section class="my-card">
-        <h2 class="visually-hidden">Карточка профиля</h2>
-        <div class="my-card__wrapper">
-          <div class="my-card__level">
-            <p class="my-card__number">80</p>
-            <p class="my-card__caption">level</p>
+      <form class="form-main__form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <h1 class="form-main__title">Направления</h1>
+        <section class="my-card">
+          <h2 class="visually-hidden">Карточка профиля</h2>
+          <div class="my-card__wrapper">
+            <div class="my-card__level">
+              <p class="my-card__number">80</p>
+              <p class="my-card__caption">level</p>
+            </div>
+            <img class="my-card__photo" src="img/demin-tablet@1x.jpg" alt="аватар">
           </div>
-          <img class="my-card__photo" src="img/demin-tablet@1x.jpg" alt="аватар">
-        </div>
-        <button class="my-card__button button" type="button">Сменить фото</button>
-        <div class="my-card__text-wrapper">
-          <p class="my-card__text my-card__text--bald">Тэги</p>
-          <p class="my-card__text">#бургер #бар #футбол #концерт #крафт</p>
-        </div>
-        <div class="my-card__text-wrapper my-card__transport-wrapper">
-          <p class="my-card__text my-card__transport-text my-card__text--bald">Транспорт</p>
-          <ul class="my-card__list transport-list transport-list--demin site-list">
-            <li class="my-card__list-item transport-list__item"></li>
-            <li class="my-card__list-item transport-list__item"></li>
-            <li class="my-card__list-item transport-list__item"></li>
-            <li class="my-card__list-item transport-list__item"></li>
+          <button class="my-card__button button" type="button">Сменить фото</button>
+          <div class="my-card__tags-wrapper">
+            <label class="my-card__tags-label" for="tags">Тэги</label>
+            <textarea class="my-card__tags" name="tags" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
+          </div>
+          <!-- <div class="my-card__text-wrapper my-card__transport-wrapper">
+            <p class="my-card__text my-card__transport-text my-card__text--bald">Транспорт</p>
+            <ul class="my-card__list transport-list transport-list--demin site-list">
+              <li class="my-card__list-item transport-list__item"></li>
+              <li class="my-card__list-item transport-list__item"></li>
+              <li class="my-card__list-item transport-list__item"></li>
+              <li class="my-card__list-item transport-list__item"></li>
+            </ul>
+          </div> -->
+          <fieldset class="my-card__transport-fieldset">
+            <legend class="my-card__transport-title">Транспорт</legend>
+            <div class="my-card__transport-wrapper transport-checkboxes">
+              <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
+              <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
+              <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
+              <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
+              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
+            </div>
+          </fieldset>
+        </section>
+        <section class="plans">
+          <h2 class="plans__title">Мои планы:</h2>
+          <ul class="plans__list site-list">
+            <li class="plans__list-item">
+              <p class="plans__text plans__text--bold"><span class="plans__text--digit">1.</span>Франция, Италия</p>
+              <p class="plans__text">3 попутчика</p>
+              <p class="plans__text">26 мар — 29 мар</p>
+              <a class="plans__button" href="#">Изменить</a>
+            </li>
+            <li class="plans__list-item">
+              <p class="plans__text plans__text--bold"><span class="plans__text--digit">2.</span>Таиланд, Индонезия</p>
+              <p class="plans__text">1 попутчик</p>
+              <p class="plans__text">1 июл — 15 июл</p>
+              <a class="plans__button" href="#">Изменить</a>
+            </li>
           </ul>
-        </div>
-      </section>
-      <section class="plans">
-        <h2 class="plans__title">Мои планы:</h2>
-        <ul class="plans__list site-list">
-          <li class="plans__list-item">
-            <p class="plans__text plans__text--bold"><span class="plans__text--digit">1.</span>Франция, Италия</p>
-            <p class="plans__text">3 попутчика</p>
-            <p class="plans__text">26 мар — 29 мар</p>
-            <a class="plans__button" href="#">Изменить</a>
-          </li>
-          <li class="plans__list-item">
-            <p class="plans__text plans__text--bold"><span class="plans__text--digit">2.</span>Таиланд, Индонезия</p>
-            <p class="plans__text">1 попутчик</p>
-            <p class="plans__text">1 июл — 15 июл</p>
-            <a class="plans__button" href="#">Изменить</a>
-          </li>
-        </ul>
-      </section>
-      <section class="add-plan">
-        <h2 class="add-plan__title">Добавить план:</h2>
-        <form class="add-plan__form" action="https://echo.htmlacademy.ru/courses" method="post">
+        </section>
+        <section class="add-plan">
+          <h2 class="add-plan__title">
+            Добавить план:
+            <span class="add-plan__dots add-plan__dots--dark"></span>
+            <span class="add-plan__dots"></span>
+            <span class="add-plan__dots"></span>
+          </h2>
           <div class="add-plan__wrapper">
-            <p class="add-plan__text add-plan__text--bold">Шаг 1. Даты пребывания</p>
-            <p class="add-plan__text">Укажите предпочтительное количество попутчиков, которых
+            <p class="add-plan__text add-plan__text--bold">Шаг 1.<br>Даты пребывания</p>
+            <p class="add-plan__text add-plan__description-text">Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
-            <input type="number" name="companions-quantity" value="2" id="comrades">
-            <label for="comrades">Ищу попутчиков:<span>чел.</span></label>
-            <input type="number" name="duration" value="2" id="duration">
-            <label for="duration">Длительность:<span>дн.</span></label>
-            <input type="checkbox" name="children" id="children" checked>
-            <label for="children">Можно с детьми</label>
+            <div class="add-plan__conditions-wrapper">
+              <label class="add-plan__conditions-label" for="comrades">Ищу попутчиков:<span class="add-plan__conditions-label--opacity">чел.</span></label>
+              <input class="add-plan__conditions" type="number" name="companions-quantity" value="2" id="comrades">
+              <button class="add-plan__quantity" type="button"></button>
+              <button class="add-plan__quantity add-plan__quantity--plus" type="button"></button>
+              <label class="add-plan__conditions-label" for="duration">Длительность:<span class="add-plan__conditions-label--opacity">дн.</span></label>
+              <input class="add-plan__conditions" type="number" name="duration" value="2" id="duration">
+              <button class="add-plan__quantity add-plan__duration-quantity" type="button"></button>
+              <button class="add-plan__quantity add-plan__duration-quantity add-plan__quantity--plus" type="button"></button>
+              <input class="add-plan__children" type="checkbox" name="children" id="children" checked>
+              <label class="add-plan__children-label" for="children">Можно с детьми</label>
+            </div>
             <table class="calendar">
               <caption class="calendar__month">
-                <span class="prev"><a href="index.html">&larr;</a></span>
-                Март 2019
-                <span class="next"><a href="index.html">&rarr;</a></span>
+                <button class="calendar__month-switch" type="button"></button>
+                <span class="calendar__month-text">Март 2019</span>
+                <button class="calendar__month-switch calendar__month-switch--right" type="button"></button>
               </caption>
               <thead class="calendar__head">
                 <tr class="calendar__row">
@@ -176,61 +200,79 @@
                   <td class="calendar__day">23</td>
                   <td class="calendar__day">24</td>
                   <td class="calendar__day">25</td>
-                  <td class="calendar__day calendar__day--active">26</td>
-                  <td class="calendar__day">27</td>
-                  <td class="calendar__day">28</td>
-                  <td class="calendar__day">29</td>
+                  <td class="calendar__day calendar__day--active calendar__day--current">26</td>
+                  <td class="calendar__day calendar__day--active">27</td>
+                  <td class="calendar__day calendar__day--active">28</td>
+                  <td class="calendar__day calendar__day--free">29</td>
                 </tr>
                 <tr class="calendar__row">
-                  <td class="calendar__day">30</td>
-                  <td class="calendar__day">31</td>
-                  <td class="calendar__day">1</td>
-                  <td class="calendar__day">2</td>
-                  <td class="calendar__day">3</td>
-                  <td class="calendar__day">4</td>
-                  <td class="calendar__day">5</td>
+                  <td class="calendar__day calendar__day--free">30</td>
+                  <td class="calendar__day calendar__day--free">31</td>
+                  <td class="calendar__day calendar__day--free">1</td>
+                  <td class="calendar__day calendar__day--free">2</td>
+                  <td class="calendar__day calendar__day--free">3</td>
+                  <td class="calendar__day calendar__day--free">4</td>
+                  <td class="calendar__day calendar__day--free">5</td>
                 </tr>
               </tbody>
             </table>
-            <button type="button">Следующий шаг</button>
+            <button class="add-plan__button button" type="button">Следующий шаг</button>
           </div>
           <div class="add-plan__wrapper">
-            <p class="add-plan__text add-plan__text--bold">Шаг 2. Маршрут</p>
-            <p class="add-plan__text">Укажите страны, которые вы хотели бы
+            <p class="add-plan__text add-plan__text--bold">Шаг 2.<br>Маршрут</p>
+            <p class="add-plan__text add-plan__description-text">Укажите страны, которые вы хотели бы
               посетить. Это может быть одна или сразу несколько.</p>
-            <select class="add-plan__country-select" name="countries">
-              <option value="choose">Выберите страну</option>
-              <option value="Bosnia" selected>Босния и Герцеговина</option>
-              <option value="Czech">Чехия</option>
-            </select>
-            <select class="add-plan__country-select" name="countries">
-              <option value="choose">Выберите страну</option>
-              <option value="Bosnia">Босния и Герцеговина</option>
-              <option value="Czech" selected>Чехия</option>
-            </select>
-            <select class="add-plan__country-select" name="countries">
-              <option value="choose">Выберите страну</option>
-              <option value="Bosnia">Босния и Герцеговина</option>
-              <option value="Czech">Чехия</option>
-            </select>
-            <input class="add-plan__input" type="text" name="add-country" placeholder="Добавить страну">
-            <button class="add-plan__button" type="button">Добавить</button>
-            <button class="add-plan__button" type="button">Следующий шаг</button>
-            <button class="add-plan__button" type="button">На шаг назад</button>
+            <div class="add-plan__country-wrapper">
+              <div class="add-plan__cover add-plan__select-cover"></div>
+              <select class="add-plan__country-select" name="countries">
+                <option value="choose">Выберите страну</option>
+                <option value="Bosnia" selected>Босния и Герцеговина</option>
+                <option value="Czech">Чехия</option>
+              </select>
+              <div class="add-plan__flag add-plan__bosnia"></div>
+              <button class="add-plan__close-button" type="button"></button>
+            </div>
+            <div class="add-plan__circle"></div>
+            <div class="add-plan__arrow"></div>
+            <div class="add-plan__country-wrapper">
+              <div class="add-plan__cover add-plan__select-cover add-plan__czech-cover"></div>
+              <select class="add-plan__country-select" name="countries">
+                <option value="choose">Выберите страну</option>
+                <option value="Bosnia">Босния и Герцеговина</option>
+                <option value="Czech" selected>Чехия</option>
+              </select>
+              <div class="add-plan__flag add-plan__czech"></div>
+              <button class="add-plan__close-button" type="button"></button>
+            </div>
+            <div class="add-plan__circle add-plan__circle--czech"></div>
+            <div class="add-plan__arrow add-plan__arrow--czech"></div>
+            <div class="add-plan__choose-wrapper">
+              <button class="add-plan__add-country add-plan__choose-country" type="button">Выберите страну</button>
+              <button class="add-plan__close-button" type="button"></button>
+            </div>
+            <div class="add-plan__arrow add-plan__arrow--choose"></div>
+            <button class="add-plan__add-country" type="button">Добавить страну</button>
+            <button class="add-plan__button button" type="button">Следующий шаг</button>
+            <button class="add-plan__back-button" type="button">На шаг назад</button>
           </div>
           <div class="add-plan__wrapper">
-            <p class="add-plan__text add-plan__text--bold">Шаг 3. Развлечения</p>
-            <p class="add-plan__text">Наконец, расскажите о своих планах времяпровождения.
+            <p class="add-plan__text add-plan__text--bold">Шаг 3.<br>Развлечения</p>
+            <p class="add-plan__text add-plan__description-text">Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить тэги.</p>
-            <label class="add-plan__text" for="bosnia">Босния и Герцеговина</label>
-            <textarea  class="add-plan__textarea" name="bosnia" id="bosnia" rows="14" cols="30" placeholder="План действий"></textarea>
-            <label class="add-plan__text" for="czech">Чехия</label>
-            <textarea class="add-plan__textarea" name="czech" id="czech" rows="14" cols="30" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-            <button class="add-plan__button" type="submit">Отправить</button>
-            <button class="add-plan__button" type="button">На шаг назад</button>
+            <div class="add-plan__textarea-wrapper">
+              <div class="add-plan__cover"></div>
+              <label class="add-plan__text add-plan__title-text" for="bosnia">Босния и герцеговина</label>
+              <textarea class="add-plan__textarea" name="bosnia" id="bosnia" rows="14" cols="30" placeholder="План действий"></textarea>
+            </div>
+            <div class="add-plan__textarea-wrapper">
+              <label class="add-plan__text add-plan__title-czech add-plan__title-text" for="czech">Чехия</label>
+              <textarea class="add-plan__textarea" name="czech" id="czech" rows="14" cols="30" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            </div>
+            <button class="add-plan__button add-plan__submit button" type="submit">Отправить</button>
+            <button class="add-plan__back-button" type="button">На шаг назад</button>
           </div>
-        </form>
-      </section>
+        </section>
+      </form>
     </main>
     <footer class="page-footer">
       <a href="index.html" class="page-footer__logo">

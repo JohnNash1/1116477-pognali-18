@@ -5,14 +5,31 @@
 }
 
 .my-card__level {
+  position: relative;
   box-sizing: border-box;
   width: 100px;
   height: 100px;
-  border: 3px solid #ff8d30;
+  background-image:
+    linear-gradient(210deg, transparent 50%, #ff8d30 50%),
+    linear-gradient(90deg, #edeff6 50%, #ff8d30 50%);
   border-radius: 50%;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    height: 94px;
+    width: 94px;
+    background-color: #edeff6;
+    border-radius: 50%;
+  }
 }
 
 .my-card__number {
+  position: absolute;
+  left: 29px;
   font-family: @font, @font-secondary;
   font-size: 38px;
   font-weight: bold;
@@ -21,9 +38,12 @@
   color: @dark-blue;
   margin: 0;
   margin-top: 20px;
+  z-index: 1;
 }
 
 .my-card__caption {
+  position: absolute;
+  bottom: 20px;
   width: 49px;
   font-family: @font, @font-secondary;
   font-size: 18px;
@@ -33,6 +53,7 @@
   margin: 0;
   margin-left: 25px;
   border-top: 2px solid #cbced9;
+  z-index: 1;
 }
 
 .my-card__photo {
@@ -64,18 +85,87 @@
   }
 }
 
-.my-card__text-wrapper {
+.my-card__tags-wrapper {
+  margin-top: 25px;
+}
+
+
+.my-card__tags-legend {
+  padding-left: 17px;
+  padding-right: 18px;
+  margin-left: 100px;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: @dark-blue;
+  text-transform: uppercase;
+}
+
+.my-card__tags {
+  box-sizing: border-box;
   width: 270px;
   height: 89px;
-  margin-top: 33px;
-  margin-left: 25px;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #444444;
+  resize: none;
+  border: none;
   border: 1px solid #cbced9;
   border-radius: 10px;
+  background-color: transparent;
+  margin-top: -10px;
+  margin-left: 25px;
+  padding-left: 26px;
+  padding-top: 21px;
+}
+
+.my-card__tags-label {
+  position: relative;
+  width: 35px;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: @dark-blue;
+  text-transform: uppercase;
+  padding-left: 17px;
+  padding-right: 18px;
+  margin-left: 117px;
+  background-color: #edeff6;
+  z-index: 1;
+}
+
+.my-card__transport-fieldset {
+  box-sizing: border-box;
+  width: 270px;
+  height: 72px;
+  padding: 0;
+  border-radius: 10px;
+  border: solid 1px #cbced9;
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.my-card__transport-title {
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  padding: 0 14px;
+  margin-left: 80px;
 }
 
 .my-card__transport-wrapper {
-  height: 63px;
-  margin-top: 23px;
+  margin-left: 69px;
+  margin-top: 5px;
 }
 
 .my-card__text {
