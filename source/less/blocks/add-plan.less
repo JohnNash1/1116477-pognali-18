@@ -188,6 +188,7 @@
 }
 
 .add-plan__button {
+  box-sizing: border-box;
   width: 230px;
   height: 40px;
   font-size: 17px;
@@ -195,18 +196,34 @@
   color: #161c35;
   text-transform: uppercase;
   border-radius: 20px;
-  border: none;
   padding: 0;
   padding-left: 45px;
   margin-top: 23px;
   margin-left: 20px;
+  margin-bottom: 0;
 
   &::after {
     display: none;
   }
 }
 
+.add-plan__back-button {
+  display: block;
+  width: 130px;
+  background-color: transparent;
+  font-family: @font, @font-secondary;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 30px;
+  text-align: center;
+  color: @dark-blue;
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-left: 68px;
+}
+
 .add-plan__submit {
+  border: none;
   padding-left: 70px;
   margin-top: 17px;
 }
@@ -313,22 +330,6 @@
     background-size: 12px 8px;
     opacity: 1;
   }
-}
-
-.add-plan__back-button {
-  width: 130px;
-  border: none;
-  background-color: transparent;
-  font-family: @font, @font-secondary;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  color: @dark-blue;
-  text-transform: uppercase;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-left: 68px;
 }
 
 .add-plan__textarea-wrapper {
@@ -487,4 +488,378 @@
 
 .add-plan__arrow--choose {
   top: 336px;
+}
+
+@media (min-width: @tablet-width) {
+  .add-plan {
+    padding-top: 16px;
+    padding-bottom: 53px;
+  }
+
+  .add-plan__title {
+    font-size: 36px;
+    line-height: 50px;
+    margin-left: 75px;
+  }
+
+  .add-plan__dots {
+    width: 5px;
+    margin-right: 29px;
+    margin-top: 4px;
+  }
+
+  .add-plan__dots:first-child {
+    margin-left: 296px;
+  }
+
+  .add-plan__wrapper {
+    position: relative;
+    width: 618px;
+    border-radius: 30px;
+    margin-left: 75px;
+    margin-top: 52px;
+    margin-bottom: 50px;
+    padding-bottom: 52px;
+  }
+
+  .add-plan__wrapper:nth-child(2) {
+    padding-bottom: 55px;
+  }
+
+  .add-plan__wrapper:nth-child(3) {
+    box-sizing: border-box;
+    min-height: 784px;
+    margin-bottom: 61px;
+  }
+
+  .add-plan__wrapper:nth-child(3)::before {
+    position: absolute;
+    top: 230px;
+    left: 43px;
+    content: "";
+    display: block;
+    width: 529px;
+    height: 1px;
+    background-color: #d6d9e6;
+  }
+
+  .add-plan__text {
+    width: 500px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 43px;
+  }
+
+  .add-plan__wrapper:nth-child(3) .add-plan__description-text {
+    margin-top: -1px;
+    margin-bottom: 77px;
+  }
+
+  .add-plan__text--bold {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 45px;
+  }
+
+  .add-plan__conditions-wrapper {
+    margin-top: 40px;
+  }
+
+  .add-plan__conditions-label {
+    .add-plan__text();
+    width: 531px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    border-top: 1px solid #d6d9e6;
+    padding-top: 22px;
+  }
+
+  .add-plan__conditions-label--order {
+    order: 4;
+  }
+
+  .add-plan__conditions {
+    width: 531px;
+    height: 70px;
+    margin-left: 44px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    margin-top: 27px;
+    margin-bottom: 25px;
+  }
+
+  .add-plan__conditions--order {
+    order: 5;
+  }
+
+  .add-plan__children-label {
+    .add-plan__text();
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 2px;
+    color: #1d2e5b;
+    text-transform: uppercase;
+    order: 3;
+    margin-bottom: 26px;
+
+    &::before {
+      box-sizing: border-box;
+      width: 36px;
+      height: 36px;
+      margin-right: 23px;
+    }
+  }
+
+  .add-plan__children:checked + .add-plan__children-label::before {
+    background-size: 12px 12px;
+  }
+
+  .add-plan__quantity {
+    top: 93px;
+    left: 67px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/qty-minus.svg");
+    background-size: 20px 2px;
+  }
+
+  .add-plan__quantity--plus {
+    left: 535px;
+    background-image: url("../img/qty-plus.svg");
+    background-size: 20px 20px;
+  }
+
+  .add-plan__duration-quantity {
+    top: 318px;
+  }
+
+  .add-plan__button {
+    width: 285px;
+    height: 81px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    padding: 0 34px;
+    margin-top: 48px;
+    margin-left: 44px;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  .add-plan__country-wrapper,
+  .add-plan__choose-wrapper {
+    justify-content: space-between;
+    align-items: center;
+    width: 533px;
+    margin-left: 43px;
+    margin-bottom: 15px;
+  }
+
+  .add-plan__country-wrapper:nth-child(3)::after {
+    position: absolute;
+    top: 230px;
+    left: 440px;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 420px;
+    background-color: #d6d9e6;
+    box-shadow: inset 0 -40px 60px -30px white;
+  }
+
+  .add-plan__country-select {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    margin: 0;
+    letter-spacing: 2px;
+    padding-left: 27px;
+  }
+
+  .add-plan__flag {
+    width: 70px;
+    height: 47px;
+    border: none;
+    background-size: 70px 47px;
+    margin-left: 53px;
+  }
+
+  .add-plan__close-button {
+    width: 17px;
+    height: 17px;
+    border-radius: 0;
+    background-color: @white;
+    padding: 0;
+    margin: 0;
+    margin-left: 24px;
+
+    &::after {
+      width: 17px;
+      height: 17px;
+      background-size: 17px 17px;
+      opacity: 0.1;
+    }
+  }
+
+  .add-plan__add-country {
+    width: 369px;
+    height: 70px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-left: 26px;
+    margin-left: 43px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      width: 20px;
+      height: 20px;
+      background-image: url("../img/qty-plus.svg");
+      margin-right: 20px;
+    }
+  }
+
+  .add-plan__choose-country {
+    margin: 0;
+
+    &::after {
+      width: 17px;
+      height: 9px;
+      background-image: url("../img/dropdown-form.svg");
+      background-size: 17px 9px;
+    }
+  }
+
+  .add-plan__select-cover {
+    top: 294px;
+    left: 347px;
+
+    &::before {
+      background-size: 17px 9px;
+    }
+  }
+
+  .add-plan__czech-cover {
+    top: 379px;
+  }
+
+  .add-plan__circle {
+    top: 305px;
+    right: 170px;
+    width: 15px;
+    height: 15px;
+  }
+
+  .add-plan__arrow {
+    display: none;
+  }
+
+  .add-plan__circle--czech {
+    top: 388px;
+  }
+
+  .add-plan__circle--choose {
+    box-sizing: border-box;
+    top: 470px;
+    background-color: @white;
+    border: 1px solid #cbced9;
+  }
+
+  .add-plan__circle--add {
+    box-sizing: border-box;
+    top: 560px;
+    background-color: #edeff6;
+    border: 1px solid #cbced9;
+  }
+
+  .add-plan__back-button {
+    display: flex;
+    align-items: center;
+    width: 182px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1d2e5b;
+    text-transform: none;
+    margin-top: 45px;
+    margin-left: 69px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 14px;
+      background-image: url("../img/triangle-arrow-left.svg");
+      margin-right: 24px;
+    }
+  }
+
+  .add-plan__buttons-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .add-plan__title-text {
+    justify-content: space-between;
+    width: 527px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 45px;
+
+    &::before {
+      width: 15px;
+      height: 15px;
+      margin-left: 80px;
+      order: 1;
+    }
+
+    &::after {
+      position: static;
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px;
+      order: 2;
+    }
+  }
+
+  .add-plan__wrapper:nth-child(4) .add-plan__cover {
+    display: none;
+  }
+
+  .add-plan__title-czech::before {
+    margin-left: 310px;
+  }
+
+  .add-plan__textarea {
+    width: 527px;
+    height: 142px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 45px;
+    margin-top: 30px;
+    padding-left: 19px;
+    padding-top: 15px;
+    padding-right: 100px;
+  }
+
+  .add-plan__wrapper:nth-child(4)::before {
+    display: none;
+  }
+
+  .add-plan__textarea-wrapper {
+    margin-top: 63px;
+  }
+
+  .add-plan__textarea-wrapper:nth-child(4) {
+    margin-top: 38px;
+  }
+
+  .add-plan__submit {
+    margin-top: 43px;
+  }
 }

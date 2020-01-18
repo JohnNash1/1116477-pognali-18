@@ -53,3 +53,27 @@ input:checked + .transport-checkboxes__label-transport--bicycle {
 input:checked + .transport-checkboxes__label-transport--running {
   background-image: url("../img/run.svg");
 }
+
+@media (min-width: @tablet-width) {
+  .transport-checkboxes__label-transport {
+    width: 43px;
+    height: 43px;
+  }
+
+  .transport-checkboxes__label-transport--plane {
+    background-size: 19px 21px;
+    background-position: 11px center;
+  }
+
+  .transport-checkboxes__label-transport--bus {
+    background-size: 17px 21px;
+  }
+
+  .transport-checkboxes__label-transport--bicycle {
+    background-size: 24px 21px;
+  }
+
+  .transport-checkboxes__label-transport--running {
+    background-size: 20px 21px;
+  }
+}

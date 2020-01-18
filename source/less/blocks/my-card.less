@@ -89,20 +89,6 @@
   margin-top: 25px;
 }
 
-
-.my-card__tags-legend {
-  padding-left: 17px;
-  padding-right: 18px;
-  margin-left: 100px;
-  font-family: @font, @font-secondary;
-  font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: @dark-blue;
-  text-transform: uppercase;
-}
-
 .my-card__tags {
   box-sizing: border-box;
   width: 270px;
@@ -204,4 +190,126 @@
 
 .my-card__list-item {
   background-color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .my-card {
+    position: relative;
+  }
+
+  .my-card__wrapper {
+    width: 618px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 75px;
+    margin-top: 65px;
+  }
+
+  .my-card__level {
+    width: 94px;
+    height: 94px;
+
+    &::after {
+      left: 3px;
+      top: 3px;
+      height: 88px;
+      width: 88px;
+    }
+  }
+
+  .my-card__number {
+    left: 27px;
+    margin-top: 17px;
+  }
+
+  .my-card__caption {
+    bottom: 14px;
+    width: 49px;
+    margin-left: 22px;
+    border-top: 2px solid rgba(0, 0, 0, 0.3);
+    padding-top: 2px;
+  }
+
+  .my-card__photo {
+    width: 94px;
+    height: 94px;
+    border-radius: 6px;
+    margin-left: 35px;
+  }
+
+  .my-card__button {
+    width: 618px;
+    height: 60px;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #1d2e5b;
+    border-radius: 10px;
+    padding-left: 231px;
+    margin-left: 75px;
+    margin-top: 52px;
+  }
+
+  .my-card__tags-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 51px;
+  }
+
+  .my-card__tags {
+    width: 618px;
+    height: 94px;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 10px;
+    margin-top: 0;
+    margin-left: 75px;
+    padding-left: 37px;
+    padding-top: 32px;
+  }
+
+  .my-card__tags-label {
+    position: absolute;
+    top: 84px;
+    left: 224px;
+    width: 47px;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: #1d2e5b;
+    padding-left: 17px;
+    padding-right: 19px;
+  }
+
+  .my-card__transport-fieldset {
+    position: absolute;
+    top: -14px;
+    left: 204px;
+    width: 308px;
+    height: 103px;
+    transform: rotate(180deg);
+  }
+
+  .my-card__transport-title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0 20px;
+    transform: rotate(180deg);
+    margin-left: 0;
+    margin-right: 80px;
+  }
+
+  .my-card__transport-wrapper {
+    margin-left: 0;
+    margin-right: 56px;
+    margin-top: 17px;
+    transform: rotate(180deg);
+  }
+
+  .my-card__label-transport {
+    margin-right: 8px;
+  }
 }

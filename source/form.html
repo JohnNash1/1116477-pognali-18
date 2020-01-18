@@ -83,13 +83,13 @@
             <legend class="my-card__transport-title">Транспорт</legend>
             <div class="my-card__transport-wrapper transport-checkboxes">
               <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
-              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
+              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
               <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
-              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
+              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
               <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
-              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
+              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
               <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
-              <label class="transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
+              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
             </div>
           </fieldset>
         </section>
@@ -126,142 +126,73 @@
               <input class="add-plan__conditions" type="number" name="companions-quantity" value="2" id="comrades">
               <button class="add-plan__quantity" type="button"></button>
               <button class="add-plan__quantity add-plan__quantity--plus" type="button"></button>
-              <label class="add-plan__conditions-label" for="duration">Длительность:<span class="add-plan__conditions-label--opacity">дн.</span></label>
-              <input class="add-plan__conditions" type="number" name="duration" value="2" id="duration">
+              <label class="add-plan__conditions-label add-plan__conditions-label--order" for="duration">Длительность:<span class="add-plan__conditions-label--opacity">дн.</span></label>
+              <input class="add-plan__conditions add-plan__conditions--order" type="number" name="duration" value="2" id="duration">
               <button class="add-plan__quantity add-plan__duration-quantity" type="button"></button>
               <button class="add-plan__quantity add-plan__duration-quantity add-plan__quantity--plus" type="button"></button>
               <input class="add-plan__children" type="checkbox" name="children" id="children" checked>
               <label class="add-plan__children-label" for="children">Можно с детьми</label>
             </div>
-            <!-- <table class="calendar">
-              <caption class="calendar__month">
-
-              </caption>
-              <thead class="calendar__head">
-                <tr class="calendar__row">
-                  <th class="calendar__weekday">П</th>
-                  <th class="calendar__weekday">В</th>
-                  <th class="calendar__weekday">С</th>
-                  <th class="calendar__weekday">Ч</th>
-                  <th class="calendar__weekday">П</th>
-                  <th class="calendar__weekday calendar__weekday--red">С</th>
-                  <th class="calendar__weekday calendar__weekday--red">В</th>
-                </tr>
-              </thead>
-              <tbody class="calendar__body">
-                <tr class="calendar__row">
-                  <td class="calendar__day">23</td>
-                  <td class="calendar__day">24</td>
-                  <td class="calendar__day">25</td>
-                  <td class="calendar__day">26</td>
-                  <td class="calendar__day">27</td>
-                  <td class="calendar__day">28</td>
-                  <td class="calendar__day">1</td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__day">2</td>
-                  <td class="calendar__day">3</td>
-                  <td class="calendar__day">4</td>
-                  <td class="calendar__day">5</td>
-                  <td class="calendar__day">6</td>
-                  <td class="calendar__day">7</td>
-                  <td class="calendar__day">8</td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__day">9</td>
-                  <td class="calendar__day">10</td>
-                  <td class="calendar__day">11</td>
-                  <td class="calendar__day">12</td>
-                  <td class="calendar__day">13</td>
-                  <td class="calendar__day">14</td>
-                  <td class="calendar__day">15</td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__day">16</td>
-                  <td class="calendar__day">17</td>
-                  <td class="calendar__day">18</td>
-                  <td class="calendar__day">19</td>
-                  <td class="calendar__day">20</td>
-                  <td class="calendar__day">21</td>
-                  <td class="calendar__day">22</td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__day">23</td>
-                  <td class="calendar__day">24</td>
-                  <td class="calendar__day">25</td>
-                  <td class="calendar__day calendar__day--active calendar__day--current">26</td>
-                  <td class="calendar__day calendar__day--active">27</td>
-                  <td class="calendar__day calendar__day--active">28</td>
-                  <td class="calendar__day calendar__day--free">29</td>
-                </tr>
-                <tr class="calendar__row">
-                  <td class="calendar__day calendar__day--free">30</td>
-                  <td class="calendar__day calendar__day--free">31</td>
-                  <td class="calendar__day calendar__day--free">1</td>
-                  <td class="calendar__day calendar__day--free">2</td>
-                  <td class="calendar__day calendar__day--free">3</td>
-                  <td class="calendar__day calendar__day--free">4</td>
-                  <td class="calendar__day calendar__day--free">5</td>
-                </tr>
-              </tbody>
-            </table> -->
-            <div class="calendar__month">
-              <button class="calendar__month-switch" type="button"></button>
-              <span class="calendar__month-text">Март 2019</span>
-              <button class="calendar__month-switch calendar__month-switch--right" type="button"></button>
-            </div>
-            <div class="calendar__wrapper">
-              <div class="calendar__weekday">П</div>
-              <div class="calendar__weekday calendar__weekday--wider">В</div>
-              <div class="calendar__weekday">С</div>
-              <div class="calendar__weekday calendar__weekday--wider">Ч</div>
-              <div class="calendar__weekday">П</div>
-              <div class="calendar__weekday calendar__weekday--wider calendar__weekday--red">С</div>
-              <div class="calendar__weekday calendar__weekday--red">В</div>
-              <button class="calendar__day" type="button" disabled>23</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>24</button>
-              <button class="calendar__day" type="button" disabled>25</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>26</button>
-              <button class="calendar__day" type="button" disabled>27</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>28</button>
-              <button class="calendar__day" type="button" disabled>1</button>
-              <button class="calendar__day" type="button" disabled>2</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>3</button>
-              <button class="calendar__day" type="button" disabled>4</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>5</button>
-              <button class="calendar__day" type="button" disabled>6</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>7</button>
-              <button class="calendar__day" type="button" disabled>8</button>
-              <button class="calendar__day" type="button" disabled>9</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>10</button>
-              <button class="calendar__day" type="button" disabled>11</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>12</button>
-              <button class="calendar__day" type="button" disabled>13</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>14</button>
-              <button class="calendar__day" type="button" disabled>15</button>
-              <button class="calendar__day" type="button" disabled>16</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>17</button>
-              <button class="calendar__day" type="button" disabled>18</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>19</button>
-              <button class="calendar__day" type="button" disabled>20</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>21</button>
-              <button class="calendar__day" type="button" disabled>22</button>
-              <button class="calendar__day" type="button" disabled>23</button>
-              <button class="calendar__day calendar__day--wider" type="button" disabled>24</button>
-              <button class="calendar__day" type="button" disabled>25</button>
-              <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--current" type="button">26</button>
-              <button class="calendar__day calendar__day--active" type="button">27</button>
-              <button class="calendar__day calendar__day--wider calendar__day--active" type="button">28</button>
-              <button class="calendar__day calendar__day--free" type="button">29</button>
-              <button class="calendar__day calendar__day--free" type="button">30</button>
-              <button class="calendar__day calendar__day--wider calendar__day--free" type="button">31</button>
-              <button class="calendar__day calendar__day--free" type="button">1</button>
-              <button class="calendar__day calendar__day--wider calendar__day--free" type="button">2</button>
-              <button class="calendar__day calendar__day--free" type="button">3</button>
-              <button class="calendar__day calendar__day--wider calendar__day--free" type="button">4</button>
-              <button class="calendar__day calendar__day--free" type="button">5</button>
-            </div>
-            <button class="add-plan__button button" type="button">Следующий шаг</button>
+            <section class="calendar">
+              <h1 class="visually-hidden">Календарь</h1>
+              <div class="calendar__month">
+                <button class="calendar__month-switch" type="button"></button>
+                <span class="calendar__month-text">Март 2019</span>
+                <button class="calendar__month-switch calendar__month-switch--right" type="button"></button>
+              </div>
+              <div class="calendar__wrapper">
+                <div class="calendar__weekday">П<span class="calendar__weekday--tablet">н</span></div>
+                <div class="calendar__weekday calendar__weekday--wider">В<span class="calendar__weekday--tablet">т</span></div>
+                <div class="calendar__weekday">С<span class="calendar__weekday--tablet">р</span></div>
+                <div class="calendar__weekday calendar__weekday--wider">Ч<span class="calendar__weekday--tablet">т</span></div>
+                <div class="calendar__weekday">П<span class="calendar__weekday--tablet">т</span></div>
+                <div class="calendar__weekday calendar__weekday--wider calendar__weekday--red">С<span class="calendar__weekday--tablet">б</span></div>
+                <div class="calendar__weekday calendar__weekday--red">В<span class="calendar__weekday--tablet">с</span></div>
+                <button class="calendar__day" type="button" disabled>23</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>24</button>
+                <button class="calendar__day" type="button" disabled>25</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>26</button>
+                <button class="calendar__day" type="button" disabled>27</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>28</button>
+                <button class="calendar__day" type="button" disabled>1</button>
+                <button class="calendar__day" type="button" disabled>2</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>3</button>
+                <button class="calendar__day" type="button" disabled>4</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>5</button>
+                <button class="calendar__day" type="button" disabled>6</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>7</button>
+                <button class="calendar__day" type="button" disabled>8</button>
+                <button class="calendar__day" type="button" disabled>9</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>10</button>
+                <button class="calendar__day" type="button" disabled>11</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>12</button>
+                <button class="calendar__day" type="button" disabled>13</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>14</button>
+                <button class="calendar__day" type="button" disabled>15</button>
+                <button class="calendar__day" type="button" disabled>16</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>17</button>
+                <button class="calendar__day" type="button" disabled>18</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>19</button>
+                <button class="calendar__day" type="button" disabled>20</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>21</button>
+                <button class="calendar__day" type="button" disabled>22</button>
+                <button class="calendar__day" type="button" disabled>23</button>
+                <button class="calendar__day calendar__day--wider" type="button" disabled>24</button>
+                <button class="calendar__day" type="button" disabled>25</button>
+                <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--current" type="button">26</button>
+                <button class="calendar__day calendar__day--active" type="button">27</button>
+                <button class="calendar__day calendar__day--wider calendar__day--active" type="button">28</button>
+                <button class="calendar__day calendar__day--free" type="button">29</button>
+                <button class="calendar__day calendar__day--free" type="button">30</button>
+                <button class="calendar__day calendar__day--wider calendar__day--free" type="button">31</button>
+                <button class="calendar__day calendar__day--free" type="button">1</button>
+                <button class="calendar__day calendar__day--wider calendar__day--free" type="button">2</button>
+                <button class="calendar__day calendar__day--free" type="button">3</button>
+                <button class="calendar__day calendar__day--wider calendar__day--free" type="button">4</button>
+                <button class="calendar__day calendar__day--free" type="button">5</button>
+              </div>
+            </section>
+            <a class="add-plan__button button">Следующий шаг</a>
           </div>
           <div class="add-plan__wrapper">
             <p class="add-plan__text add-plan__text--bold">Шаг 2.<br>Маршрут</p>
@@ -294,11 +225,15 @@
             <div class="add-plan__choose-wrapper">
               <button class="add-plan__add-country add-plan__choose-country" type="button">Выберите страну</button>
               <button class="add-plan__close-button" type="button"></button>
+              <div class="add-plan__circle add-plan__circle--choose"></div>
             </div>
             <div class="add-plan__arrow add-plan__arrow--choose"></div>
             <button class="add-plan__add-country" type="button">Добавить страну</button>
-            <button class="add-plan__button button" type="button">Следующий шаг</button>
-            <button class="add-plan__back-button" type="button">На шаг назад</button>
+            <div class="add-plan__circle add-plan__circle--add"></div>
+            <div class="add-plan__buttons-wrapper">
+              <a class="add-plan__button button">Следующий шаг</a>
+              <a class="add-plan__back-button">На шаг назад</a>
+            </div>
           </div>
           <div class="add-plan__wrapper">
             <p class="add-plan__text add-plan__text--bold">Шаг 3.<br>Развлечения</p>
@@ -313,8 +248,10 @@
               <label class="add-plan__text add-plan__title-czech add-plan__title-text" for="czech">Чехия</label>
               <textarea class="add-plan__textarea" name="czech" id="czech" rows="14" cols="30" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
-            <button class="add-plan__button add-plan__submit button" type="submit">Отправить</button>
-            <button class="add-plan__back-button" type="button">На шаг назад</button>
+            <div class="add-plan__buttons-wrapper">
+              <button class="add-plan__button add-plan__submit button" type="submit">Отправить</button>
+              <a class="add-plan__back-button">На шаг назад</a>
+            </div>
           </div>
         </section>
       </form>

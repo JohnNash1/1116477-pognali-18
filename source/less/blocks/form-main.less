@@ -10,3 +10,26 @@
     width: 214px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .form-main {
+    width: 100%;
+  }
+
+  .form-main__title {
+    height: 219px;
+    font-size: 60px;
+    line-height: 70px;
+    padding-top: 83px;
+    padding-left: 77px;
+    border-radius: 0 0 60px 60px;
+
+    &::after {
+      width: 355px;
+      height: 8px;
+      background-color: @dark-orange;
+      border-radius: 4px;
+      margin-top: 62px;
+    }
+  }
+}
