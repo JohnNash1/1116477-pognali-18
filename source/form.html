@@ -117,7 +117,7 @@
             <span class="add-plan__dots"></span>
             <span class="add-plan__dots"></span>
           </h2>
-          <div class="add-plan__wrapper">
+          <div class="add-plan__wrapper" id="step1">
             <p class="add-plan__text add-plan__text--bold">Шаг 1.<br>Даты пребывания</p>
             <p class="add-plan__text add-plan__description-text">Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
@@ -192,9 +192,9 @@
                 <button class="calendar__day calendar__day--free" type="button">5</button>
               </div>
             </section>
-            <a class="add-plan__button button">Следующий шаг</a>
+            <a class="add-plan__button button" href="#step2">Следующий шаг</a>
           </div>
-          <div class="add-plan__wrapper">
+          <div class="add-plan__wrapper" id="step2">
             <p class="add-plan__text add-plan__text--bold">Шаг 2.<br>Маршрут</p>
             <p class="add-plan__text add-plan__description-text">Укажите страны, которые вы хотели бы
               посетить. Это может быть одна или сразу несколько.</p>
@@ -231,11 +231,11 @@
             <button class="add-plan__add-country" type="button">Добавить страну</button>
             <div class="add-plan__circle add-plan__circle--add"></div>
             <div class="add-plan__buttons-wrapper">
-              <a class="add-plan__button button">Следующий шаг</a>
-              <a class="add-plan__back-button">На шаг назад</a>
+              <a class="add-plan__button button" href="#step3">Следующий шаг</a>
+              <a class="add-plan__back-button" href="#step1">На шаг назад</a>
             </div>
           </div>
-          <div class="add-plan__wrapper">
+          <div class="add-plan__wrapper" id="step3">
             <p class="add-plan__text add-plan__text--bold">Шаг 3.<br>Развлечения</p>
             <p class="add-plan__text add-plan__description-text">Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить тэги.</p>
@@ -250,7 +250,7 @@
             </div>
             <div class="add-plan__buttons-wrapper">
               <button class="add-plan__button add-plan__submit button" type="submit">Отправить</button>
-              <a class="add-plan__back-button">На шаг назад</a>
+              <a class="add-plan__back-button" href="#step2">На шаг назад</a>
             </div>
           </div>
         </section>
