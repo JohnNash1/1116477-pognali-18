@@ -72,26 +72,31 @@
               <p class="my-card__number">80</p>
               <p class="my-card__caption">level</p>
             </div>
-            <img class="my-card__photo" src="img/demin-tablet@1x.jpg" alt="аватар">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+              <img class="my-card__photo" src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" alt="аватар">
+            </picture>
           </div>
-          <button class="my-card__button button" type="button">Сменить фото</button>
-          <div class="my-card__tags-wrapper">
-            <label class="my-card__tags-label" for="tags">Тэги</label>
-            <textarea class="my-card__tags" name="tags" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
-          </div>
-          <fieldset class="my-card__transport-fieldset">
-            <legend class="my-card__transport-title">Транспорт</legend>
-            <div class="my-card__transport-wrapper transport-checkboxes">
-              <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
-              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
-              <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
-              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
-              <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
-              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
-              <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
-              <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
+          <button class="my-card__button button" type="button"><span class="my-card__text-hidden">Сменить</span> фото</button>
+          <div class="my-card__inputs-wrapper">
+            <div class="my-card__tags-wrapper">
+              <label class="my-card__tags-label" for="tags">Тэги</label>
+              <textarea class="my-card__tags" name="tags" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
-          </fieldset>
+            <fieldset class="my-card__transport-fieldset">
+              <legend class="my-card__transport-title">Транспорт</legend>
+              <div class="my-card__transport-wrapper transport-checkboxes">
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
+                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
+                <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
+                <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
+              </div>
+            </fieldset>
+          </div>
         </section>
         <section class="plans">
           <h2 class="plans__title">Мои планы:</h2>
@@ -118,9 +123,18 @@
             <span class="add-plan__dots"></span>
           </h2>
           <div class="add-plan__wrapper" id="step1">
-            <p class="add-plan__text add-plan__text--bold">Шаг 1.<br>Даты пребывания</p>
-            <p class="add-plan__text add-plan__description-text">Укажите предпочтительное количество попутчиков, которых
-              вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+            <div class="add-plan__flex-wrapper">
+              <div class="add-plan__text-wrapper">
+                <p class="add-plan__text add-plan__text--bold">Шаг 1.<br class="add-plan__break"> Даты пребывания</p>
+                <p class="add-plan__text add-plan__description-text">Укажите предпочтительное количество попутчиков, которых<br class="add-plan__description-break">
+                  вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              </div>
+              <ul class="add-plan__plans-list site-list">
+                <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Даты</a></li>
+                <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step2">Маршрут</a></li>
+                <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Разрешения</a></li>
+              </ul>
+            </div>
             <div class="add-plan__conditions-wrapper">
               <label class="add-plan__conditions-label" for="comrades">Ищу попутчиков:<span class="add-plan__conditions-label--opacity">чел.</span></label>
               <input class="add-plan__conditions" type="number" name="companions-quantity" value="2" id="comrades">
@@ -154,7 +168,7 @@
                 <button class="calendar__day calendar__day--wider" type="button" disabled>26</button>
                 <button class="calendar__day" type="button" disabled>27</button>
                 <button class="calendar__day calendar__day--wider" type="button" disabled>28</button>
-                <button class="calendar__day" type="button" disabled>1</button>
+                <button class="calendar__day" type="button" disabled>1<span class="calendar__day-text"> мар</span></button>
                 <button class="calendar__day" type="button" disabled>2</button>
                 <button class="calendar__day calendar__day--wider" type="button" disabled>3</button>
                 <button class="calendar__day" type="button" disabled>4</button>
@@ -179,13 +193,13 @@
                 <button class="calendar__day" type="button" disabled>23</button>
                 <button class="calendar__day calendar__day--wider" type="button" disabled>24</button>
                 <button class="calendar__day" type="button" disabled>25</button>
-                <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--current" type="button">26</button>
+                <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--current" type="button">26<span class="calendar__day-text"><br> Заезд</span></button>
                 <button class="calendar__day calendar__day--active" type="button">27</button>
-                <button class="calendar__day calendar__day--wider calendar__day--active" type="button">28</button>
+                <button class="calendar__day calendar__day--wider calendar__day--active" type="button">28<span class="calendar__day-text"><br> Выезд</span></button>
                 <button class="calendar__day calendar__day--free" type="button">29</button>
                 <button class="calendar__day calendar__day--free" type="button">30</button>
                 <button class="calendar__day calendar__day--wider calendar__day--free" type="button">31</button>
-                <button class="calendar__day calendar__day--free" type="button">1</button>
+                <button class="calendar__day calendar__day--free" type="button">1<span class="calendar__day-text"> апр</span></button>
                 <button class="calendar__day calendar__day--wider calendar__day--free" type="button">2</button>
                 <button class="calendar__day calendar__day--free" type="button">3</button>
                 <button class="calendar__day calendar__day--wider calendar__day--free" type="button">4</button>
@@ -195,9 +209,18 @@
             <a class="add-plan__button button" href="#step2">Следующий шаг</a>
           </div>
           <div class="add-plan__wrapper" id="step2">
-            <p class="add-plan__text add-plan__text--bold">Шаг 2.<br>Маршрут</p>
-            <p class="add-plan__text add-plan__description-text">Укажите страны, которые вы хотели бы
-              посетить. Это может быть одна или сразу несколько.</p>
+            <div class="add-plan__flex-wrapper">
+              <div class="add-plan__text-wrapper">
+                <p class="add-plan__text add-plan__text--bold">Шаг 2.<br class="add-plan__break"> Маршрут</p>
+                <p class="add-plan__text add-plan__description-text">Укажите страны, которые вы хотели бы
+                  посетить.<br class="add-plan__description-break"> Это может быть одна или сразу несколько.</p>
+              </div>
+              <ul class="add-plan__plans-list site-list">
+                <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
+                <li class="add-plan__plans-item"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Маршрут</a></li>
+                <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Разрешения</a></li>
+              </ul>
+            </div>
             <div class="add-plan__country-wrapper">
               <div class="add-plan__cover add-plan__select-cover"></div>
               <select class="add-plan__country-select" name="countries">
@@ -236,9 +259,18 @@
             </div>
           </div>
           <div class="add-plan__wrapper" id="step3">
-            <p class="add-plan__text add-plan__text--bold">Шаг 3.<br>Развлечения</p>
-            <p class="add-plan__text add-plan__description-text">Наконец, расскажите о своих планах времяпровождения.
-              Можно писать в свободной форме и ставить тэги.</p>
+            <div class="add-plan__flex-wrapper">
+              <div class="add-plan__text-wrapper">
+                <p class="add-plan__text add-plan__text--bold">Шаг 3.<br class="add-plan__break"> Развлечения</p>
+                <p class="add-plan__text add-plan__description-text">Наконец, расскажите о своих планах времяпровождения.<br class="add-plan__description-break">
+                  Можно писать в свободной форме и ставить тэги.</p>
+              </div>
+              <ul class="add-plan__plans-list site-list">
+                <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
+                <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step2">Маршрут</a></li>
+                <li class="add-plan__plans-item"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Разрешения</a></li>
+              </ul>
+            </div>
             <div class="add-plan__textarea-wrapper">
               <div class="add-plan__cover"></div>
               <label class="add-plan__text add-plan__title-text" for="bosnia">Босния и герцеговина</label>

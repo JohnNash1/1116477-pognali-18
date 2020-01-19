@@ -64,6 +64,7 @@
 }
 
 .my-card__button {
+  display: block;
   box-sizing: border-box;
   width: 270px;
   height: 40px;
@@ -76,7 +77,6 @@
   border: none;
   border-radius: 30px;
   padding: 0;
-  padding-left: 75px;
   margin-left: 25px;
   margin-top: 20px;
 
@@ -246,7 +246,6 @@
     letter-spacing: 2px;
     color: #1d2e5b;
     border-radius: 10px;
-    padding-left: 231px;
     margin-left: 75px;
     margin-top: 52px;
   }
@@ -311,5 +310,82 @@
 
   .my-card__label-transport {
     margin-right: 8px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .my-card__wrapper {
+    width: 329px;
+    margin-left: 956px;
+    margin-top: -190px;
+  }
+
+  .my-card__photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .my-card__level {
+    background-image:
+      linear-gradient(210deg, transparent 50%, #ff8d30 50%),
+      linear-gradient(90deg, #161c35 50%, #ff8d30 50%);
+    border-radius: 50%;
+    margin-bottom: 15px;
+
+    &::after {
+      background-color: #161c35;
+    }
+  }
+
+  .my-card__number {
+    color: @white;
+  }
+
+  .my-card__caption {
+    color: @white;
+    border-color: rgba(223, 227, 240, 0.3);
+  }
+
+  .my-card__button {
+    width: 190px;
+    height: 47px;
+    border-radius: 0 0 10px 10px;
+    margin-left: 1095px;
+    margin-top: -4px;
+  }
+
+  .my-card__text-hidden {
+    display: none;
+  }
+
+  .my-card__inputs-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1256px;
+    margin-left: 124px;
+    margin-top: 26px;
+  }
+
+  .my-card__tags-wrapper {
+    margin: 0;
+  }
+
+  .my-card__tags {
+    box-sizing: border-box;
+    width: 730px;
+    margin: 0;
+  }
+
+  .my-card__tags-label {
+    left: 145px;
+    margin: 0;
+  }
+
+  .my-card__transport-fieldset {
+    position: static;
+    width: 384px;
+    height: 103px;
+    margin: 0;
   }
 }

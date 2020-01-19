@@ -107,6 +107,10 @@
   background-image: url("../img/month-arrow-right.svg");
 }
 
+.calendar__day-text {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .calendar__month {
     box-sizing: border-box;
@@ -161,6 +165,60 @@
   }
 
   .calendar__weekday--tablet {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .calendar__month {
+    width: 999px;
+    margin-left: 160px;
+    margin-top: 32px;
+    margin-bottom: 0;
+  }
+
+  .calendar__month-switch {
+    width: 18px;
+    height: 34px;
+    background-size: 18px 34px;
+    margin-top: 5px;
+  }
+
+  .calendar__wrapper {
+    width: 1006px;
+    margin-left: 160px;
+    margin-top: 0;
+  }
+
+  .calendar__weekday {
+    width: 143px;
+    height: 56px;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 16px;
+    margin: 0;
+    border-bottom: 1px solid #cbced9;
+  }
+
+  .calendar__day {
+    width: 143px;
+    height: 71px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1.8px;
+    text-align: left;
+    padding-left: 16px;
+    padding-bottom: 27px;
+  }
+
+  .calendar__day:nth-child(7n+1),
+  .calendar__day:nth-child(7n),
+  .calendar__weekday:nth-child(7n+1),
+  .calendar__weekday:nth-child(7n) {
+    width: 144px;
+  }
+
+  .calendar__day-text {
     display: inline;
   }
 }
