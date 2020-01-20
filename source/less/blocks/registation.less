@@ -1,10 +1,15 @@
 .registation {
   position: relative;
-  min-height: 550px;
   background-color: @page-color;
   margin-top: -180px;
   z-index: 1;
   border-radius: 0 0 30px 30px;
+}
+
+.registation-wrapper {
+  width: @mobile-width;
+  min-height: 550px;
+  margin: 0 auto;
 }
 
 .registation__title {
@@ -101,9 +106,13 @@
 
 @media (min-width: @tablet-width) {
   .registation {
-    min-height: 785px;
     margin-top: -220px;
     border-radius: 0 0 60px 60px;
+  }
+
+  .registation-wrapper {
+    width: @tablet-width;
+    min-height: 785px;
   }
 
   .registation__title {
@@ -157,7 +166,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .registation {
+  .registation-wrapper {
+    width: @desktop-width;
     min-height: 810px;
   }
 

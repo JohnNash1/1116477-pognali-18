@@ -1,12 +1,17 @@
 .catalog-main {
-  position: relative;
-  width: @mobile-width;
   background-color: @grey;
+}
+
+.catalog-main__bg-wrapper {
+  position: relative;
+  border-radius: 0 0 20px 20px;
+  background-color: @dark-blue;
 }
 
 .catalog-main__title {
   position: relative;
   box-sizing: border-box;
+  width: @mobile-width;
   height: 70px;
   font-family: @font, @font-secondary;
   font-size: 36px;
@@ -14,11 +19,9 @@
   line-height: 40px;
   text-align: left;
   color: @white;
-  margin: 0;
+  margin: 0 auto;
   padding-top: 20px;
   padding-left: 27px;
-  border-radius: 0 0 20px 20px;
-  background-color: @dark-blue;
 
   &::after {
     content: "";

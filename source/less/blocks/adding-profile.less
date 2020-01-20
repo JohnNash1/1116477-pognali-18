@@ -1,17 +1,26 @@
 .adding-profile {
   position: relative;
   top: -120px;
-  display: flex;
-  flex-direction: column;
-  min-height: 430px;
-  background-color: @grey;
-  padding-top: 58px;
   z-index: 2;
   border-radius: 0 0 30px 30px;
+  background-color: @grey;
+
+}
+
+.adding-profile__wrapper {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: @mobile-width;
+  min-height: 430px;
+  padding-top: 58px;
   background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
   background-size: 99px 99px;
   background-position: 195px 75px;
+  margin: 0 auto;
+  outline: 1px solid red;
 
   @media (min-resolution: @retina) {
     background-image: url("../img/rates@2x.png");
@@ -111,10 +120,16 @@
 
 @media (min-width: @tablet-width) {
   .adding-profile {
-    top: -160px;
     min-height: 578px;
+    top: -160px;
     border-radius: 0 0 60px 60px;
+  }
+
+  .adding-profile__wrapper {
+    width: @tablet-width;
+    min-height: 578px;
     background-image: none;
+    padding-bottom: 58px;
 
     &::before {
       position: absolute;
@@ -149,7 +164,7 @@
   .adding-profile__title {
     width: 490px;
     margin-left: 145px;
-    margin-top: 95px;
+    margin-top: 93px;
     font-size: 45px;
     line-height: 45px;
   }
@@ -182,6 +197,7 @@
     font-size: 20px;
     line-height: 20px;
     color: #132576;
+    margin-top: 6px;
   }
 
   .adding-profile__list-item:last-child::before {
@@ -225,7 +241,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .adding-profile {
+  .adding-profile__wrapper {
+    width: @desktop-width;
     min-height: 780px;
 
     &::before {

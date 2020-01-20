@@ -1,11 +1,17 @@
 .page-header {
+  width: 100%;
+  background-color: @dark-blue;
+}
+
+.page-header__wrapper {
   position: relative;
   width: @mobile-width;
   min-height: 73px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: @dark-blue;
+  margin: 0 auto;
+  outline: 1px solid red;
 }
 
 .page-header--menu-opened {
@@ -25,13 +31,16 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: 100%;
+    background-color: @page-color;
+  }
+
+  .page-header__wrapper {
+    width: @tablet-width;
     min-height: 132px;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
-    background-color: @page-color;
   }
 
   .page-header--dark {
@@ -64,12 +73,12 @@
 
 @media (min-width: @desktop-width) {
   .page-header {
-    width: 100%;
-    height: 90px;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
     background-color: @dark-blue;
+  }
+
+  .page-header__wrapper {
+    width: @desktop-width;
+    min-height: 90px;
   }
 
   .page-header__logo {

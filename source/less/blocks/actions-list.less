@@ -1,8 +1,11 @@
 .actions-list {
+  box-sizing: border-box;
+  width: @mobile-width;
   height: 277px;
   padding: 0 25px;
   background-color: @page-color;
   z-index: 6;
+  margin: 0 auto;
 }
 
 .actions-font() {
@@ -64,6 +67,7 @@
 
 @media (min-width: @tablet-width) {
   .actions-list {
+    width: @tablet-width;
     height: 0;
     display: flex;
     flex-wrap: wrap;
@@ -117,6 +121,7 @@
 
 @media (min-width: @desktop-width) {
   .actions-list {
+    width: @desktop-width;
     margin-top: -95px;
   }
 

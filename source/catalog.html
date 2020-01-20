@@ -9,698 +9,704 @@
   </head>
   <body>
     <header class="page-header page-header--dark">
-      <a href="index.html" class="page-header__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
-          <source class="page-header__logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
-          <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Погнали">
-        </picture>
-      </a>
-      <nav class="main-navigation main-navigation--nojs main-navigation--closed">
-        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
-        <div class="main-navigation__wrapper">
-          <ul class="main-navigation__list main-navigation__list--menu site-list">
-            <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor" href="index.html">О сервисе</a>
-            </li>
-            <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor" href="form.html">Направления</a>
-            </li>
-            <li class="main-navigation__list-item">
-              <a class="main-navigation__anchor">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="main-navigation__list main-navigation__list--hidden user-list site-list">
-            <li class="user-list__item">
-              <a class="user-list__login" href="login.html">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="main-navigation__list contacts-list site-list">
-            <li class="contacts-list__item">
-              <a class="contacts-list__tel" href="tel:+88005558628"><span class="contacts-list__text">8 800 555-86-28</span></a>
-            </li>
-            <li class="contacts-list__item">
-              <a class="contacts-list__mail" href="mailto:mail@htmlacademy.ru"><span class="contacts-list__text">mail@htmlacademy.ru</span></a>
-            </li>
-          </ul>
-          <ul class="main-navigation__list social-list site-list">
-            <li class="social-list__item">
-              <a class="social-list__fb" href="#"></a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__vk" href="#"></a>
-            </li>
-            <li class="social-list__item">
-              <a class="social-list__instagram" href="#"></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <ul class="page-header__list user-list site-list">
-        <li class="user-list__item">
-          <a class="page-header__login user-list__login" href="login.html">Авторизация</a>
-        </li>
-      </ul>
+      <div class="page-header__wrapper">
+        <a href="index.html" class="page-header__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+            <source class="page-header__logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+            <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Погнали">
+          </picture>
+        </a>
+        <nav class="main-navigation main-navigation--nojs main-navigation--closed">
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+          <div class="main-navigation__wrapper">
+            <ul class="main-navigation__list main-navigation__list--menu site-list">
+              <li class="main-navigation__list-item">
+                <a class="main-navigation__anchor" href="index.html">О сервисе</a>
+              </li>
+              <li class="main-navigation__list-item">
+                <a class="main-navigation__anchor" href="form.html">Направления</a>
+              </li>
+              <li class="main-navigation__list-item">
+                <a class="main-navigation__anchor">Попутчики</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__list main-navigation__list--hidden user-list site-list">
+              <li class="user-list__item">
+                <a class="user-list__login" href="login.html">Авторизация</a>
+              </li>
+            </ul>
+            <ul class="main-navigation__list contacts-list site-list">
+              <li class="contacts-list__item">
+                <a class="contacts-list__tel" href="tel:+88005558628"><span class="contacts-list__text">8 800 555-86-28</span></a>
+              </li>
+              <li class="contacts-list__item">
+                <a class="contacts-list__mail" href="mailto:mail@htmlacademy.ru"><span class="contacts-list__text">mail@htmlacademy.ru</span></a>
+              </li>
+            </ul>
+            <ul class="main-navigation__list social-list site-list">
+              <li class="social-list__item">
+                <a class="social-list__fb" href="#"></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__vk" href="#"></a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__instagram" href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <ul class="page-header__list user-list site-list">
+          <li class="user-list__item">
+            <a class="page-header__login user-list__login" href="login.html">Авторизация</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main class="catalog-main">
-      <h1 class="catalog-main__title">Попутчики</h1>
-      <a class="catalog-main__back" href="index.html">На главную</a>
-        <section class="catalog-filter">
-          <div class="catalog-filter__wrapper catalog-filter__wrapper--closed">
-            <h2 class="catalog-filter__title">Фильтрация по странам</h2>
-            <button class="catalog-filter__button" type="button"></button>
-            <ul class="catalog-filter__list catalog-filter__list--continents site-list">
-              <li class="catalog-filter__list-item">
-                <a class="catalog-filter__continent">Европа</a>
-              </li>
-              <li class="catalog-filter__list-item">
-                <a class="catalog-filter__continent">Азия</a>
-              </li>
-              <li class="catalog-filter__list-item">
-                <a class="catalog-filter__continent">Америка</a>
-              </li>
-              <li class="catalog-filter__list-item">
-                <a class="catalog-filter__continent">Острова</a>
-              </li>
-            </ul>
-            <div class="catalog-filter__letters">
-              <div class="catalog-filter__coutries-wrapper catalog-filter__coutries-wrapper--active">
-                <button class="catalog-filter__letter catalog-filter__letter--active" type="button">А</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Австралия</li>
-                  <li class="catalog-filter__country">Австрия</li>
-                  <li class="catalog-filter__country">Азербайджан</li>
-                  <li class="catalog-filter__country">Албания</li>
-                  <li class="catalog-filter__country">Алжир</li>
-                  <li class="catalog-filter__country">Ангола</li>
-                  <li class="catalog-filter__country">Андорра</li>
-                  <li class="catalog-filter__country">Антигуа и Барбуда</li>
-                  <li class="catalog-filter__country">Аргентина</li>
-                  <li class="catalog-filter__country">Армения</li>
-                  <li class="catalog-filter__country">Афганистан</li>
+      <div class="catalog-main__bg-wrapper">
+        <h1 class="catalog-main__title">Попутчики</h1>
+        <a class="catalog-main__back" href="index.html">На главную</a>
+      </div>
+      <section class="catalog-filter">
+        <div class="catalog-filter__wrapper catalog-filter__wrapper--closed">
+          <h2 class="catalog-filter__title">Фильтрация по странам</h2>
+          <button class="catalog-filter__button" type="button"></button>
+          <ul class="catalog-filter__list catalog-filter__list--continents site-list">
+            <li class="catalog-filter__list-item">
+              <a class="catalog-filter__continent">Европа</a>
+            </li>
+            <li class="catalog-filter__list-item">
+              <a class="catalog-filter__continent">Азия</a>
+            </li>
+            <li class="catalog-filter__list-item">
+              <a class="catalog-filter__continent">Америка</a>
+            </li>
+            <li class="catalog-filter__list-item">
+              <a class="catalog-filter__continent">Острова</a>
+            </li>
+          </ul>
+          <div class="catalog-filter__letters">
+            <div class="catalog-filter__coutries-wrapper catalog-filter__coutries-wrapper--active">
+              <button class="catalog-filter__letter catalog-filter__letter--active" type="button">А</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Австралия</li>
+                <li class="catalog-filter__country">Австрия</li>
+                <li class="catalog-filter__country">Азербайджан</li>
+                <li class="catalog-filter__country">Албания</li>
+                <li class="catalog-filter__country">Алжир</li>
+                <li class="catalog-filter__country">Ангола</li>
+                <li class="catalog-filter__country">Андорра</li>
+                <li class="catalog-filter__country">Антигуа и Барбуда</li>
+                <li class="catalog-filter__country">Аргентина</li>
+                <li class="catalog-filter__country">Армения</li>
+                <li class="catalog-filter__country">Афганистан</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Б</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Багамские Острова</li>
+                <li class="catalog-filter__country">Бангладеш</li>
+                <li class="catalog-filter__country">Барбадос</li>
+                <li class="catalog-filter__country">Бахрейн</li>
+                <li class="catalog-filter__country">Белоруссия</li>
+                <li class="catalog-filter__country">Белиз</li>
+                <li class="catalog-filter__country">Бельгия</li>
+                <li class="catalog-filter__country">Бенин</li>
+                <li class="catalog-filter__country">Болгария</li>
+                <li class="catalog-filter__country">Боливия</li>
+                <li class="catalog-filter__country">Босния и Герцеговина</li>
+                <li class="catalog-filter__country">Ботсвана</li>
+                <li class="catalog-filter__country">Бразилия</li>
+                <li class="catalog-filter__country">Бруней</li>
+                <li class="catalog-filter__country">Буркина-Фасо</li>
+                <li class="catalog-filter__country">Бурунди</li>
+                <li class="catalog-filter__country">Бутан</li>
                 </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Б</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Багамские Острова</li>
-                  <li class="catalog-filter__country">Бангладеш</li>
-                  <li class="catalog-filter__country">Барбадос</li>
-                  <li class="catalog-filter__country">Бахрейн</li>
-                  <li class="catalog-filter__country">Белоруссия</li>
-                  <li class="catalog-filter__country">Белиз</li>
-                  <li class="catalog-filter__country">Бельгия</li>
-                  <li class="catalog-filter__country">Бенин</li>
-                  <li class="catalog-filter__country">Болгария</li>
-                  <li class="catalog-filter__country">Боливия</li>
-                  <li class="catalog-filter__country">Босния и Герцеговина</li>
-                  <li class="catalog-filter__country">Ботсвана</li>
-                  <li class="catalog-filter__country">Бразилия</li>
-                  <li class="catalog-filter__country">Бруней</li>
-                  <li class="catalog-filter__country">Буркина-Фасо</li>
-                  <li class="catalog-filter__country">Бурунди</li>
-                  <li class="catalog-filter__country">Бутан</li>
-                  </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">В</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Вануату</li>
-                  <li class="catalog-filter__country">Великобритания</li>
-                  <li class="catalog-filter__country">Венгрия</li>
-                  <li class="catalog-filter__country">Венесуэла</li>
-                  <li class="catalog-filter__country">Восточный Тимор</li>
-                  <li class="catalog-filter__country">Вьетнам</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Г</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Габон</li>
-                  <li class="catalog-filter__country">Гаити</li>
-                  <li class="catalog-filter__country">Гайана</li>
-                  <li class="catalog-filter__country">Гамбия</li>
-                  <li class="catalog-filter__country">Гана</li>
-                  <li class="catalog-filter__country">Гватемала</li>
-                  <li class="catalog-filter__country">Гвинея</li>
-                  <li class="catalog-filter__country">Гвинея-Бисау</li>
-                  <li class="catalog-filter__country">Германия</li>
-                  <li class="catalog-filter__country">Гондурас</li>
-                  <li class="catalog-filter__country">Гренада</li>
-                  <li class="catalog-filter__country">Греция</li>
-                  <li class="catalog-filter__country">Грузия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Д</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Дания</li>
-                  <li class="catalog-filter__country">Джибути</li>
-                  <li class="catalog-filter__country">Доминика</li>
-                  <li class="catalog-filter__country">Доминикана</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Е</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Египет</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">З</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Замбия</li>
-                  <li class="catalog-filter__country">Зимбабве</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">И</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Израиль</li>
-                  <li class="catalog-filter__country">Индия</li>
-                  <li class="catalog-filter__country">Индонезия</li>
-                  <li class="catalog-filter__country">Иордания</li>
-                  <li class="catalog-filter__country">Ирак</li>
-                  <li class="catalog-filter__country">Иран</li>
-                  <li class="catalog-filter__country">Ирландия</li>
-                  <li class="catalog-filter__country">Исландия</li>
-                  <li class="catalog-filter__country">Испания</li>
-                  <li class="catalog-filter__country">Италия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">К</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Кабо-Верде</li>
-                  <li class="catalog-filter__country">Казахстан</li>
-                  <li class="catalog-filter__country">Камбоджа</li>
-                  <li class="catalog-filter__country">Камерун</li>
-                  <li class="catalog-filter__country">Канада</li>
-                  <li class="catalog-filter__country">Катар</li>
-                  <li class="catalog-filter__country">Кения</li>
-                  <li class="catalog-filter__country">Кипр</li>
-                  <li class="catalog-filter__country">Киргизия</li>
-                  <li class="catalog-filter__country">Кирибати</li>
-                  <li class="catalog-filter__country">Китай</li>
-                  <li class="catalog-filter__country">Колумбия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Л</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Лаос</li>
-                  <li class="catalog-filter__country">Латвия</li>
-                  <li class="catalog-filter__country">Лесото</li>
-                  <li class="catalog-filter__country">Либерия</li>
-                  <li class="catalog-filter__country">Ливан</li>
-                  <li class="catalog-filter__country">Ливия</li>
-                  <li class="catalog-filter__country">Литва</li>
-                  <li class="catalog-filter__country">Лихтенштейн</li>
-                  <li class="catalog-filter__country">Люксембург</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">М</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Маврикий</li>
-                  <li class="catalog-filter__country">Мавритания</li>
-                  <li class="catalog-filter__country">Мадагаскар</li>
-                  <li class="catalog-filter__country">Малави</li>
-                  <li class="catalog-filter__country">Малайзия</li>
-                  <li class="catalog-filter__country">Мали</li>
-                  <li class="catalog-filter__country">Мальдивы</li>
-                  <li class="catalog-filter__country">Мальта</li>
-                  <li class="catalog-filter__country">Марокко</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Н</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Намибия</li>
-                  <li class="catalog-filter__country">Науру</li>
-                  <li class="catalog-filter__country">Непал</li>
-                  <li class="catalog-filter__country">Нигер</li>
-                  <li class="catalog-filter__country">Нигерия</li>
-                  <li class="catalog-filter__country">Нидерланды</li>
-                  <li class="catalog-filter__country">Никарагуа</li>
-                  <li class="catalog-filter__country">Новая Зеландия</li>
-                  <li class="catalog-filter__country">Норвегия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">О</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">ОАЭ</li>
-                  <li class="catalog-filter__country">Оман</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">П</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Пакистан</li>
-                  <li class="catalog-filter__country">Палау</li>
-                  <li class="catalog-filter__country">Панама</li>
-                  <li class="catalog-filter__country">Папуа — Новая Гвинея</li>
-                  <li class="catalog-filter__country">Парагвай</li>
-                  <li class="catalog-filter__country">Перу</li>
-                  <li class="catalog-filter__country">Польша</li>
-                  <li class="catalog-filter__country">Португалия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Р</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Руанда</li>
-                  <li class="catalog-filter__country">Румыния</li>
-                  <li class="catalog-filter__country">Россия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">С</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Сальвадор</li>
-                  <li class="catalog-filter__country">Самоа</li>
-                  <li class="catalog-filter__country">Сан-Марино</li>
-                  <li class="catalog-filter__country">Саудовская Аравия</li>
-                  <li class="catalog-filter__country">Сейшелы</li>
-                  <li class="catalog-filter__country">Сенегал</li>
-                  <li class="catalog-filter__country">Сербия</li>
-                  <li class="catalog-filter__country">Сингапур</li>
-                  <li class="catalog-filter__country">Сирия</li>
-                  <li class="catalog-filter__country">Словакия</li>
-                  <li class="catalog-filter__country">Словения</li>
-                  <li class="catalog-filter__country">США</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Т</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Таджикистан</li>
-                  <li class="catalog-filter__country">Таиланд</li>
-                  <li class="catalog-filter__country">Танзания</li>
-                  <li class="catalog-filter__country">Того</li>
-                  <li class="catalog-filter__country">Тонга</li>
-                  <li class="catalog-filter__country">Тринидад и Тобаго</li>
-                  <li class="catalog-filter__country">Тувалу</li>
-                  <li class="catalog-filter__country">Тунис</li>
-                  <li class="catalog-filter__country">Туркмения</li>
-                  <li class="catalog-filter__country">Турция</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">У</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Уганда</li>
-                  <li class="catalog-filter__country">Узбекистан</li>
-                  <li class="catalog-filter__country">Украина</li>
-                  <li class="catalog-filter__country">Уругвай</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Ф</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Фиджи</li>
-                  <li class="catalog-filter__country">Филиппины</li>
-                  <li class="catalog-filter__country">Финляндия</li>
-                  <li class="catalog-filter__country">Франция</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Х</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Хорватия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Ч</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Чад</li>
-                  <li class="catalog-filter__country">Черногория</li>
-                  <li class="catalog-filter__country">Чехия</li>
-                  <li class="catalog-filter__country">Чили</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Ш</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Швейцария</li>
-                  <li class="catalog-filter__country">Швеция</li>
-                  <li class="catalog-filter__country">Шри-Ланка</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Э</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Эквадор</li>
-                  <li class="catalog-filter__country">Эритрея</li>
-                  <li class="catalog-filter__country">Эсватини</li>
-                  <li class="catalog-filter__country">Эстония</li>
-                  <li class="catalog-filter__country">Эфиопия</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Ю</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">ЮАР</li>
-                  <li class="catalog-filter__country">Южный Судан</li>
-                </ul>
-              </div>
-              <div class="catalog-filter__coutries-wrapper">
-                <button class="catalog-filter__letter" type="button">Я</button>
-                <ul class="catalog-filter__country-list site-list">
-                  <li class="catalog-filter__country">Ямайка</li>
-                  <li class="catalog-filter__country">Япония</li>
-                </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">В</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Вануату</li>
+                <li class="catalog-filter__country">Великобритания</li>
+                <li class="catalog-filter__country">Венгрия</li>
+                <li class="catalog-filter__country">Венесуэла</li>
+                <li class="catalog-filter__country">Восточный Тимор</li>
+                <li class="catalog-filter__country">Вьетнам</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Г</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Габон</li>
+                <li class="catalog-filter__country">Гаити</li>
+                <li class="catalog-filter__country">Гайана</li>
+                <li class="catalog-filter__country">Гамбия</li>
+                <li class="catalog-filter__country">Гана</li>
+                <li class="catalog-filter__country">Гватемала</li>
+                <li class="catalog-filter__country">Гвинея</li>
+                <li class="catalog-filter__country">Гвинея-Бисау</li>
+                <li class="catalog-filter__country">Германия</li>
+                <li class="catalog-filter__country">Гондурас</li>
+                <li class="catalog-filter__country">Гренада</li>
+                <li class="catalog-filter__country">Греция</li>
+                <li class="catalog-filter__country">Грузия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Д</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Дания</li>
+                <li class="catalog-filter__country">Джибути</li>
+                <li class="catalog-filter__country">Доминика</li>
+                <li class="catalog-filter__country">Доминикана</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Е</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Египет</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">З</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Замбия</li>
+                <li class="catalog-filter__country">Зимбабве</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">И</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Израиль</li>
+                <li class="catalog-filter__country">Индия</li>
+                <li class="catalog-filter__country">Индонезия</li>
+                <li class="catalog-filter__country">Иордания</li>
+                <li class="catalog-filter__country">Ирак</li>
+                <li class="catalog-filter__country">Иран</li>
+                <li class="catalog-filter__country">Ирландия</li>
+                <li class="catalog-filter__country">Исландия</li>
+                <li class="catalog-filter__country">Испания</li>
+                <li class="catalog-filter__country">Италия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">К</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Кабо-Верде</li>
+                <li class="catalog-filter__country">Казахстан</li>
+                <li class="catalog-filter__country">Камбоджа</li>
+                <li class="catalog-filter__country">Камерун</li>
+                <li class="catalog-filter__country">Канада</li>
+                <li class="catalog-filter__country">Катар</li>
+                <li class="catalog-filter__country">Кения</li>
+                <li class="catalog-filter__country">Кипр</li>
+                <li class="catalog-filter__country">Киргизия</li>
+                <li class="catalog-filter__country">Кирибати</li>
+                <li class="catalog-filter__country">Китай</li>
+                <li class="catalog-filter__country">Колумбия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Л</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Лаос</li>
+                <li class="catalog-filter__country">Латвия</li>
+                <li class="catalog-filter__country">Лесото</li>
+                <li class="catalog-filter__country">Либерия</li>
+                <li class="catalog-filter__country">Ливан</li>
+                <li class="catalog-filter__country">Ливия</li>
+                <li class="catalog-filter__country">Литва</li>
+                <li class="catalog-filter__country">Лихтенштейн</li>
+                <li class="catalog-filter__country">Люксембург</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">М</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Маврикий</li>
+                <li class="catalog-filter__country">Мавритания</li>
+                <li class="catalog-filter__country">Мадагаскар</li>
+                <li class="catalog-filter__country">Малави</li>
+                <li class="catalog-filter__country">Малайзия</li>
+                <li class="catalog-filter__country">Мали</li>
+                <li class="catalog-filter__country">Мальдивы</li>
+                <li class="catalog-filter__country">Мальта</li>
+                <li class="catalog-filter__country">Марокко</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Н</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Намибия</li>
+                <li class="catalog-filter__country">Науру</li>
+                <li class="catalog-filter__country">Непал</li>
+                <li class="catalog-filter__country">Нигер</li>
+                <li class="catalog-filter__country">Нигерия</li>
+                <li class="catalog-filter__country">Нидерланды</li>
+                <li class="catalog-filter__country">Никарагуа</li>
+                <li class="catalog-filter__country">Новая Зеландия</li>
+                <li class="catalog-filter__country">Норвегия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">О</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">ОАЭ</li>
+                <li class="catalog-filter__country">Оман</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">П</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Пакистан</li>
+                <li class="catalog-filter__country">Палау</li>
+                <li class="catalog-filter__country">Панама</li>
+                <li class="catalog-filter__country">Папуа — Новая Гвинея</li>
+                <li class="catalog-filter__country">Парагвай</li>
+                <li class="catalog-filter__country">Перу</li>
+                <li class="catalog-filter__country">Польша</li>
+                <li class="catalog-filter__country">Португалия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Р</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Руанда</li>
+                <li class="catalog-filter__country">Румыния</li>
+                <li class="catalog-filter__country">Россия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">С</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Сальвадор</li>
+                <li class="catalog-filter__country">Самоа</li>
+                <li class="catalog-filter__country">Сан-Марино</li>
+                <li class="catalog-filter__country">Саудовская Аравия</li>
+                <li class="catalog-filter__country">Сейшелы</li>
+                <li class="catalog-filter__country">Сенегал</li>
+                <li class="catalog-filter__country">Сербия</li>
+                <li class="catalog-filter__country">Сингапур</li>
+                <li class="catalog-filter__country">Сирия</li>
+                <li class="catalog-filter__country">Словакия</li>
+                <li class="catalog-filter__country">Словения</li>
+                <li class="catalog-filter__country">США</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Т</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Таджикистан</li>
+                <li class="catalog-filter__country">Таиланд</li>
+                <li class="catalog-filter__country">Танзания</li>
+                <li class="catalog-filter__country">Того</li>
+                <li class="catalog-filter__country">Тонга</li>
+                <li class="catalog-filter__country">Тринидад и Тобаго</li>
+                <li class="catalog-filter__country">Тувалу</li>
+                <li class="catalog-filter__country">Тунис</li>
+                <li class="catalog-filter__country">Туркмения</li>
+                <li class="catalog-filter__country">Турция</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">У</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Уганда</li>
+                <li class="catalog-filter__country">Узбекистан</li>
+                <li class="catalog-filter__country">Украина</li>
+                <li class="catalog-filter__country">Уругвай</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Ф</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Фиджи</li>
+                <li class="catalog-filter__country">Филиппины</li>
+                <li class="catalog-filter__country">Финляндия</li>
+                <li class="catalog-filter__country">Франция</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Х</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Хорватия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Ч</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Чад</li>
+                <li class="catalog-filter__country">Черногория</li>
+                <li class="catalog-filter__country">Чехия</li>
+                <li class="catalog-filter__country">Чили</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Ш</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Швейцария</li>
+                <li class="catalog-filter__country">Швеция</li>
+                <li class="catalog-filter__country">Шри-Ланка</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Э</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Эквадор</li>
+                <li class="catalog-filter__country">Эритрея</li>
+                <li class="catalog-filter__country">Эсватини</li>
+                <li class="catalog-filter__country">Эстония</li>
+                <li class="catalog-filter__country">Эфиопия</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Ю</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">ЮАР</li>
+                <li class="catalog-filter__country">Южный Судан</li>
+              </ul>
+            </div>
+            <div class="catalog-filter__coutries-wrapper">
+              <button class="catalog-filter__letter" type="button">Я</button>
+              <ul class="catalog-filter__country-list site-list">
+                <li class="catalog-filter__country">Ямайка</li>
+                <li class="catalog-filter__country">Япония</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="catalog-filter__list catalog-filter__list--country site-list">
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Афганистан</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Албания</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Алжир</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Андорра</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Аргентина</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Армения</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Австралия</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Австрия</li>
+            <li class="catalog-filter__list-item catalog-filter__list-item--country">Азербайджан</li>
+          </ul>
+          <button class="catalog-filter__close-button button" type="button">Свернуть</button>
+        </div>
+      </section>
+      <div class="catalog-main__wrapper">
+        <form class="catalog-main__form" action="https://echo.htmlacademy.ru/courses" method="post">
+          <p class="catalog-main__text">Подберите идеального попутчика</p>
+          <fieldset class="filter-group">
+            <div class="filter-group__wrapper">
+              <legend class="filter-group__title">Хобби</legend>
+              <button class="filter-group__button filter-group__hobby-button" type="button"></button>
+              <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
+                <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
+                <label class="filter-group__label-text" for="sport">Спортзал</label>
+                <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+                <label class="filter-group__label-text" for="hookah">Кальян</label>
+                <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
+                <label class="filter-group__label-text" for="sofa">Диван</label>
               </div>
             </div>
-            <ul class="catalog-filter__list catalog-filter__list--country site-list">
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Афганистан</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Албания</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Алжир</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Андорра</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Аргентина</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Армения</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Австралия</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Австрия</li>
-              <li class="catalog-filter__list-item catalog-filter__list-item--country">Азербайджан</li>
-            </ul>
-            <button class="catalog-filter__close-button button" type="button">Свернуть</button>
+          </fieldset>
+          <fieldset class="filter-group">
+            <div class="filter-group__wrapper">
+              <legend class="filter-group__title">Музыка</legend>
+              <button class="filter-group__button filter-group__music-button filter-group__button--opened" type="button"></button>
+              <div class="filter-group__music-wrapper">
+                <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
+                <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
+                <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
+                <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
+                <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <div class="filter-group__wrapper">
+              <legend class="filter-group__title">Еда</legend>
+              <button class="filter-group__button filter-group__food-button" type="button"></button>
+              <div class="filter-group__food-wrapper filter-group__wrapper--closed">
+                <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                <label class="filter-group__label-text" for="meat">Мясоед</label>
+                <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
+                <label class="filter-group__label-text" for="proper-nutrition">Сидит на ПП</label>
+                <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
+                <label class="filter-group__label-text" for="vegan">Веган-сыроед</label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <div class="filter-group__wrapper">
+              <legend class="filter-group__title">Транспорт</legend>
+              <button class="filter-group__button filter-group__button--opened" type="button"></button>
+              <div class="filter-group__transport-wrapper transport-checkboxes">
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                <label class="filter-group__label-transport filter-group__label-transport--plane transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                <label class="filter-group__label-transport filter-group__label-transport--bus transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
+                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                <label class="filter-group__label-transport filter-group__label-transport--bicycle transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
+                <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
+                <label class="filter-group__label-transport filter-group__label-transport--running transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter-group">
+            <div class="filter-group__wrapper">
+              <legend class="filter-group__title">Левел</legend>
+              <button class="filter-group__button filter-group__button--opened" type="button"></button>
+              <div class="filter-group__number-wrapper">
+                <input class="filter-group__number" type="number" name="levelfrom" value="30">
+                <div class="filter-group__slash-wrapper">
+                  <div class="filter-group__slash"></div>
+                </div>
+                <input class="filter-group__number" type="number" name="levelto" value="100">
+              </div>
+              <div class="filter-group__range-full">
+                <div class="filter-group__range-slider filter-group__range-slider--left" tabindex="0"></div><div class="filter-group__range-part"></div><div class="filter-group__range-slider filter-group__range-slider--right" tabindex="0"></div>
+              </div>
+            </div>
+          </fieldset>
+          <button class="catalog-main__submit button" type="submit">Показать</button>
+        </form>
+        <section class="catalog-companions">
+          <h2 class="visually-hidden">Профили попутчиков</h2>
+          <div class="catalog-companions__card">
+            <div class="catalog-companions__wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
+                <img class="catalog-companions__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова">
+              </picture>
+              <div class="catalog-companions__text-wrapper">
+                <p class="catalog-companions__text catalog-companions__username">Таня Фирсова</p>
+                <p class="catalog-companions__text catalog-companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+              </div>
+            </div>
+            <div class="catalog-companions__wishes-wrapper">
+              <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
+              <ul class="catalog-companions__list wishes-list site-list">
+                <li class="wishes-list__item">Шри-Ланка</li>
+                <li class="wishes-list__item">Таиланд</li>
+                <li class="wishes-list__item">Сейшелы</li>
+              </ul>
+            </div>
+            <div class="catalog-companions__attributes-wrapper">
+              <div class="catalog-companions__transport-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
+                <ul class="catalog-companions__list transport-list transport-list--firsova site-list">
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                </ul>
+              </div>
+              <div class="catalog-companions__level-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
+                <div class="catalog-companions__level">
+                  <p class="catalog-companions__number">99</p>
+                  <p class="catalog-companions__caption">level</p>
+                </div>
+              </div>
+            </div>
+            <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
+            <div class="catalog-companions__heart-wrapper">
+              <div class="catalog-companions__heart catalog-companions__heart--active"></div>
+              <p class="catalog-companions__text catalog-companions__distance">1,5 М</p>
+            </div>
+          </div>
+          <div class="catalog-companions__card">
+            <div class="catalog-companions__wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+                <img class="catalog-companions__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин">
+              </picture>
+              <div class="catalog-companions__text-wrapper">
+                <p class="catalog-companions__text catalog-companions__username">Петя Демин</p>
+                <p class="catalog-companions__text catalog-companions__tags">#бургер #бар #футбол #концерт #крафт</p>
+              </div>
+            </div>
+            <div class="catalog-companions__wishes-wrapper">
+              <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
+              <ul class="catalog-companions__list wishes-list site-list">
+                <li class="wishes-list__item">Бельгия</li>
+                <li class="wishes-list__item">Чехия</li>
+              </ul>
+            </div>
+            <div class="catalog-companions__attributes-wrapper">
+              <div class="catalog-companions__transport-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
+                <ul class="catalog-companions__list transport-list transport-list--demin site-list">
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                </ul>
+              </div>
+              <div class="catalog-companions__level-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
+                <div class="catalog-companions__level catalog-companions__level--demin">
+                  <p class="catalog-companions__number">80</p>
+                  <p class="catalog-companions__caption">level</p>
+                </div>
+              </div>
+            </div>
+            <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
+            <div class="catalog-companions__heart-wrapper">
+              <div class="catalog-companions__heart"></div>
+              <p class="catalog-companions__text catalog-companions__distance">150</p>
+            </div>
+          </div>
+          <div class="catalog-companions__card">
+            <div class="catalog-companions__wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/smolov-desktop@1x.jpg, img/smolov-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x">
+                <img class="catalog-companions__image" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов">
+              </picture>
+              <div class="catalog-companions__text-wrapper">
+                <p class="catalog-companions__text catalog-companions__username">Марк Смолов</p>
+                <p class="catalog-companions__text catalog-companions__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+              </div>
+            </div>
+            <div class="catalog-companions__wishes-wrapper">
+              <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
+              <ul class="catalog-companions__list wishes-list site-list">
+                <li class="wishes-list__item">США</li>
+                <li class="wishes-list__item">Австралия</li>
+                <li class="wishes-list__item">Доминикана</li>
+              </ul>
+            </div>
+            <div class="catalog-companions__attributes-wrapper">
+              <div class="catalog-companions__transport-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
+                <ul class="catalog-companions__list transport-list transport-list--smolov site-list">
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                </ul>
+              </div>
+              <div class="catalog-companions__level-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
+                <div class="catalog-companions__level catalog-companions__level--smolov">
+                  <p class="catalog-companions__number">25</p>
+                  <p class="catalog-companions__caption">level</p>
+                </div>
+              </div>
+            </div>
+            <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
+            <div class="catalog-companions__heart-wrapper">
+              <div class="catalog-companions__heart"></div>
+              <p class="catalog-companions__text catalog-companions__distance">1700</p>
+            </div>
+          </div>
+          <div class="catalog-companions__card">
+            <div class="catalog-companions__wrapper catalog-companions__wrapper--online">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x">
+                <img class="catalog-companions__image" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая">
+              </picture>
+              <div class="catalog-companions__text-wrapper">
+                <p class="catalog-companions__text catalog-companions__username catalog-companions__username--online">Лариса Роговая</p>
+                <p class="catalog-companions__text catalog-companions__tags">#образование #карьера #учеба #линкедин</p>
+              </div>
+            </div>
+            <div class="catalog-companions__wishes-wrapper">
+              <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
+              <ul class="catalog-companions__list wishes-list site-list">
+                <li class="wishes-list__item">Великобритания</li>
+                <li class="wishes-list__item">Германия</li>
+              </ul>
+            </div>
+            <div class="catalog-companions__attributes-wrapper">
+              <div class="catalog-companions__transport-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
+                <ul class="catalog-companions__list transport-list transport-list--rogovaya site-list">
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                  <li class="catalog-companions__list-item transport-list__item"></li>
+                </ul>
+              </div>
+              <div class="catalog-companions__level-wrapper">
+                <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
+                <div class="catalog-companions__level catalog-companions__level--rogovaya">
+                  <p class="catalog-companions__number">50</p>
+                  <p class="catalog-companions__caption">level</p>
+                </div>
+              </div>
+            </div>
+            <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
+            <div class="catalog-companions__heart-wrapper">
+              <div class="catalog-companions__heart"></div>
+              <p class="catalog-companions__text catalog-companions__distance">23</p>
+            </div>
+          </div>
+          <button class="catalog-companions__button catalog-companions__button--more" type="button">Показать еще</button>
+          <div class="pagination">
+            <div class="pagination__list-wrapper">
+              <ul class="pagination__list pagination__list--pages site-list">
+                <li class="pagination__list-item pagination__list-item--active">
+                  <a class="pagination__anchor">1</a>
+                </li>
+                <li class="pagination__list-item">
+                  <a class="pagination__anchor" href="#">2</a>
+                </li>
+                <li class="pagination__list-item">
+                  <a class="pagination__anchor" href="#">3</a>
+                </li>
+                <li class="pagination__list-item">
+                  <a class="pagination__anchor" href="#">4</a>
+                </li>
+              </ul>
+              <ul class="pagination__list site-list">
+                <li>
+                  <a class="pagination__button pagination__button--left button" href=""></a>
+                </li>
+                <li>
+                  <a class="pagination__button pagination__button--right button" href=""></a>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
-        <div class="catalog-main__wrapper">
-          <form class="catalog-main__form" action="https://echo.htmlacademy.ru/courses" method="post">
-            <p class="catalog-main__text">Подберите идеального попутчика</p>
-            <fieldset class="filter-group">
-              <div class="filter-group__wrapper">
-                <legend class="filter-group__title">Хобби</legend>
-                <button class="filter-group__button filter-group__hobby-button" type="button"></button>
-                <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
-                  <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
-                  <label class="filter-group__label-text" for="sport">Спортзал</label>
-                  <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
-                  <label class="filter-group__label-text" for="hookah">Кальян</label>
-                  <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
-                  <label class="filter-group__label-text" for="sofa">Диван</label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <div class="filter-group__wrapper">
-                <legend class="filter-group__title">Музыка</legend>
-                <button class="filter-group__button filter-group__music-button filter-group__button--opened" type="button"></button>
-                <div class="filter-group__music-wrapper">
-                  <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
-                  <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
-                  <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
-                  <label class="filter-group__label-text" for="rusrap">Русский рэп</label>
-                  <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
-                  <label class="filter-group__label-text" for="eurodance">Евродэнс</label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <div class="filter-group__wrapper">
-                <legend class="filter-group__title">Еда</legend>
-                <button class="filter-group__button filter-group__food-button" type="button"></button>
-                <div class="filter-group__food-wrapper filter-group__wrapper--closed">
-                  <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
-                  <label class="filter-group__label-text" for="meat">Мясоед</label>
-                  <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
-                  <label class="filter-group__label-text" for="proper-nutrition">Сидит на ПП</label>
-                  <input class="visually-hidden" type="checkbox" name="vegan" id="vegan">
-                  <label class="filter-group__label-text" for="vegan">Веган-сыроед</label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <div class="filter-group__wrapper">
-                <legend class="filter-group__title">Транспорт</legend>
-                <button class="filter-group__button filter-group__button--opened" type="button"></button>
-                <div class="filter-group__transport-wrapper transport-checkboxes">
-                  <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
-                  <label class="filter-group__label-transport filter-group__label-transport--plane transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
-                  <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
-                  <label class="filter-group__label-transport filter-group__label-transport--bus transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
-                  <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
-                  <label class="filter-group__label-transport filter-group__label-transport--bicycle transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
-                  <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
-                  <label class="filter-group__label-transport filter-group__label-transport--running transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
-                </div>
-              </div>
-            </fieldset>
-            <fieldset class="filter-group">
-              <div class="filter-group__wrapper">
-                <legend class="filter-group__title">Левел</legend>
-                <button class="filter-group__button filter-group__button--opened" type="button"></button>
-                <div class="filter-group__number-wrapper">
-                  <input class="filter-group__number" type="number" name="levelfrom" value="30">
-                  <div class="filter-group__slash-wrapper">
-                    <div class="filter-group__slash"></div>
-                  </div>
-                  <input class="filter-group__number" type="number" name="levelto" value="100">
-                </div>
-                <div class="filter-group__range-full">
-                  <div class="filter-group__range-slider filter-group__range-slider--left" tabindex="0"></div><div class="filter-group__range-part"></div><div class="filter-group__range-slider filter-group__range-slider--right" tabindex="0"></div>
-                </div>
-              </div>
-            </fieldset>
-            <button class="catalog-main__submit button" type="submit">Показать</button>
-          </form>
-          <section class="catalog-companions">
-            <h2 class="visually-hidden">Профили попутчиков</h2>
-            <div class="catalog-companions__card">
-              <div class="catalog-companions__wrapper">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
-                  <img class="catalog-companions__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" alt="Таня Фирсова">
-                </picture>
-                <div class="catalog-companions__text-wrapper">
-                  <p class="catalog-companions__text catalog-companions__username">Таня Фирсова</p>
-                  <p class="catalog-companions__text catalog-companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-                </div>
-              </div>
-              <div class="catalog-companions__wishes-wrapper">
-                <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
-                <ul class="catalog-companions__list wishes-list site-list">
-                  <li class="wishes-list__item">Шри-Ланка</li>
-                  <li class="wishes-list__item">Таиланд</li>
-                  <li class="wishes-list__item">Сейшелы</li>
-                </ul>
-              </div>
-              <div class="catalog-companions__attributes-wrapper">
-                <div class="catalog-companions__transport-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list transport-list--firsova site-list">
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                  </ul>
-                </div>
-                <div class="catalog-companions__level-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
-                  <div class="catalog-companions__level">
-                    <p class="catalog-companions__number">99</p>
-                    <p class="catalog-companions__caption">level</p>
-                  </div>
-                </div>
-              </div>
-              <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
-              <div class="catalog-companions__heart-wrapper">
-                <div class="catalog-companions__heart catalog-companions__heart--active"></div>
-                <p class="catalog-companions__text catalog-companions__distance">1,5 М</p>
-              </div>
-            </div>
-            <div class="catalog-companions__card">
-              <div class="catalog-companions__wrapper">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
-                  <img class="catalog-companions__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" alt="Петя Демин">
-                </picture>
-                <div class="catalog-companions__text-wrapper">
-                  <p class="catalog-companions__text catalog-companions__username">Петя Демин</p>
-                  <p class="catalog-companions__text catalog-companions__tags">#бургер #бар #футбол #концерт #крафт</p>
-                </div>
-              </div>
-              <div class="catalog-companions__wishes-wrapper">
-                <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
-                <ul class="catalog-companions__list wishes-list site-list">
-                  <li class="wishes-list__item">Бельгия</li>
-                  <li class="wishes-list__item">Чехия</li>
-                </ul>
-              </div>
-              <div class="catalog-companions__attributes-wrapper">
-                <div class="catalog-companions__transport-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list transport-list--demin site-list">
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                  </ul>
-                </div>
-                <div class="catalog-companions__level-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
-                  <div class="catalog-companions__level catalog-companions__level--demin">
-                    <p class="catalog-companions__number">80</p>
-                    <p class="catalog-companions__caption">level</p>
-                  </div>
-                </div>
-              </div>
-              <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
-              <div class="catalog-companions__heart-wrapper">
-                <div class="catalog-companions__heart"></div>
-                <p class="catalog-companions__text catalog-companions__distance">150</p>
-              </div>
-            </div>
-            <div class="catalog-companions__card">
-              <div class="catalog-companions__wrapper">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/smolov-desktop@1x.jpg, img/smolov-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x">
-                  <img class="catalog-companions__image" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" alt="Марк Смолов">
-                </picture>
-                <div class="catalog-companions__text-wrapper">
-                  <p class="catalog-companions__text catalog-companions__username">Марк Смолов</p>
-                  <p class="catalog-companions__text catalog-companions__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-                </div>
-              </div>
-              <div class="catalog-companions__wishes-wrapper">
-                <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
-                <ul class="catalog-companions__list wishes-list site-list">
-                  <li class="wishes-list__item">США</li>
-                  <li class="wishes-list__item">Австралия</li>
-                  <li class="wishes-list__item">Доминикана</li>
-                </ul>
-              </div>
-              <div class="catalog-companions__attributes-wrapper">
-                <div class="catalog-companions__transport-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list transport-list--smolov site-list">
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                  </ul>
-                </div>
-                <div class="catalog-companions__level-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
-                  <div class="catalog-companions__level catalog-companions__level--smolov">
-                    <p class="catalog-companions__number">25</p>
-                    <p class="catalog-companions__caption">level</p>
-                  </div>
-                </div>
-              </div>
-              <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
-              <div class="catalog-companions__heart-wrapper">
-                <div class="catalog-companions__heart"></div>
-                <p class="catalog-companions__text catalog-companions__distance">1700</p>
-              </div>
-            </div>
-            <div class="catalog-companions__card">
-              <div class="catalog-companions__wrapper catalog-companions__wrapper--online">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x">
-                  <img class="catalog-companions__image" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" alt="Лариса Роговая">
-                </picture>
-                <div class="catalog-companions__text-wrapper">
-                  <p class="catalog-companions__text catalog-companions__username catalog-companions__username--online">Лариса Роговая</p>
-                  <p class="catalog-companions__text catalog-companions__tags">#образование #карьера #учеба #линкедин</p>
-                </div>
-              </div>
-              <div class="catalog-companions__wishes-wrapper">
-                <p class="catalog-companions__text catalog-companions__subtitle catalog-companions__subtitle--wishes">хочет посетить:</p>
-                <ul class="catalog-companions__list wishes-list site-list">
-                  <li class="wishes-list__item">Великобритания</li>
-                  <li class="wishes-list__item">Германия</li>
-                </ul>
-              </div>
-              <div class="catalog-companions__attributes-wrapper">
-                <div class="catalog-companions__transport-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden">транспорт:</p>
-                  <ul class="catalog-companions__list transport-list transport-list--rogovaya site-list">
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                    <li class="catalog-companions__list-item transport-list__item"></li>
-                  </ul>
-                </div>
-                <div class="catalog-companions__level-wrapper">
-                  <p class="catalog-companions__subtitle catalog-companions__subtitle--hidden catalog-companions__subtitle--level">левел:</p>
-                  <div class="catalog-companions__level catalog-companions__level--rogovaya">
-                    <p class="catalog-companions__number">50</p>
-                    <p class="catalog-companions__caption">level</p>
-                  </div>
-                </div>
-              </div>
-              <button class="catalog-companions__button catalog-companions__button--absolute button" type="button">Позвать!</button>
-              <div class="catalog-companions__heart-wrapper">
-                <div class="catalog-companions__heart"></div>
-                <p class="catalog-companions__text catalog-companions__distance">23</p>
-              </div>
-            </div>
-            <button class="catalog-companions__button catalog-companions__button--more" type="button">Показать еще</button>
-            <div class="pagination">
-              <div class="pagination__list-wrapper">
-                <ul class="pagination__list pagination__list--pages site-list">
-                  <li class="pagination__list-item pagination__list-item--active">
-                    <a class="pagination__anchor">1</a>
-                  </li>
-                  <li class="pagination__list-item">
-                    <a class="pagination__anchor" href="#">2</a>
-                  </li>
-                  <li class="pagination__list-item">
-                    <a class="pagination__anchor" href="#">3</a>
-                  </li>
-                  <li class="pagination__list-item">
-                    <a class="pagination__anchor" href="#">4</a>
-                  </li>
-                </ul>
-                <ul class="pagination__list site-list">
-                  <li>
-                    <a class="pagination__button pagination__button--left button" href=""></a>
-                  </li>
-                  <li>
-                    <a class="pagination__button pagination__button--right button" href=""></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </section>
-        </div>
+      </div>
     </main>
     <footer class="page-footer">
-      <a href="index.html" class="page-footer__logo">
-        <picture>
-          <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
-          <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Погнали">
-        </picture>
-      </a>
-      <ul class="page-footer__list page-footer__list--social site-list">
-        <li class="page-footer__list-item">
-          <a class="page-footer__anchor page-footer__anchor--fb" href="#"></a>
-        </li>
-        <li class="page-footer__list-item">
-          <a class="page-footer__anchor page-footer__anchor--vk" href="#"></a>
-        </li>
-        <li class="page-footer__list-item">
-          <a class="page-footer__anchor page-footer__anchor--instagram" href="#"></a>
-        </li>
-      </ul>
-      <ul class="page-footer__list page-footer__list--develop site-list">
-        <li class="page-footer__list-item">
-          <p class="page-footer__text">Разработано</p>
-        </li>
-        <li class="page-footer__list-item">
-          <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/htmlacademy.svg" width="27" height="34" alt="html-академия">
-          </a>
-        </li>
-      </ul>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+            <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Погнали">
+          </picture>
+        </a>
+        <ul class="page-footer__list page-footer__list--social site-list">
+          <li class="page-footer__list-item">
+            <a class="page-footer__anchor page-footer__anchor--fb" href="#"></a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__anchor page-footer__anchor--vk" href="#"></a>
+          </li>
+          <li class="page-footer__list-item">
+            <a class="page-footer__anchor page-footer__anchor--instagram" href="#"></a>
+          </li>
+        </ul>
+        <ul class="page-footer__list page-footer__list--develop site-list">
+          <li class="page-footer__list-item">
+            <p class="page-footer__text">Разработано</p>
+          </li>
+          <li class="page-footer__list-item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">
+              <img src="img/htmlacademy.svg" width="27" height="34" alt="html-академия">
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script src="js/script.js"></script>
   </body>

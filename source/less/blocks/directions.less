@@ -1,13 +1,18 @@
 .directions {
   position: relative;
-  margin-top: -20px;
+  margin-top: -30px;
+  background-color: @grey;
+  border-radius: 0 0 30px 30px;
+  padding-top: 82px;
+  z-index: 4;
+}
+
+.directions__wrapper {
   display: flex;
   flex-direction: column;
   min-height: 950px;
-  background-color: @grey;
-  border-radius: 0 0 30px 30px;
-  padding-top: 72px;
-  z-index: 4;
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .directions_card-wrapper {
@@ -44,11 +49,15 @@
 
 @media (min-width: @tablet-width) {
   .directions {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .directions__wrapper {
     min-height: 1030px;
+    width: @tablet-width;
     background-image: url("../img/flags-back@1x.png");
     background-repeat: no-repeat;
     background-position: 440px 110px;
-    border-radius: 0 0 60px 60px;
 
     @media (min-resolution: @retina) {
       background-image: url("../img/flags-back@2x.png");
@@ -106,12 +115,12 @@
 }
 
 @media (min-width: @desktop-width) {
-  .directions {
-    display: flex;
+  .directions__wrapper {
+    min-height: 705px;
     flex-direction: row;
     flex-wrap: wrap;
-    min-height: 705px;
     align-content: flex-start;
+    width: @desktop-width;
     background-position: 1100px 110px;
   }
 
