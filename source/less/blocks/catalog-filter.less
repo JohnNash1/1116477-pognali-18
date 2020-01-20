@@ -239,6 +239,7 @@
   }
 
   .catalog-filter__letters {
+    position: relative;
     order: 2;
     width: 385px;
     height: 415px;
@@ -281,6 +282,22 @@
     color: #1d2e5b;
   }
 
+  .catalog-filter__country {
+    font-family: @font, @font-secondary;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    color: #444444;
+  }
+
+  .catalog-filter__coutries-wrapper--active .catalog-filter__country-list {
+    position: absolute;
+    top: 8px;
+    left: 468px;
+    display: block;
+    width: 155px;
+  }
+
   .catalog-filter__coutries-wrapper:nth-child(5n+1) .catalog-filter__letter {
     border: none;
   }
@@ -320,6 +337,7 @@
   }
 
   .catalog-filter__letters {
+    position: static;
     width: 1223px;
     margin-left: 97px;
     margin-top: 78px;
@@ -332,6 +350,7 @@
   .catalog-filter__coutries-wrapper:nth-child(5n+1) {
     width: 255px;
   }
+
   .catalog-filter__coutries-wrapper:nth-child(5n+2) {
     width: 253px;
   }
@@ -344,7 +363,8 @@
     width: 241px;
   }
 
-  .catalog-filter__country-list {
+  .catalog-filter__coutries-wrapper .catalog-filter__country-list {
+    position: static;
     display: block;
     margin-top: 20px;
     margin-bottom: 36px;
@@ -355,14 +375,6 @@
     color: @page-color;
     padding: 0;
     margin-left: -1px;
-  }
-
-  .catalog-filter__country {
-    font-family: @font, @font-secondary;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: left;
-    color: #444444;
   }
 
   .catalog-filter__button {
@@ -376,7 +388,7 @@
     background-size: 18px 18px;
     background-position: 594px center;
     margin-left: 60px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .catalog-filter__title {
