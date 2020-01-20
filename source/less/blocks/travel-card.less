@@ -1,5 +1,30 @@
 .travel-card {
+  position: relative;
   margin: -5px 25px;
+
+  &::before {
+    position: absolute;
+    top: 87px;
+    left: 25px;
+    content: "";
+    display: block;
+    width: 35px;
+    height: 24px;
+    background-size: 35px 24px;
+    z-index: 1;
+  }
+}
+
+.travel-card--thailand::before {
+  background-image: url("../img/flag-thailand.svg");
+}
+
+.travel-card--france::before {
+  background-image: url("../img/flag-france.svg");
+}
+
+.travel-card--czech::before {
+  background-image: url("../img/flag-czech.svg");
 }
 
 .travel-card__image {

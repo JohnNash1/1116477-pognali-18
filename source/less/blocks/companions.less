@@ -8,7 +8,6 @@
 }
 
 .companions__wrapper {
-  outline: 1px solid red;
   display: flex;
   flex-direction: column;
   width: @mobile-width;
@@ -49,6 +48,7 @@
 }
 
 .companions__card {
+  position: relative;
   margin-bottom: 10px;
 }
 
@@ -85,6 +85,7 @@
 }
 
 .companions__card-wrapper {
+  position: relative;
   width: 270px;
   height: 147px;
   background-color: @white;
@@ -108,11 +109,54 @@
   font-weight: bold;
   line-height: 21px;
   color: #1d2e5b;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 53px;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #f97676;
+  }
+}
+
+.companions__card-text--demin::before {
+  left: 63px;
+  background-color: #81e31e;
 }
 
 .companions__list {
   margin-top: 17px;
   margin-left: 75px;
+}
+
+.companions__list-item {
+  background-color: @white;
+  border-radius: 0;
+  background-position: center;
+}
+
+.companions__list-item:first-child {
+  background-image: url("../img/plane.svg");
+  background-size: 19px 21px;
+}
+
+.companions__list-item:nth-child(2) {
+  background-image: url("../img/bus.svg");
+  background-size: 17px 21px;
+}
+
+.companions__list-item:nth-child(3) {
+  background-image: url("../img/bike.svg");
+  background-size: 24px 21px;
+}
+
+.companions__list-item:nth-child(4) {
+  background-image: url("../img/run.svg");
+  background-size: 20px 21px;
 }
 
 .companions__button {

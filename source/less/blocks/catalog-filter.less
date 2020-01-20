@@ -178,13 +178,14 @@
 @media (min-width: @tablet-width) {
   .catalog-filter {
     width: 100%;
+    border-radius: 0 0 60px 60px;
   }
 
   .catalog-filter__wrapper {
+    width: @tablet-width;
     justify-content: flex-start;
     padding-top: 87px;
     margin-top: -60px;
-    border-radius: 0 0 60px 60px;
   }
 
   .catalog-filter__wrapper--closed {
@@ -243,7 +244,7 @@
     position: relative;
     order: 2;
     width: 385px;
-    height: 415px;
+    height: auto;
     margin-top: 47px;
     margin-left: 54px;
   }
@@ -332,6 +333,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-filter__wrapper {
+    width: @desktop-width;
+  }
+
   .catalog-filter__wrapper--opened {
     height: 2620px;
     background-color: #edeff6;
