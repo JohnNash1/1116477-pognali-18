@@ -63,7 +63,7 @@
 }
 
 .catalog-filter__wrapper--opened .catalog-filter__button {
-  background-image: url("../img/close-blue.svg");
+  background-image: url("../img/filter-close.svg");
   background-size: 12px 12px;
   background-position: center 6px;
   margin-top: -2px;
@@ -118,15 +118,15 @@
   border-bottom: 1px solid #cbced9;
 }
 
-.catalog-filter__letter:nth-child(5n+1) {
+.catalog-filter__coutries-wrapper:nth-child(5n+1) .catalog-filter__letter {
   border-left: 1px solid #cbced9;
 }
 
-.catalog-filter__letter:nth-child(-n+5) {
+.catalog-filter__coutries-wrapper:nth-child(-n+5) .catalog-filter__letter {
   border-top: 1px solid #cbced9;
 }
 
-.catalog-filter__letter:first-child {
+.catalog-filter__letter--active {
   background-color: #1d2e5b;
   color: @white;
 }
@@ -170,12 +170,17 @@
   }
 }
 
+.catalog-filter__country-list {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .catalog-filter {
     width: 100%;
   }
 
   .catalog-filter__wrapper {
+    justify-content: flex-start;
     padding-top: 87px;
     margin-top: -60px;
     border-radius: 0 0 60px 60px;
@@ -183,6 +188,10 @@
 
   .catalog-filter__wrapper--closed {
     height: 197px;
+  }
+
+  .catalog-filter__wrapper--opened {
+    height: 832px;
   }
 
   .catalog-filter__title {
@@ -203,7 +212,7 @@
     background-position: right center;
     background-size: 27px 5px;
     padding-left: 0;
-    margin-right: 75px;
+    margin-left: 80px;
     margin-top: 28px;
 
     &::before {
@@ -219,6 +228,7 @@
   }
 
   .catalog-filter__wrapper--opened .catalog-filter__button {
+    background-image: url("../img/close-blue.svg");
     background-size: 19px 19px;
     background-position: right center;
     margin-top: 28px;
@@ -237,11 +247,7 @@
   }
 
   .catalog-filter__list--country {
-    order: 3;
-  }
-
-  .catalog-filter__close-button {
-    order: 4;
+    display: none;
   }
 
   .catalog-filter__continent {
@@ -270,16 +276,16 @@
     border: none;
   }
 
-  .catalog-filter__letter:first-child {
+  .catalog-filter__letter--active {
     background-color: transparent;
     color: #1d2e5b;
   }
 
-  .catalog-filter__letter:nth-child(5n+1) {
+  .catalog-filter__coutries-wrapper:nth-child(5n+1) .catalog-filter__letter {
     border: none;
   }
 
-  .catalog-filter__letter:nth-child(-n+5) {
+  .catalog-filter__coutries-wrapper:nth-child(-n+5) .catalog-filter__letter {
     border: none;
   }
 
@@ -303,5 +309,92 @@
     background-position: 243px center;
     margin-left: 75px;
     margin-top: 56px;
+    order: 4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-filter__wrapper--opened {
+    height: 2620px;
+    background-color: #edeff6;
+  }
+
+  .catalog-filter__letters {
+    width: 1223px;
+    margin-left: 97px;
+    margin-top: 78px;
+  }
+
+  .catalog-filter__coutries-wrapper {
+    width: 223px;
+  }
+
+  .catalog-filter__coutries-wrapper:nth-child(5n+1) {
+    width: 255px;
+  }
+  .catalog-filter__coutries-wrapper:nth-child(5n+2) {
+    width: 253px;
+  }
+
+  .catalog-filter__coutries-wrapper:nth-child(5n+3) {
+    width: 251px;
+  }
+
+  .catalog-filter__coutries-wrapper:nth-child(5n+4) {
+    width: 241px;
+  }
+
+  .catalog-filter__country-list {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 36px;
+  }
+
+  .catalog-filter__letter {
+    text-align: left;
+    color: @page-color;
+    padding: 0;
+    margin-left: -1px;
+  }
+
+  .catalog-filter__country {
+    font-family: @font, @font-secondary;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: left;
+    color: #444444;
+  }
+
+  .catalog-filter__button {
+    margin-left: 371px;
+  }
+
+  .catalog-filter__close-button {
+    width: 1320px;
+    padding-left: 633px;
+    background-image: url("../img/filter-close.svg");
+    background-size: 18px 18px;
+    background-position: 594px center;
+    margin-left: 60px;
+    margin-top: 0px;
+  }
+
+  .catalog-filter__title {
+    display: inline;
+    margin-top: 30px;
+    padding-left: 124px;
+    font-size: 20px;
+    line-height: 24px;
+    background-size: 23px 15px;
+    background-position: 80px 3px;
+
+    &::after {
+      content: ":";
+    }
+  }
+
+  .catalog-filter__wrapper--closed .catalog-filter__list--continents,
+  .catalog-filter__wrapper--opened .catalog-filter__list--continents {
+    margin-left: 10px;
   }
 }
