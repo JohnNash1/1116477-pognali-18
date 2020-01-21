@@ -24,15 +24,18 @@ menuButton.addEventListener("click", function () {
 
 var filterButton = document.querySelector(".catalog-filter__button");
 var filterMenu = document.querySelector(".catalog-filter__wrapper");
+var catalogFilter = document.querySelector(".catalog-filter");
 
 filterButton.addEventListener("click", function () {
   if (filterMenu.classList.contains("catalog-filter__wrapper--closed")) {
     filterMenu.classList.remove("catalog-filter__wrapper--closed");
     filterMenu.classList.add("catalog-filter__wrapper--opened");
+    catalogFilter.classList.add("catalog-filter--opened");
   }
   else {
     filterMenu.classList.remove("catalog-filter__wrapper--opened");
     filterMenu.classList.add("catalog-filter__wrapper--closed");
+    catalogFilter.classList.remove("catalog-filter--opened");
   };
 });
 
@@ -41,6 +44,7 @@ var filterCloseButton = document.querySelector(".catalog-filter__close-button");
 filterCloseButton.addEventListener("click", function () {
   filterMenu.classList.remove("catalog-filter__wrapper--opened");
   filterMenu.classList.add("catalog-filter__wrapper--closed");
+  catalogFilter.classList.remove("catalog-filter--opened");
 });
 
 var hobbyButton = document.querySelector(".filter-group__hobby-button");
