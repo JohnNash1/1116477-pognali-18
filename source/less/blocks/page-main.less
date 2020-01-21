@@ -7,20 +7,16 @@
 
 .page-main__bg-wrapper {
   background-color: @dark-blue;
+  background-image: url("../img/globe-back-mobile@2x.jpg");
+  background-size: auto 569px;
+  background-repeat: no-repeat;
+  background-position: 0 -93px;
 }
 
 .page-main__wrapper {
   width: @mobile-width;
   position: relative;
-  background-image: url("../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 -93px;
   margin: 0 auto;
-
-  @media (min-resolution: @retina) {
-    background-image: url("../img/globe-back-mobile@2x.jpg");
-    background-size: 320px 569px;
-  }
 }
 
 .page-main__title {
@@ -101,10 +97,9 @@
 
   .page-main__wrapper {
     width: @tablet-width;
-    min-height: 862px;
+    min-height: 830px;
     background-image: none;
     margin: 0 auto;
-    outline: 1px solid red;
   }
 
   .page-main__title {

@@ -1,6 +1,10 @@
 .form-main {
-  width: @mobile-width;
   background-color: #edeff6;
+}
+
+.form-main__title-wrapper {
+  border-radius: 0 0 20px 20px;
+  background-color: @dark-blue;
 }
 
 .form-main__title {
@@ -12,11 +16,12 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form-main {
-    width: 100%;
+  .form-main__title-wrapper {
+    border-radius: 0 0 60px 60px;
   }
 
   .form-main__title {
+    width: @tablet-width;
     height: 219px;
     font-size: 60px;
     line-height: 70px;
@@ -36,6 +41,7 @@
 
 @media (min-width: @desktop-width) {
   .form-main__title {
+    width: @desktop-width;
     padding-left: 124px;
   }
 }

@@ -12,14 +12,13 @@
   display: flex;
   flex-direction: column;
   width: @mobile-width;
-  min-height: 430px;
+  min-height: 491px;
   padding-top: 58px;
   background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
   background-size: 99px 99px;
   background-position: 195px 75px;
   margin: 0 auto;
-  outline: 1px solid red;
 
   @media (min-resolution: @retina) {
     background-image: url("../img/rates@2x.png");
@@ -115,6 +114,62 @@
   line-height: 22px;
   text-align: left;
   color: #444444;
+}
+
+.adding-profile__busines {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  height: 443px;
+  background-color: @white;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.adding-profile__busines--show {
+  display: block;
+}
+
+.adding-profile__busines-title {
+  width: 167px;
+  padding-top: 0;
+  margin-top: 31px;
+}
+
+.adding-profile__busines-list {
+  margin-top: 30px;
+  margin-left: 25px;
+}
+
+.adding-profile__busines-text {
+  padding-top: 11px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+.adding-profile__busines-text:last-child {
+  padding-bottom: 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.adding-profile__close {
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  color: #1d2e5b;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  width: 270px;
+  height: 59px;
+  background-color: #f3f4f8;
+  border-radius: 0 0 20px 20px;
+  margin-top: 23px;
 }
 
 @media (min-width: @tablet-width) {
@@ -237,6 +292,50 @@
     top: 134px;
     left: 39px;
   }
+
+  .adding-profile__busines {
+    width: 688px;
+    height: 526px;
+    border-radius: 30px;
+  }
+
+  .adding-profile__busines-title {
+    width: 315px;
+    margin-top: 47px;
+    margin-left: 192px;
+  }
+
+  .adding-profile__busines-list {
+    margin-top: 50px;
+    margin-left: 92px;
+    margin-right: 91px;
+  }
+
+  .adding-profile__busines-text {
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    line-height: 28px;
+    padding-top: 12px;
+    margin-bottom: 15px;
+  }
+
+  .adding-profile__busines-text:last-child {
+    padding-bottom: 15px;
+  }
+
+  .adding-profile__close {
+    font-size: 24px;
+    text-transform: none;
+    width: 688px;
+    height: 108px;
+    border-radius: 0 0 30px 30px;
+    margin-top: 36px;
+  }
+
+  .adding-profile__break {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -272,5 +371,24 @@
 
   .adding-profile__list-item {
     width: 813px;
+  }
+
+  .adding-profile__busines {
+    width: 750px;
+  }
+
+  .adding-profile__busines-title {
+    margin-top: 47px;
+    margin-left: 223px;
+  }
+
+  .adding-profile__busines-list {
+    margin-top: 50px;
+    margin-left: 59px;
+    margin-right: 59px;
+  }
+
+  .adding-profile__close {
+    width: 750px;
   }
 }

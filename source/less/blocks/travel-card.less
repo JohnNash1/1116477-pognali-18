@@ -76,6 +76,14 @@
   .travel-card {
     display: flex;
     margin-top: 10px;
+
+    &::before {
+      top: 16px;
+      left: 398px;
+      width: 70px;
+      height: 47px;
+      background-size: 70px 47px;
+    }
   }
 
   .travel-card__picture {
@@ -118,6 +126,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .travel-card::before {
+    top: 23px;
+    left: 338px;
+  }
+
   .travel-card__wrapper {
     box-sizing: border-box;
     width: 370px;
