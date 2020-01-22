@@ -220,7 +220,7 @@
                 <div class="add-plan__text-wrapper">
                   <p class="add-plan__text add-plan__text--bold">Шаг 2.<br class="add-plan__break"> Маршрут</p>
                   <p class="add-plan__text add-plan__description-text">Укажите страны, которые вы хотели бы
-                    посетить.<br class="add-plan__description-break"> Это может быть одна или сразу несколько.</p>
+                    посетить.<br class="add-plan__first-break"> Это может<br class="add-plan__description-break"> быть одна или сразу несколько.</p>
                 </div>
                 <ul class="add-plan__plans-list site-list">
                   <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
@@ -230,11 +230,7 @@
               </div>
               <div class="add-plan__country-wrapper">
                 <div class="add-plan__cover add-plan__select-cover"></div>
-                <select class="add-plan__country-select" name="countries">
-                  <option value="choose">Выберите страну</option>
-                  <option value="Bosnia" selected>Босния и Герцеговина</option>
-                  <option value="Czech">Чехия</option>
-                </select>
+                <input type="text" class="add-plan__country-select" name="Bosnia" value="Босния и Герцеговина" readonly>
                 <div class="add-plan__flag add-plan__bosnia"></div>
                 <button class="add-plan__close-button" type="button"></button>
               </div>
@@ -242,22 +238,18 @@
               <div class="add-plan__arrow"></div>
               <div class="add-plan__country-wrapper">
                 <div class="add-plan__cover add-plan__select-cover add-plan__czech-cover"></div>
-                <select class="add-plan__country-select" name="countries">
-                  <option value="choose">Выберите страну</option>
-                  <option value="Bosnia">Босния и Герцеговина</option>
-                  <option value="Czech" selected>Чехия</option>
-                </select>
+                <input type="text" class="add-plan__country-select" name="czech" value="Чехия" readonly>
                 <div class="add-plan__flag add-plan__czech"></div>
                 <button class="add-plan__close-button" type="button"></button>
               </div>
               <div class="add-plan__circle add-plan__circle--czech"></div>
               <div class="add-plan__arrow add-plan__arrow--czech"></div>
               <div class="add-plan__choose-wrapper">
-                <button class="add-plan__add-country add-plan__choose-country add-plan__choose-country--opened" type="button">Выберите страну</button>
+                <button class="add-plan__add-country add-plan__choose-country" type="button">Выберите страну</button>
                 <button class="add-plan__close-button" type="button"></button>
                 <div class="add-plan__circle add-plan__circle--choose"></div>
               </div>
-              <div class="add-plan__drop-menu add-plan__drop-menu--opened">
+              <div class="add-plan__drop-menu">
                 <div class="add-plan__letters">
                   <button class="add-plan__letter add-plan__letter--active" type="button">А</button>
                   <button class="add-plan__letter" type="button">Б</button>

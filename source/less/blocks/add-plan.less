@@ -92,6 +92,10 @@
   margin-top: -4px;
 }
 
+.add-plan__first-break {
+  display: none;
+}
+
 .add-plan__text--bold {
   font-size: 20px;
   line-height: 20px;
@@ -246,7 +250,6 @@
   box-sizing: border-box;
   width: 168px;
   margin-left: 25px;
-  appearance: none;
   font-family: @font, @font-secondary;
   font-size: 14px;
   font-weight: 500;
@@ -255,7 +258,7 @@
   text-align: left;
   color: #1d2e5b;
   text-transform: uppercase;
-  border-color: #cbced9;
+  border: 1px solid #cbced9;
   border-radius: 4px;
   padding-left: 12px;
 }
@@ -651,6 +654,14 @@
   .add-plan__wrapper:nth-child(3) .add-plan__description-text {
     margin-top: -1px;
     margin-bottom: 77px;
+  }
+
+  .add-plan__description-break {
+    display: none;
+  }
+
+  .add-plan__first-break {
+    display: inline;
   }
 
   .add-plan__text--bold {
