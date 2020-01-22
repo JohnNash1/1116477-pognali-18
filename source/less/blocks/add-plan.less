@@ -566,10 +566,7 @@
   border-right: none;
 }
 
-.add-plan__letter:nth-child(5n+2) {
-  width: 43px;
-}
-
+.add-plan__letter:nth-child(5n+2),
 .add-plan__letter:nth-child(5n-1) {
   width: 43px;
 }
@@ -821,7 +818,6 @@
     &::after {
       width: 20px;
       height: 20px;
-      background-image: url("../img/qty-plus.svg");
       margin-right: 20px;
     }
   }
@@ -832,9 +828,14 @@
     &::after {
       width: 17px;
       height: 9px;
-      background-image: url("../img/dropdown-form.svg");
       background-size: 17px 9px;
     }
+  }
+
+  .add-plan__choose-country--opened::after {
+    width: 17px;
+    height: 17px;
+    background-size: 17px 17px;
   }
 
   .add-plan__select-cover {
@@ -962,6 +963,64 @@
 
   .add-plan__submit {
     margin-top: 43px;
+  }
+
+  .add-plan__drop-menu {
+    display: flex;
+    top: 517px;
+    left: 43px;
+    width: 575px;
+    border: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .add-plan__drop-menu--opened {
+    display: flex;
+  }
+
+  .add-plan__letters {
+    width: 260px;
+    height: 350px;
+    border-top: 1px solid #cbced9;
+    border-left: 1px solid #cbced9;
+    margin-top: 34px;
+    margin-left: 27px;
+  }
+
+  .add-plan__letter {
+    width: 52px;
+    height: 70px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    border-right: 1px solid #cbced9;
+    border-bottom: 1px solid #cbced9;
+
+    &--active {
+      color: @white;
+      background-color: #1d2e5b;
+    }
+  }
+
+  .add-plan__letter:nth-child(5n) {
+    border-right: 1px solid #cbced9;
+  }
+
+  .add-plan__letter:nth-child(5n+2),
+  .add-plan__letter:nth-child(5n-1) {
+    width: 52px;
+  }
+
+  .add-plan__list-country {
+    border-left: 1px solid rgba(203, 206, 217, 0.5);
+    margin-top: 0;
+    margin-left: 79px;
+    padding-top: 30px;
+    padding-left: 25px;
+  }
+
+  .add-plan__country {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -1238,5 +1297,39 @@
 
   .add-plan__title-czech::before {
     margin-left: 667px;
+  }
+
+  .add-plan__drop-menu {
+    top: 575px;
+    left: 160px;
+    width: 730px;
+  }
+
+  .add-plan__letters {
+    align-content: space-between;
+    width: 360px;
+    height: 410px;
+    border: none;
+  }
+
+  .add-plan__letter {
+    width: 60px;
+    border-radius: 4px;
+    border: 1px solid #cbced9;
+    margin-right: 15px;
+  }
+
+  .add-plan__letter:nth-child(5n) {
+    border: 1px solid #cbced9;
+    margin: 0;
+  }
+
+  .add-plan__letter:nth-child(5n+2),
+  .add-plan__letter:nth-child(5n-1) {
+    width: 60px;
+  }
+
+  .add-plan__list-country {
+    margin-left: 102px;
   }
 }
