@@ -50,19 +50,48 @@
 .companions__card {
   position: relative;
   margin-bottom: 10px;
+
+  &:hover {
+    box-shadow: 0px 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
 }
 
 .companions__card-level {
-  // background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  top: 0;
+  top: 16px;
+  left: 17px;
   width: 60px;
   height: 60px;
-  background-image: url("../img/statusbar.svg");
-  background-size: 60px 60px;
-  background-position: center;
-  outline: 1px solid red;
+  border-radius: 50%;
+  background-image: url("../img/statusbar99.png");
+  background-size:  auto;
+  background-position: -14px -8px;
   z-index: 100;
+}
+
+.companions__card-number {
+  font-family: @font, @font-secondary;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+  color: @white;
+  margin: 0;
+  margin-top: 12px;
+}
+
+.companions__card-caption {
+  width: 31px;
+  font-family: @font, @font-secondary;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  color: @white;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 0;
+  margin-left: 14px;
+  padding-top: 2px;
 }
 
 .companions__text-wrapper {

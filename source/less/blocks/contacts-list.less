@@ -15,6 +15,15 @@
 .contacts-list__mail {
   width: 209px;
   padding-left: 61px;
+
+  &:hover,
+  &:focus {
+    color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(255, 189, 48, 0.3);
+  }
 }
 
 .contacts-list__tel::before,
@@ -38,6 +47,24 @@
 
 .contacts-list__mail::before {
   background-image: url("../img/contacts-mail.svg");
+}
+
+.contacts-list__tel:hover::before,
+.contacts-list__tel:focus::before {
+  background-image: url("../img/contacts-phone-hover.svg");
+}
+
+.contacts-list__mail:hover::before,
+.contacts-list__mail:focus::before {
+  background-image: url("../img/contacts-mail-hover.svg");
+}
+
+.contacts-list__tel:active::before {
+  background-image: url("../img/contacts-phone-active.svg");
+}
+
+.contacts-list__mail:active::before {
+  background-image: url("../img/contacts-mail-active.svg");
 }
 
 @media (min-width: @tablet-width) {
@@ -108,5 +135,25 @@
   .contacts-list__tel::before,
   .contacts-list__mail::before {
     background-size: 18px 18px;
+  }
+
+  .contacts-list__tel:hover::before,
+  .contacts-list__tel:focus::before {
+    background-color: #f26926;
+    background-image: url("../img/topmenu-phone.svg");
+  }
+
+  .contacts-list__mail:hover::before,
+  .contacts-list__mail:focus::before {
+    background-color: #ff8d30;
+    background-image: url("../img/topmenu-mail.svg");
+  }
+
+  .contacts-list__tel:active::before {
+    background-image: url("../img/topmenu-phone-active.svg");
+  }
+
+  .contacts-list__mail:active::before {
+    background-image: url("../img/topmenu-mail-active.svg");
   }
 }

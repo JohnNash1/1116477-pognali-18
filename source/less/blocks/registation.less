@@ -57,6 +57,15 @@
 .registation__login {
   color: @yellow;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #ff8d30;
+  }
+
+  &:active {
+    color: rgba(255, 141, 48, 0.3);
+  }
 }
 
 .registation__form {
@@ -102,6 +111,18 @@
 .registation__list {
   margin-left: 25px;
   margin-top: 36px;
+}
+
+.registation__tel:hover .registation__list-text,
+.registation__tel:focus .registation__list-text,
+.registation__mail:hover .registation__list-text,
+.registation__mail:focus .registation__list-text {
+  color: #ffbd30;
+}
+
+.registation__tel:active .registation__list-text,
+.registation__mail:active .registation__list-text {
+  color: rgba(255, 189, 48, 0.3);
 }
 
 @media (min-width: @tablet-width) {
@@ -217,6 +238,26 @@
 
   .registation__mail::before {
     background-image: url("../img/contacts-mail.svg");
+  }
+
+  .registation__tel:hover::before,
+  .registation__tel:focus::before {
+    background-color: #121936;
+    background-image: url("../img/contacts-phone-hover.svg");
+  }
+
+  .registation__tel:active::before {
+    background-image: url("../img/contacts-phone-active.svg");
+  }
+
+  .registation__mail:hover::before,
+  .registation__mail:focus::before {
+    background-color: #121936;
+    background-image: url("../img/contacts-mail-hover.svg");
+  }
+
+  .registation__mail:active::before {
+    background-image: url("../img/contacts-mail-active.svg");
   }
 
   .registation__list {
