@@ -88,6 +88,15 @@
   &::after {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    background-color: #d1d7e9;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .my-card__tags-wrapper {
@@ -111,6 +120,15 @@
   margin-left: 25px;
   padding-left: 26px;
   padding-top: 21px;
+
+  &:hover {
+    border-color: #aeb4cb;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @dark-blue;
+  }
 }
 
 .my-card__tags-label {
@@ -139,6 +157,11 @@
   border: solid 1px #cbced9;
   margin-left: 25px;
   margin-top: 13px;
+
+  &:hover,
+  &:focus {
+    border-color: #aeb4cb;
+  }
 }
 
 .my-card__transport-title {

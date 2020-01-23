@@ -51,6 +51,7 @@
 }
 
 .calendar__day {
+  position: relative;
   width: 31px;
   height: 30px;
   padding: 0;
@@ -63,10 +64,10 @@
   border-bottom: 1px solid #cbced9;
 }
 
-.calendar__day--wider,
-.calendar__weekday--wider {
-  width: 32px;
-}
+// .calendar__day--wider,
+// .calendar__weekday--wider {
+//   width: 31px;
+// }
 
 .calendar__day:nth-child(7n+1) {
   border-left: 1px solid #cbced9;
@@ -77,14 +78,26 @@
   background-color: @white;
 }
 
-.calendar__day--active {
+.calendar__day:not(:disabled):hover {
   background-color: #1d2e5b;
   color: @white;
 }
 
-.calendar__day--current,
-.calendar__day:hover {
+.calendar__day:not(:disabled):hover::before {
+  position: absolute;
+  top: 0;
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  width: 31px;
+  height: 30px;
   border: 2px solid #ff5c23;
+}
+
+.calendar__day--active,
+.calendar__day:not(:disabled):active {
+  background-color: #101d41;
+  color: @white;
 }
 
 .calendar__day--free {
@@ -101,6 +114,15 @@
   background-image: url("../img/month-arrow-left.svg");
   background-repeat: no-repeat;
   background-size: 9px 17px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__month-switch--right {
@@ -159,8 +181,9 @@
     font-size: 20px;
   }
 
-  .calendar__day--current,
-  .calendar__day:hover {
+  .calendar__day:not(:disabled):hover::before {
+    width: 76px;
+    height: 68px;
     border: 4px solid #ff5c23;
   }
 
@@ -171,7 +194,7 @@
 
 @media (min-width: @desktop-width) {
   .calendar__month {
-    width: 999px;
+    width: 1002px;
     margin-left: 160px;
     margin-top: 32px;
     margin-bottom: 0;
@@ -185,7 +208,7 @@
   }
 
   .calendar__wrapper {
-    width: 1006px;
+    width: 1002px;
     margin-left: 160px;
     margin-top: 0;
   }
@@ -211,14 +234,17 @@
     padding-bottom: 27px;
   }
 
-  .calendar__day:nth-child(7n+1),
-  .calendar__day:nth-child(7n),
-  .calendar__weekday:nth-child(7n+1),
-  .calendar__weekday:nth-child(7n) {
-    width: 144px;
+  .calendar__day:not(:disabled) {
+    cursor: pointer;
   }
 
   .calendar__day-text {
     display: inline;
+  }
+
+  .calendar__day:not(:disabled):hover::before {
+    left: 0;
+    width: 143px;
+    height: 72px;
   }
 }

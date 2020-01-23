@@ -85,7 +85,7 @@
           <div class="my-card__inputs-wrapper">
             <div class="my-card__tags-wrapper">
               <label class="my-card__tags-label" for="tags">Тэги</label>
-              <textarea class="my-card__tags" name="tags" id="tags">#бургер #бар #футбол #концерт #крафт</textarea>
+              <textarea class="my-card__tags" name="tags" id="tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
             </div>
             <fieldset class="my-card__transport-fieldset">
               <legend class="my-card__transport-title">Транспорт</legend>
@@ -223,22 +223,22 @@
                     посетить.<br class="add-plan__first-break"> Это может<br class="add-plan__description-break"> быть одна или сразу несколько.</p>
                 </div>
                 <ul class="add-plan__plans-list site-list">
-                  <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
-                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Маршрут</a></li>
+                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
+                  <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Маршрут</a></li>
                   <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Разрешения</a></li>
                 </ul>
               </div>
               <div class="add-plan__country-wrapper">
+                <input class="add-plan__country-select" type="text" name="Bosnia" value="Босния и Герцеговина" readonly>
                 <div class="add-plan__cover add-plan__select-cover"></div>
-                <input type="text" class="add-plan__country-select" name="Bosnia" value="Босния и Герцеговина" readonly>
                 <div class="add-plan__flag add-plan__bosnia"></div>
                 <button class="add-plan__close-button" type="button"></button>
               </div>
               <div class="add-plan__circle"></div>
               <div class="add-plan__arrow"></div>
               <div class="add-plan__country-wrapper">
+                <input class="add-plan__country-select" type="text" name="czech" value="Чехия" readonly>
                 <div class="add-plan__cover add-plan__select-cover add-plan__czech-cover"></div>
-                <input type="text" class="add-plan__country-select" name="czech" value="Чехия" readonly>
                 <div class="add-plan__flag add-plan__czech"></div>
                 <button class="add-plan__close-button" type="button"></button>
               </div>
@@ -278,19 +278,19 @@
                   <button class="add-plan__letter" type="button">Я</button>
                 </div>
                 <ul class="add-plan__list-country site-list">
-                  <li class="add-plan__country">Афганистан</li>
-                  <li class="add-plan__country">Албания</li>
-                  <li class="add-plan__country">Алжир</li>
-                  <li class="add-plan__country">Андорра</li>
-                  <li class="add-plan__country">Аргентина</li>
-                  <li class="add-plan__country">Армения</li>
-                  <li class="add-plan__country">Австралия</li>
-                  <li class="add-plan__country">Австрия</li>
-                  <li class="add-plan__country">Азербайджан</li>
+                  <li><a class="add-plan__country" href="">Афганистан</a></li>
+                  <li><a class="add-plan__country" href="">Албания</a></li>
+                  <li><a class="add-plan__country" href="">Алжир</a></li>
+                  <li><a class="add-plan__country" href="">Андорра</a></li>
+                  <li><a class="add-plan__country" href="">Аргентина</a></li>
+                  <li><a class="add-plan__country" href="">Армения</a></li>
+                  <li><a class="add-plan__country" href="">Австралия</a></li>
+                  <li><a class="add-plan__country" href="">Австрия</a></li>
+                  <li><a class="add-plan__country" href="">Азербайджан</a></li>
                 </ul>
               </div>
               <div class="add-plan__arrow add-plan__arrow--choose"></div>
-              <button class="add-plan__add-country" type="button">Добавить страну</button>
+              <button class="add-plan__add-country add-plan__add-country--hover" type="button">Добавить страну</button>
               <div class="add-plan__circle add-plan__circle--add"></div>
               <div class="add-plan__buttons-wrapper">
                 <a class="add-plan__button button yellow-button" href="#step3">Следующий шаг</a>
@@ -305,19 +305,19 @@
                     Можно писать в свободной форме и ставить тэги.</p>
                 </div>
                 <ul class="add-plan__plans-list site-list">
-                  <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
+                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
                   <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step2">Маршрут</a></li>
-                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Разрешения</a></li>
+                  <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Разрешения</a></li>
                 </ul>
               </div>
               <div class="add-plan__textarea-wrapper">
                 <div class="add-plan__cover"></div>
                 <label class="add-plan__text add-plan__title-text" for="bosnia">Босния и герцеговина</label>
-                <textarea class="add-plan__textarea" name="bosnia" id="bosnia" rows="14" cols="30" placeholder="План действий"></textarea>
+                <textarea class="add-plan__textarea" name="bosnia" id="bosnia" rows="14" cols="30" placeholder="План действий" required></textarea>
               </div>
               <div class="add-plan__textarea-wrapper">
                 <label class="add-plan__text add-plan__title-czech add-plan__title-text" for="czech">Чехия</label>
-                <textarea class="add-plan__textarea" name="czech" id="czech" rows="14" cols="30" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <textarea class="add-plan__textarea" name="czech" id="czech" rows="14" cols="30" placeholder="План действий" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
               </div>
               <div class="add-plan__buttons-wrapper">
                 <button class="add-plan__button add-plan__submit button yellow-button" type="submit">Отправить</button>
@@ -361,5 +361,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/pop-up.js"></script>
   </body>
 </html>
