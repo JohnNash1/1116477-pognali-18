@@ -69,6 +69,7 @@
 }
 
 .registation__form {
+  position: relative;
   display: flex;
   margin-top: 25px;
 }
@@ -90,6 +91,47 @@
 
 .registation__field::placeholder {
   color: rgba(68, 68, 68, 0.3);
+}
+
+.registation__field:hover::placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.registation__field:active,
+.registation__field:focus {
+  background-color: @page-color;
+  border: 4px solid @white;
+  color: @white;
+}
+
+.registation__field:invalid {
+  border: none;
+  background-color: #ffefef;
+}
+
+.registation__field:invalid::placeholder {
+  visibility: hidden;
+}
+
+.registation__invalid {
+  display: none;
+  position: absolute;
+  top: 28px;
+  left: 60px;
+  font-family: @font, @font-secondary;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: left;
+  color: #ff0000;
+}
+
+.registation__field:invalid + .registation__invalid {
+  display: inline-block;
+}
+
+.registation__field:focus + .registation__invalid {
+  display: none;
 }
 
 .registation__submit-text {

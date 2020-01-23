@@ -104,6 +104,15 @@
   line-height: 16px;
   text-align: left;
   color: @page-color;
+
+  &:hover,
+  &:focus {
+    color: rgba(19, 37, 118, 0.7);
+  }
+
+  &:active {
+    color: rgba(19, 37, 118, 0.3);
+  }
 }
 
 .adding-profile__text {
@@ -170,6 +179,15 @@
   background-color: #f3f4f8;
   border-radius: 0 0 20px 20px;
   margin-top: 23px;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -268,6 +286,15 @@
     background-repeat: no-repeat;
     background-size: 17px 21px;
     background-position: center 22px;
+  }
+
+  .adding-profile__list-item:last-child:hover::before,
+  .adding-profile__list-item:last-child:focus::before {
+    background-image: url("../img/business-hover.svg");
+  }
+
+  .adding-profile__list-item:last-child:active::before {
+    background-image: url("../img/business-active.svg");
   }
 
   .adding-profile__list-item::after {

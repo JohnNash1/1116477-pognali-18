@@ -58,6 +58,25 @@
   padding-top: 20px;
   border: 3px solid @page-color;
   margin-left: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: @page-color;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.address-button:hover::after,
+.address-button:focus::after {
+  background-image: url("../img/triangle-arrow-right-white.svg");
+}
+
+.address-button:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

@@ -22,13 +22,13 @@
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list main-navigation__list--menu site-list">
               <li class="main-navigation__list-item">
-                <a class="main-navigation__anchor" href="index.html">О сервисе</a>
+                <a class="main-navigation__anchor" href="index.html"><span class="main-navigation__anchor-text" data-hover="О сервисе">О сервисе</span></a>
               </li>
               <li class="main-navigation__list-item">
-                <a class="main-navigation__anchor">Направления</a>
+                <a class="main-navigation__anchor"><span class="main-navigation__anchor-text" data-hover="Направления">Направления</span></a>
               </li>
               <li class="main-navigation__list-item">
-                <a class="main-navigation__anchor" href="catalog.html">Попутчики</a>
+                <a class="main-navigation__anchor" href="catalog.html"><span class="main-navigation__anchor-text" data-hover="Попутчики">Попутчики</span></a>
               </li>
             </ul>
             <ul class="main-navigation__list main-navigation__list--hidden user-list site-list">
@@ -314,6 +314,9 @@
                 <div class="add-plan__cover"></div>
                 <label class="add-plan__text add-plan__title-text" for="bosnia">Босния и герцеговина</label>
                 <textarea class="add-plan__textarea" name="bosnia" id="bosnia" rows="14" cols="30" placeholder="План действий" required></textarea>
+                <div class="add-plan__invalid">
+                  <span class="add-plan__invalid-text">Это поле должно быть заполнено</span>
+                </div>
               </div>
               <div class="add-plan__textarea-wrapper">
                 <label class="add-plan__text add-plan__title-czech add-plan__title-text" for="czech">Чехия</label>

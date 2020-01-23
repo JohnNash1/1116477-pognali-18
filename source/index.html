@@ -171,18 +171,46 @@
                 <p class="companions__card-caption">level</p>
               </div>
               <div class="card-flags card-flags--firsova">
-                <div class="card-flag card-flag--sri-lanka"></div>
-                <div class="card-flag card-flag--thailand"></div>
-                <div class="card-flag card-flag--seychelles"></div>
+                <div class="card-flag card-flag--sri-lanka">
+                  <div class="card-flag__tooltip card-flag__tooltip--sri-lanka">
+                    <span class="card-flag__tooltip-text">Шри-ланка</span>
+                  </div>
+                </div>
+                <div class="card-flag card-flag--thailand">
+                  <div class="card-flag__tooltip card-flag__tooltip--thailand">
+                    <span class="card-flag__tooltip-text">Таиланд</span>
+                  </div>
+                </div>
+                <div class="card-flag card-flag--seychelles">
+                  <div class="card-flag__tooltip card-flag__tooltip--seychelles">
+                    <span class="card-flag__tooltip-text">Сейшелы</span>
+                  </div>
+                </div>
               </div>
               <div class="companions__card-wrapper">
                 <p class="companions__card-text companions__card-text--bold">Таня Фирсова</p>
                 <p class="companions__card-text">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
                 <ul class="companions__list transport-list transport-list--firsova site-list">
-                  <li class="companions__list-item transport-list__item"></li>
-                  <li class="companions__list-item transport-list__item"></li>
-                  <li class="companions__list-item transport-list__item"></li>
-                  <li class="companions__list-item transport-list__item"></li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--plane">
+                      <span class="transport-list__tooltip-text">Авиаперелет</span>
+                    </div>
+                  </li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--bus">
+                      <span class="transport-list__tooltip-text">Автотранспорт</span>
+                    </div>
+                  </li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--bike">
+                      <span class="transport-list__tooltip-text">Велосипед</span>
+                    </div>
+                  </li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--run">
+                      <span class="transport-list__tooltip-text">Пешком</span>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -193,17 +221,41 @@
                 <p class="companions__card-caption">level</p>
               </div>
               <div class="card-flags card-flags--demin">
-                <div class="card-flag card-flag--belgium"></div>
-                <div class="card-flag card-flag--czech"></div>
+                <div class="card-flag card-flag--belgium">
+                  <div class="card-flag__tooltip card-flag__tooltip--belgium">
+                    <span class="card-flag__tooltip-text">Бельгия</span>
+                  </div>
+                </div>
+                <div class="card-flag card-flag--czech">
+                  <div class="card-flag__tooltip card-flag__tooltip--czech">
+                    <span class="card-flag__tooltip-text">Чехия</span>
+                  </div>
+                </div>
               </div>
               <div class="companions__card-wrapper">
                 <p class="companions__card-text companions__card-text--bold companions__card-text--demin">Петя Демин</p>
                 <p class="companions__card-text">#бургер #бар #футбол #концерт #крафт</p>
                 <ul class="companions__list transport-list transport-list--demin site-list">
-                  <li class="companions__list-item transport-list__item"></li>
-                  <li class="companions__list-item transport-list__item"></li>
-                  <li class="companions__list-item transport-list__item"></li>
-                  <li class="companions__list-item transport-list__item"></li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--plane">
+                      <span class="transport-list__tooltip-text">Авиаперелет</span>
+                    </div>
+                  </li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--bus">
+                      <span class="transport-list__tooltip-text">Автотранспорт</span>
+                    </div>
+                  </li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--bike">
+                      <span class="transport-list__tooltip-text">Велосипед</span>
+                    </div>
+                  </li>
+                  <li class="companions__list-item transport-list__item">
+                    <div class="transport-list__tooltip transport-list__tooltip--run">
+                      <span class="transport-list__tooltip-text">Пешком</span>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -252,6 +304,7 @@
           </div>
           <form class="registation__form" action="https://echo.htmlacademy.ru/courses" method="post">
             <input class="registation__field" type="email" name="email" placeholder="E-mail" required>
+            <span class="registation__invalid">Введите e-mail</span>
             <button class="registation__submit button yellow-button" type="submit"><span class="registation__submit-text">Регистрация</span></button>
           </form>
           <div class="registation__text-wrapper registation__text-wrapper--bottom">
@@ -317,5 +370,6 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/business-popup.js"></script>
   </body>
 </html>

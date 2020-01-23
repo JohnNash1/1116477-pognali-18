@@ -533,6 +533,7 @@
 }
 
 .add-plan__textarea {
+  position: relative;
   box-sizing: border-box;
   width: 220px;
   height: 220px;
@@ -563,6 +564,33 @@
 .add-plan__textarea:invalid {
   border-color: #f47e7e;
 }
+
+.add-plan__invalid {
+  position: absolute;
+  top: 197px;
+  left: 26px;
+  display: none;
+  width: 218px;
+  height: 57px;
+  background-color: #ffefef;
+  border-radius: 0 0 4px 4px;
+}
+
+.add-plan__invalid-text {
+  display: inline-block;
+  font-family: @font, @font-secondary;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #ff0000;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.add-plan__textarea:invalid + .add-plan__invalid {
+  display: block;
+}
+
 
 .add-plan__textarea::placeholder {
   color: rgba(68, 68, 68, 0.3);
@@ -1114,6 +1142,19 @@
     margin-top: 38px;
   }
 
+  .add-plan__invalid {
+    top: 161px;
+    left: 46px;
+    width: 525px;
+  }
+
+  .add-plan__invalid-text {
+    font-size: 20px;
+    line-height: 24px;
+    margin-left: 19px;
+    margin-top: 15px;
+  }
+
   .add-plan__submit {
     margin-top: 43px;
   }
@@ -1423,6 +1464,12 @@
     padding-left: 19px;
     padding-top: 22px;
     padding-right: 0;
+  }
+
+  .add-plan__invalid {
+    top: 161px;
+    left: 161px;
+    width: 728px;
   }
 
   .add-plan__wrapper:nth-child(4)::before {
