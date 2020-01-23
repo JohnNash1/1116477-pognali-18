@@ -24,6 +24,15 @@
   &::after {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .pagination__button--left {
@@ -72,9 +81,15 @@
     text-align: left;
     color: @dark-blue;
     margin: auto;
+
+    &:hover,
+    &:focus {
+      color: rgba(22, 28, 53, 0.6);
+    }
   }
 
-  .pagination__list-item--active {
+  .pagination__list-item--active,
+  .pagination__list-item:active {
     border-radius: 50%;
     background-color: @yellow;
   }

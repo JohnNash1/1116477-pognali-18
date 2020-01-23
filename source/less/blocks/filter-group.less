@@ -17,6 +17,15 @@
   text-transform: uppercase;
   padding-top: 11px;
   margin-left: 15px;
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .filter-group__button {
@@ -30,7 +39,15 @@
   background-image: url("../img/dropdown.svg");
   background-repeat: no-repeat;
   margin-top: -12px;
-  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .filter-group__button--opened {
@@ -61,6 +78,24 @@
     border-radius: 4px;
     margin-right: 10px;
   }
+
+  &:hover,
+  &:focus {
+    color: rgba(68, 68, 68, 0.6);
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.filter-group__label-text:hover::before,
+.filter-group__label-text:focus::before {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.filter-group__label-text:active::before {
+  opacity: 0.3;
 }
 
 .filter-group__label-text:last-child {
@@ -100,6 +135,15 @@ input:checked + .filter-group__label-text::before {
   letter-spacing: 1.5px;
   text-align: center;
   color: #1d2e5b;
+
+  &:hover {
+    border-color: #959bb2;
+  }
+
+  &:active,
+  &:focus {
+    border-color: @dark-blue;
+  }
 }
 
 .filter-group__number:first-child {
@@ -134,6 +178,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .filter-group__range-full {
+  position: relative;
   display: flex;
   justify-content: flex-end;
   width: 220px;
@@ -151,12 +196,39 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .filter-group__range-slider {
+  position: absolute;
+  top: -4px;
   width: 10px;
   height: 10px;
   background-color: #1d2e5b;
   border-radius: 50%;
-  cursor: pointer;
-  margin-top: -4px;
+
+  &:hover,
+  &:focus {
+    width: 19px;
+    height: 19px;
+    top: -8px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
+}
+
+.filter-group__range-slider--left {
+  left: 90px;
+
+  &:hover,
+  &:focus {
+    left: 86px;
+  }
+}
+
+.filter-group__range-slider--right {
+  &:hover,
+  &:focus {
+    right: -4px;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -232,7 +304,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .filter-group__range-slider {
     width: 13px;
     height: 13px;
-    margin-top: -5px;
+    top: -5px;
   }
 
   .filter-group__number-wrapper {
