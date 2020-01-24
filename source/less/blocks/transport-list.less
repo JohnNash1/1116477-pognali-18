@@ -52,10 +52,11 @@
   display: none;
   box-sizing: border-box;
   position: absolute;
-  top: 180px;
+  top: 150px;
   height: 57px;
   background-color: #101d41;
   border-radius: 4px;
+  z-index: 100;
 
   &::before {
     content: "";
@@ -134,6 +135,10 @@
 @media (min-width: @tablet-width) {
   .transport-list {
     flex-direction: column;
+  }
+
+  .transport-list__tooltip {
+    top: 180px;
   }
 }
 

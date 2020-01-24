@@ -43,6 +43,10 @@
   border-radius: 10px;
 }
 
+.travel-card__wrapper--czech {
+  box-shadow: inset 0 -40px 25px 0 #edeff6;
+}
+
 .travel-card__text {
   width: 175px;
   margin: 0;
@@ -123,6 +127,10 @@
     background-size: 21px 20px;
     background-position: 0 0;
   }
+
+  .travel-card__wrapper--czech {
+    box-shadow: none;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -135,5 +143,16 @@
     box-sizing: border-box;
     width: 370px;
     height: 140px;
+  }
+
+  .travel-card__shadow {
+    position: relative;
+    width: 559px;
+    margin-top: 2px;
+    margin-left: 25px;
+    height: 40px;
+    background-color: #edeff6;
+    box-shadow: 0 -20px 25px 10px #edeff6;
+    z-index: 1;
   }
 }
