@@ -13,11 +13,11 @@
   flex-direction: column;
   width: @mobile-width;
   min-height: 491px;
-  padding-top: 58px;
+  padding-top: 56px;
   background-image: url("../img/rates@1x.png");
   background-repeat: no-repeat;
   background-size: 99px 99px;
-  background-position: 195px 75px;
+  background-position: 195px 76px;
   margin: 0 auto;
 
   @media (min-resolution: @retina) {
@@ -34,19 +34,20 @@
   text-align: left;
   color: #ff8d30;
   margin: 0;
-  margin-left: 50px;
+  margin-left: 51px;
   margin-top: 35px;
 }
 
 .adding-profile__list {
   position: relative;
-  margin-top: 40px;
+  margin-top: 43px;
 }
 
 .adding-profile__list-item {
   width: 200px;
   margin-left: 50px;
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 11px;
   border-top: 1px solid rgba(68, 68, 68, 0.05);
 }
 
@@ -57,7 +58,7 @@
 .adding-profile__list-item:last-child {
   width: 219px;
   border: 0;
-  margin-top: 22px;
+  margin-top: 20px;
 }
 
 .adding-profile__list-item::after {
@@ -77,7 +78,7 @@
 }
 
 .adding-profile__list-item:nth-child(1)::after {
-  top: 3px;
+  top: 4px;
   right: 26px;
   content: "1";
   background-color: @orange;
@@ -91,7 +92,7 @@
 }
 
 .adding-profile__list-item:nth-child(3)::after {
-  top: 135px;
+  top: 137px;
   right: 26px;
   content: "3";
   background-color: @yellow;
@@ -192,14 +193,14 @@
 
 @media (min-width: @tablet-width) {
   .adding-profile {
-    min-height: 578px;
+    min-height: 585px;
     top: -160px;
     border-radius: 0 0 60px 60px;
   }
 
   .adding-profile__wrapper {
     width: @tablet-width;
-    min-height: 578px;
+    min-height: 636px;
     background-image: none;
     padding-bottom: 58px;
 
@@ -248,7 +249,7 @@
 
   .adding-profile__list {
     width: 100%;
-    margin-top: 74px;
+    margin-top: 77px;
   }
 
   .adding-profile__list-item {
@@ -262,14 +263,14 @@
   .adding-profile__list-item:last-child {
     width: 300px;
     border: 0;
-    margin-top: 37px;
+    margin-top: 42px;
+    margin-left: 130px;
   }
 
   .adding-profile__anchor {
     font-size: 20px;
     line-height: 20px;
     color: #132576;
-    margin-top: 6px;
   }
 
   .adding-profile__list-item:last-child::before {
@@ -302,7 +303,7 @@
     height: 67px;
     font-size: 28px;
     line-height: 28px;
-    padding-top: 22px;
+    padding-top: 21px;
   }
 
   .adding-profile__list-item:nth-child(1)::after {
@@ -313,11 +314,13 @@
   .adding-profile__list-item:nth-child(2)::after {
     top: 67px;
     left: 39px;
+    padding-top: 19px;
   }
 
   .adding-profile__list-item:nth-child(3)::after {
     top: 134px;
     left: 39px;
+    padding-top: 19px;
   }
 
   .adding-profile__busines {
@@ -368,32 +371,32 @@
 @media (min-width: @desktop-width) {
   .adding-profile__wrapper {
     width: @desktop-width;
-    min-height: 780px;
+    min-height: 830px;
 
     &::before {
       width: 444px;
       height: 300px;
-      top: 307px;
-      left: 730px;
+      top: 314px;
+      left: 750px;
     }
 
     &::after {
       width: 198px;
       height: 198px;
       background-size: 198px 198px;
-      top: 357px;
-      left: 1082px;
+      top: 366px;
+      left: 1108px;
     }
   }
 
   .adding-profile__title {
-    margin: 0 auto;
-    margin-top: 120px;
+    margin-left: 480px;
+    margin-top: 127px;
   }
 
   .adding-profile__list {
-    margin-top: 134px;
-    margin-left: 81px;
+    margin-top: 136px;
+    margin-left: 91px;
   }
 
   .adding-profile__list-item {

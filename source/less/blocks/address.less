@@ -1,6 +1,6 @@
 .address {
   position: relative;
-  min-height: 546px;
+  min-height: 446px;
   z-index: 0;
 }
 
@@ -17,7 +17,7 @@
   min-height: 255px;
   margin: 0 auto;
   margin-top: -50px;
-  padding-top: 80px;
+  padding-top: 68px;
 }
 
 .address__list-item:first-child {
@@ -53,11 +53,15 @@
 }
 
 .address-button {
+  box-sizing: border-box;
   width: 270px;
   height: 62px;
-  padding-top: 20px;
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 3px solid @page-color;
   margin-left: 25px;
+  margin-top: 16px;
 
   &:hover,
   &:focus {
@@ -82,8 +86,8 @@
 @media (min-width: @tablet-width) {
   .address__list {
     width: @tablet-width;
-    min-height: 380px;
-    padding-top: 95px;
+    min-height: 375px;
+    padding-top: 89px;
   }
 
   .address__bg-wrapper {
@@ -114,7 +118,9 @@
     box-sizing: border-box;
     width: 618px;
     height: 81px;
-    padding: 0 37px;
+    padding-top: 22px;
+    padding-left: 33px;
+    padding-right: 33px;
     margin-left: 75px;
     border-radius: 20px;
     font-size: 24px;
@@ -146,8 +152,13 @@
     }
   }
 
+  .address__list-text {
+    margin-left: 29px;
+  }
+
   .address-button {
     width: 324px;
     margin-left: 148px;
+    margin-top: 3px;
   }
 }

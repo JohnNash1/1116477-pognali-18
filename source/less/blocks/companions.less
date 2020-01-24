@@ -1,7 +1,7 @@
 .companions {
   position: relative;
   top: -80px;
-  min-height: 1370px;
+  min-height: 1362px;
   background-color: @page-color;
   border-radius: 0 0 30px 30px;
   z-index: 3;
@@ -18,17 +18,17 @@
     url("../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
   background-position:
-    -10px 358px,
-    152px 80px;
+    -10px 352px,
+    152px 79px;
 
   &::before {
     position: absolute;
-    top: 80px;
+    top: 79px;
     content: "";
     width: 113px;
     height: 132px;
     background-color: #141b3b;
-    border-radius: 10px;
+    border-radius: 20px;
     z-index: -1;
   }
 
@@ -44,7 +44,7 @@
 
 .companions__cards {
   margin: 0 25px;
-  margin-top: 35px;
+  margin-top: 41px;
 }
 
 .companions__card {
@@ -100,12 +100,12 @@
 }
 
 .companions__text-wrapper {
-  margin-left: 50px;
-  margin-top: 95px;
+  margin-left: 48px;
+  margin-top: 90px;
 }
 
 .companions__title {
-  font-family: @font;
+  font-family: @font, @font-secondary;
   font-size: 24px;
   font-weight: bold;
   line-height: 24px;
@@ -125,6 +125,12 @@
 
 .companions__text--bold {
   font-weight: bold;
+  margin-top: 21px;
+  margin-left: 2px;
+}
+
+.companions__text-break {
+  display: none;
 }
 
 .companions__card-image {
@@ -148,7 +154,13 @@
   line-height: 18px;
   text-align: center;
   color: #444444;
-  margin: 15px 47px;
+  margin: 0;
+  margin-top: 15px;
+  margin-left: 46px;
+}
+
+.companions__card-text--demin {
+  margin-left: 52px;
 }
 
 .companions__card-text--bold {
@@ -156,6 +168,7 @@
   font-weight: bold;
   line-height: 21px;
   color: #1d2e5b;
+  margin-top: 15px;
   cursor: pointer;
 
   &::before {
@@ -180,40 +193,47 @@
   }
 }
 
-.companions__card-text--demin::before {
+.companions__card-text--demin-bold::before {
   left: 63px;
   background-color: #81e31e;
 }
 
 .companions__list {
-  margin-top: 17px;
-  margin-left: 75px;
+  margin-top: 12px;
+  margin-left: 68px;
+}
+
+.companions__list--demin {
+  margin-left: 66px;
 }
 
 .companions__list-item {
   background-color: @white;
   border-radius: 0;
-  background-position: center;
 }
 
 .companions__list-item:first-child {
   background-image: url("../img/plane.svg");
   background-size: 19px 21px;
+  background-position: 8px center;
 }
 
 .companions__list-item:nth-child(2) {
   background-image: url("../img/bus.svg");
   background-size: 17px 21px;
+  background-position: 11px center;
 }
 
 .companions__list-item:nth-child(3) {
   background-image: url("../img/bike.svg");
   background-size: 24px 21px;
+  background-position: 8px 6px;
 }
 
 .companions__list-item:nth-child(4) {
   background-image: url("../img/run.svg");
   background-size: 20px 21px;
+  background-position: 9px center;
 }
 
 .companions__button {
@@ -222,6 +242,7 @@
 
 @media (min-width: @tablet-width) {
   .companions {
+    min-height: 1335px;
     border-radius: 0 0 60px 60px;
   }
 
@@ -232,11 +253,11 @@
       url("../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat;
     background-position:
-      400px 120px,
-      40px 500px;
+      409px 120px,
+      40px 468px;
 
     &::before {
-      top: 120px;
+      top: 160px;
       left: 40px;
       width: 213px;
       height: 213px;
@@ -257,11 +278,16 @@
     width: 618px;
     display: flex;
     margin-left: 75px;
-    margin-top: 60px;
+    margin-top: 39px;
   }
 
   .companions__card {
     margin-right: 48px;
+  }
+
+  .companions__card-level {
+    top: 20px;
+    left: 20px;
   }
 
   .companions__card-wrapper {
@@ -298,7 +324,7 @@
     }
   }
 
-  .companions__card-text--demin::before {
+  .companions__card-text--demin-bold::before {
     left: 56px;
   }
 
@@ -311,69 +337,99 @@
   .companions__text-wrapper {
     width: 618px;
     margin-left: 75px;
-    margin-top: 150px;
+    margin-top: 141px;
   }
 
   .companions__title {
     font-size: 45px;
     line-height: 45px;
+    margin-left: -3px;
   }
 
   .companions__text {
     width: 425px;
     font-size: 28px;
     line-height: 33px;
-    margin-top: 50px;
+    margin-top: 57px;
+  }
+
+  .companions__text-break {
+    display: inline;
   }
 
   .companions__text--bold {
     font-size: 21px;
     line-height: 25px;
-    margin-top: 35px;
+    margin-top: 41px;
+    margin-left: -1px;
   }
 
   .companions__button {
-    margin-top: 80px;
+    box-sizing: border-box;
+    margin-top: 70px;
     margin-left: 75px;
     font-size: 24px;
     line-height: 24px;
-    width: 550px;
-    height: 19px;
-    padding: 31px 34px;
+    width: 618px;
+    height: 81px;
+    padding-top: 23px;
+    padding-left: 33px;
+    padding-right: 36px;
     border-radius: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .companions {
-    min-height: 840px;
+    min-height: 830px;
   }
 
   .companions__wrapper {
     width: @desktop-width;
+    min-height: 750px;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
     background-position:
-      191px 475px,
-      547px 180px;
+      191px 425px,
+      547px 173px;
+
+    &::before {
+      top: 148px;
+      left: 60px;
+    }
   }
 
   .companions__button {
-    margin-top: -78px;
-    width: 218px;
+    margin-top: -91px;
+    margin-left: 130px;
+    width: 280px;
   }
 
   .companions__cards {
     margin: 0;
-    margin-top: 180px;
+    margin-top: 173px;
   }
 
   .companions__card {
     margin-right: 60px;
   }
 
+  .companions__card-text--bold {
+    margin-top: 20px;
+  }
+
+  .companions__card-level {
+    top: 23px;
+    left: 23px;
+  }
+
   .companions__text-wrapper {
-    margin-left: 105px;
+    margin-top: 129px;
+    margin-left: 132px;
+  }
+
+  .companions__title {
+    margin-left: -4px;
   }
 }

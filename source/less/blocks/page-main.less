@@ -10,7 +10,7 @@
   background-image: url("../img/globe-back-mobile@2x.jpg");
   background-size: auto 569px;
   background-repeat: no-repeat;
-  background-position: 0 -93px;
+  background-position: 0 -73px;
 }
 
 .page-main__wrapper {
@@ -21,6 +21,7 @@
 
 .page-main__title {
   margin: 0 auto;
+  padding-top: 18px;
   width: 240px;
   font-family: @font;
   font-size: 36px;
@@ -38,7 +39,7 @@
 .page-main__list {
   display: flex;
   position: absolute;
-  bottom: -20px;
+  bottom: -16px;
   left: 26px;
 }
 
@@ -81,17 +82,19 @@
 }
 
 .page-main__login {
+  box-sizing: border-box;
   display: block;
   width: 189px;
-  height: 33px;
-  padding-top: 7px;
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 38px;
   background-color: #ffd74b;
   border-radius: 20px;
   font-family: @font, @font-secondary;
   font-size: 17px;
   font-weight: bold;
   line-height: 30px;
-  text-align: center;
+  text-align: left;
   color: @dark-blue;
   text-transform: uppercase;
 
@@ -116,7 +119,7 @@
     background-color: @page-color;
     background-image: url("../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: -350px bottom;
+    background-position: -357px bottom;
 
     @media (min-resolution: @retina) {
       background-image: url("../img/globe-back-tablet@2x.jpg");
@@ -126,7 +129,7 @@
 
   .page-main__wrapper {
     width: @tablet-width;
-    min-height: 830px;
+    min-height: 852px;
     background-image: none;
     margin: 0 auto;
   }
@@ -135,7 +138,7 @@
     width: 400px;
     font-size: 60px;
     line-height: 70px;
-    margin-top: 38px;
+    margin-top: 9px;
   }
 
   .page-main__list {
@@ -143,8 +146,8 @@
   }
 
   .page-main__image {
-    margin-top: 30px;
-    margin-left: 290px;
+    margin-top: 34px;
+    margin-left: 284px;
   }
 }
 
@@ -154,10 +157,11 @@
   }
 
   .page-main__bg-wrapper {
+    height: 625px;
     background-color: @dark-blue;
     background-image: url("../img/globe-back-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-position: -160px -125px;
+    background-position: -180px -125px;
     border-radius: 0 0 60px 60px;
     z-index: 6;
 
@@ -170,18 +174,19 @@
   .page-main__wrapper {
     display: flex;
     width: @desktop-width;
-    min-height: 610px;
+    min-height: 620px;
   }
 
   .page-main__title {
+    text-align: left;
     margin: 0;
-    margin-top: 127px;
-    margin-left: 130px;
+    margin-top: 62px;
+    margin-left: 127px;
   }
 
   .page-main__image {
-    margin-top: -25px;
-    margin-left: 75px;
+    margin-top: -15px;
+    margin-left: 76px;
     margin-right: 28%;
   }
 }
