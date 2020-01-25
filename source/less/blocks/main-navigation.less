@@ -25,6 +25,12 @@
   background-image: url("../img/menu.svg");
 }
 
+// стиль для скролл меню
+
+.main-navigation--scroll .main-navigation__toggle {
+  background-image: url("../img/menu-scroll.svg");
+}
+
 .main-navigation--closed .main-navigation__wrapper {
   display: none;
 }
@@ -173,6 +179,16 @@
     }
   }
 
+  .main-navigation--scroll .main-navigation__list--menu {
+    margin-top: 30px;
+    margin-left: 215px;
+
+    &::before {
+      width: 45px;
+      background-color: @page-color;
+    }
+  }
+
   .main-navigation__list-item {
     margin-right: 33px;
   }
@@ -182,6 +198,20 @@
     line-height: 30px;
     text-align: left;
     color: @white;
+  }
+
+  .main-navigation--scroll .main-navigation__anchor {
+    color: @page-color;
+  }
+
+  .main-navigation--scroll .main-navigation__list--contacts {
+    margin-left: 15px;
+    margin-top: 24px;
+  }
+
+  .main-navigation--scroll .main-navigation__list-login {
+    margin-left: -16px;
+    margin-top: -5px;
   }
 
   .main-navigation__toggle {

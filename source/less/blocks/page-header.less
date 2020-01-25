@@ -3,6 +3,11 @@
   background-color: @dark-blue;
 }
 
+.page-header__logo-image {
+  width: 100px;
+  height: 19px;
+}
+
 .page-header__wrapper {
   position: relative;
   width: @mobile-width;
@@ -20,6 +25,28 @@
 .page-header__logo {
   margin-top: 27px;
   margin-left: 25px;
+}
+
+// стили для скролл меню
+
+.page-header__wrapper--scroll {
+  background-color: @white;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 100;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-repeat: no-repeat;
+  background-position: 27px 27px;
+
+  @media (min-resolution: @retina) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+    background-size: 100px 19px;
+  }
+}
+
+.page-header__wrapper--scroll .page-header__logo-image {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -42,6 +69,16 @@
     align-content: flex-start;
   }
 
+  .page-header__wrapper--scroll {
+    background-image: url("../img/logo-tablet-blue@1x.png");
+    background-position: 39px 43px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+      background-size: 166px 42px;
+    }
+  }
+
   .page-header--dark {
     background-color: @dark-blue;
   }
@@ -55,11 +92,20 @@
     margin-left: 40px;
   }
 
+  .page-header__logo-image {
+    width: 166px;
+    height: 42px;
+  }
+
   .page-header__list {
     height: 100%;
     margin-top: 40px;
     margin-left: 330px;
     order: 1;
+  }
+
+  .page-header__wrapper--scroll .page-header__list {
+    margin-left: 497px;
   }
 
   .page-header__login {
@@ -84,10 +130,28 @@
     min-height: 90px;
   }
 
+  .page-header__wrapper--scroll {
+    height: 90px;
+    left: 0;
+    transform: none;
+    background-image: url("../img/logo-desktop-blue@1x.png");
+    background-position: 60px 20px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+      background-size: 200px 52px;
+    }
+  }
+
   .page-header__logo {
     margin-right: 0;
     margin-left: 60px;
     margin-top: 47px;
+  }
+
+  .page-header__logo-image {
+    width: 200px;
+    height: 52px;
   }
 
   .page-header__list {
