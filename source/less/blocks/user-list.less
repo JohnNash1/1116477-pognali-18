@@ -1,7 +1,8 @@
 .user-list__login {
+  box-sizing: border-box;
   display: block;
   width: 270px;
-  height: 38px;
+  height: 50px;
   border-radius: 100px;
   background-color: #ffd74b;
   font-family: @font, @font-secondary;
@@ -14,6 +15,15 @@
   padding-top: 12px;
   margin-top: 52px;
   margin-bottom: 60px;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -24,8 +34,9 @@
 
   .user-list__login {
     width: 189px;
-    margin-top: -15px;
+    margin-top: -11px;
     font-size: 20px;
     line-height: 30px;
+    padding: 10px;
   }
 }

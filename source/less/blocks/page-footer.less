@@ -1,15 +1,19 @@
 .page-footer {
   position: relative;
   margin-top: -40px;
-  width: 320px;
   min-height: 239px;
   background-color: @white;
   border-radius: 30px 30px 0 0;
 }
 
+.page-footer__wrapper {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
 .page-footer__logo-image {
-  margin-top: 38px;
-  margin-left: 112px;
+  margin-top: 37px;
+  margin-left: 110px;
 }
 
 .page-footer__list {
@@ -19,71 +23,127 @@
 .page-footer__list--social {
   width: 135px;
   margin: 0 93px;
-  margin-top: 30px;
+  margin-top: 34px;
   flex-wrap: wrap;
 }
 
 .page-footer__anchor {
-  display: block;
+  display: flex;
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background-color: @yellow;
   background-repeat: no-repeat;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: auto;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
 }
 
-.page-footer__anchor--fb {
+.page-footer__anchor--fb::after {
+  width: 11px;
+  height: 21px;
   background-image: url("../img/facebook-blue.svg");
   background-size: 11px 21px;
-  background-position: center 13px;
 }
 
-.page-footer__anchor--vk {
+.page-footer__anchor--vk::after {
+  width: 23px;
+  height: 12px;
   background-image: url("../img/vk-blue.svg");
   background-size: 23px 12px;
-  background-position: center 18px;
 }
 
-.page-footer__anchor--instagram {
+.page-footer__anchor--instagram::after {
+  width: 18px;
+  height: 18px;
   background-image: url("../img/instagram-blue.svg");
   background-size: 18px 18px;
-  background-position: center 14px;
 }
 
-.page-footer__list--develop {
-  margin: 0 25px;
-  margin-top: 50px;
+.page-footer__anchor--fb:active::after,
+.page-footer__anchor--vk:active::after,
+.page-footer__anchor--instagram:active::after {
+  opacity: 0.3;
+}
+
+.page-footer__academy {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
-}
-
-.page-footer__text {
+  width: 270px;
   font-family: @font, @font-secondary;
   font-size: 16px;
   line-height: 22px;
   text-align: center;
   color: #444444;
+  margin: 0 auto;
+  margin-top: 36px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    background-image: url("../img/htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-size: 27px 34px;
+    margin-top: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba(68, 68, 68, 0.6);
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.page-footer__academy:hover::after,
+.page-footer__academy:focus::after {
+  opacity: 0.6;
+}
+
+.page-footer__academy:active::after {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
   .page-footer {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     min-height: 154px;
     border-radius: 60px 60px 0 0;
   }
 
+  .page-footer__wrapper {
+    width: @tablet-width;
+    min-height: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .page-footer__logo-image {
-    margin: 0;
-    margin-left: 39px;
+    margin-left: 40px;
+    margin-top: 2px;
   }
 
   .page-footer__list--social {
     width: 180px;
     margin: 0;
+    margin-top: 2px;
+    margin-right: 9px;
   }
 
   .page-footer__anchor {
@@ -91,40 +151,59 @@
     height: 60px;
   }
 
-  .page-footer__anchor--fb {
+  .page-footer__anchor--fb::after {
+    width: 14px;
+    height: 28px;
     background-size: 14px 28px;
-    background-position: center 16px;
   }
 
-  .page-footer__anchor--vk {
+  .page-footer__anchor--vk::after {
+    width: 31px;
+    height: 16px;
     background-size: 31px 16px;
-    background-position: center 23px;
   }
 
-  .page-footer__anchor--instagram {
+  .page-footer__anchor--instagram::after {
+    width: 24px;
+    height: 24px;
     background-size: 24px 24px;
-    background-position: center 18px;
   }
 
-  .page-footer__list--develop {
-    margin: 0;
-    margin-right: 25px;
-    align-items: center;
-  }
-
-  .page-footer__text {
+  .page-footer__academy {
+    width: 154px;
     font-size: 20px;
     line-height: 24px;
-    margin-right: 24px;
+    margin: 0;
+    margin-top: -2px;
+    margin-right: 40px;
+    padding-top: 0;
+    border: none;
+
+    &::after {
+      margin-top: 5px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    width: @desktop-width;
+  }
+
   .page-footer__logo-image {
     margin-left: 61px;
   }
 
-  .page-footer__list--develop {
+  .page-footer__list--social {
+    margin-right: 49px;
+  }
+
+  .page-footer__academy {
     margin-right: 59px;
+    margin-top: -4px;
+
+    &::after {
+      margin-top: 6px;
+    }
   }
 }

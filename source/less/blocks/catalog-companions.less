@@ -1,10 +1,51 @@
+.catalog-companions {
+  margin-top: 82px;
+}
+
 .catalog-companions__card {
   position: relative;
   width: 270px;
-  height: 415px;
+  min-height: 393px;
   margin: 10px 25px;
   background-color: @white;
   border-radius: 20px;
+
+  &:hover {
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &::before {
+    position: absolute;
+    top: 159px;
+    content: "";
+    display: block;
+    width: 270px;
+    height: 1px;
+    background-color: #edeff6;
+  }
+
+  &::after {
+    position: absolute;
+    top: 277px;
+    content: "";
+    display: block;
+    width: 270px;
+    height: 1px;
+    background-color: #edeff6;
+  }
+}
+
+.catalog-companions__card--demin::after,
+.catalog-companions__card--rogovaya::after {
+  top: 255px;
+}
+
+.catalog-companions__card--fisrsova {
+  padding-bottom: 22px;
+}
+
+.catalog-companions__card--smolov {
+  padding-bottom: 25px;
 }
 
 .catalog-companions__wrapper {
@@ -50,11 +91,21 @@
   font-weight: bold;
   line-height: 20px;
   color: #1d2e5b;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba(29, 46, 91, 0.6);
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .catalog-companions__distance {
-  margin-top: 10px;
-  margin-left: 17px;
+  margin-top: 7px;
+  margin-left: 8px;
   font-size: 14px;
   font-weight: bold;
   line-height: 21px;
@@ -68,25 +119,47 @@
 }
 
 .catalog-companions__tags {
-  margin-top: 50px;
-  margin-left: -60px;
-  width: 168px;
   .catalog-companions-font();
+  margin-top: 43px;
+  margin-left: -62px;
+  width: 168px;
 }
 
 .catalog-companions__subtitle {
-  font-family: @font, @font-secondary;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: left;
-  color: #444444;
-  margin-top: 20px;
-  margin-left: 26px;
   .catalog-companions-font();
+  font-family: @font, @font-secondary;
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 26px;
+}
+
+.catalog-companions__subtitle--wishes {
+  position: relative;
+  width: 121px;
+  text-align: center;
+  background-color: @white;
+  z-index: 1;
+  margin-left: 13px;
+}
+
+.catalog-companions__subtitle--transport {
+  position: relative;
+  width: 90px;
+  text-align: center;
+  background-color: @white;
+  margin-top: 0;
+  margin-left: 13px;
+  z-index: 1;
 }
 
 .catalog-companions__subtitle--level {
-  margin-left: 50px;
+  position: relative;
+  width: 62px;
+  text-align: center;
+  background-color: @white;
+  margin-top: 0;
+  margin-left: 39px;
+  z-index: 1;
 }
 
 .catalog-companions__list {
@@ -106,45 +179,118 @@
 
 .catalog-companions__attributes-wrapper {
   display: flex;
+  margin-top: 11px;
+}
+
+.catalog-companions__card--demin .catalog-companions__attributes-wrapper,
+.catalog-companions__card--rogovaya .catalog-companions__attributes-wrapper {
+  margin-top: 17px;
 }
 
 .catalog-companions__level {
+  position: relative;
   box-sizing: border-box;
-  margin: 0;
-  margin-top: -10px;
-  margin-left: 46px;
-  border: 3px solid #ff8d30;
-  border-radius: 50%;
   width: 45px;
   height: 45px;
+  background-image:
+    linear-gradient(260deg, transparent 50%, #ff8d30 50%),
+    linear-gradient(90deg, #ffffff 50%, #ff8d30 50%);
+  border-radius: 50%;
+  margin: 0;
+  margin-top: -6px;
+  margin-left: 48px;
 
-  &::before {
-    content: "99";
+  &::after {
+    height: 39px;
+    width: 39px;
+    content: "";
     display: block;
-    font-family: @font, @font-secondary;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 18px;
-    text-align: center;
-    color: @dark-blue;
-    margin-top: 13px;
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    background-color: @white;
+    border-radius: 50%;
   }
 }
 
+.catalog-companions__level--demin {
+  background-image:
+    linear-gradient(210deg, transparent 50%, #ff8d30 50%),
+    linear-gradient(90deg, #ffffff 50%, #ff8d30 50%);
+}
+
+.catalog-companions__level--smolov {
+  background-image:
+    linear-gradient(270deg, transparent 50%, #ffffff 50%),
+    linear-gradient(180deg, #ff8d30 50%, #ffffff 50%);
+}
+
+.catalog-companions__level--rogovaya {
+  background-image: linear-gradient(90deg, #ffffff 50%, #ff8d30 50%);
+}
+
+.catalog-companions__number {
+  .my-card__number();
+  top: -7px;
+  left: 10px;
+  font-size: 24px;
+  line-height: 18px;
+  color: #1d2e5b;
+}
+
+.catalog-companions__caption {
+  display: none;
+  .my-card__caption();
+  left: 0;
+  bottom: 9px;
+  width: 31px;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(68, 68, 68, 0.4);
+  border-top: 1px solid rgba(68, 68, 68, 0.4);
+}
+
 .catalog-companions__heart {
+  display: flex;
+  border: none;
   width: 31px;
   height: 31px;
   background-color: #edeff6;
   border-radius: 50%;
-  background-image: url("../img/heart.svg");
   background-repeat: no-repeat;
   background-size: 13px 11px;
-  background-position: 9px 10px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 11px;
+    background-image: url("../img/heart.svg");
+    margin: auto;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #e2e5f2;
+  }
 }
 
 .catalog-companions__heart--active {
   background-color: #f9eaea;
-  background-image: url("../img/heart-active.svg");
+
+
+  &::after {
+    background-image: url("../img/heart-active.svg");
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #f9d8d8;
+  }
+}
+
+.catalog-companions__heart:active::after {
+  opacity: 0.1;
 }
 
 .catalog-companions__heart-wrapper {
@@ -169,7 +315,7 @@
   text-transform: uppercase;
   border-radius: 30px;
   margin-left: 20px;
-  margin-top: 14px;
+  margin-top: 13px;
 
   &::after {
     display: none;
@@ -177,8 +323,11 @@
 }
 
 .catalog-companions__button--more {
-  margin-top: 5px;
-  margin-bottom: 15px;
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  margin-left: 39px;
+  padding-top: 10px;
   font-family: @font, @font-secondary;
   text-align: left;
   font-weight: bold;
@@ -187,20 +336,51 @@
   background-image: url("../img/show-more-plus.svg");
   background-repeat: no-repeat;
   background-size: 18px 18px;
-  background-position: 45px center;
+  background-position: 46px 13px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-companions__list-item--opacity {
   opacity: 0.15;
 }
 
+.catalog-companions__smolov-distance--second {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .catalog-companions {
+    margin-top: 175px;
+  }
+
   .catalog-companions__card {
     display: flex;
     flex-wrap: wrap;
     width: 688px;
-    height: 332px;
+    min-height: 332px;
     margin: 40px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      width: 688px;
+      top: 254px;
+    }
+  }
+
+  .catalog-companions__card--fisrsova,
+  .catalog-companions__card--smolov {
+    padding-bottom: 0;
   }
 
   .catalog-companions__wrapper {
@@ -230,7 +410,7 @@
     font-size: 30px;
     line-height: 30px;
     margin-left: 33px;
-    margin-top: 34px;
+    margin-top: 30px;
 
     &::after {
       content: "";
@@ -243,10 +423,8 @@
     }
   }
 
-  .catalog-companions__username--online {
-    &::after {
-      background-color: #81e31e;
-    }
+  .catalog-companions__username--online::after {
+    background-color: #81e31e;
   }
 
   .catalog-companions__tags {
@@ -254,13 +432,7 @@
     font-size: 20px;
     line-height: 24px;
     margin-left: 36px;
-    margin-top: 20px;
-  }
-
-  .catalog-companions__attributes-wrapper {
-    flex-direction: column;
-    margin-left: auto;
-    width: 100px;
+    margin-top: 18px;
   }
 
   .catalog-companions__button {
@@ -273,48 +445,58 @@
 
   .catalog-companions__button--more {
     width: 250px;
-    padding-left: 79px;
+    padding-left: 80px;
+    padding-top: 13px;
     background-size: 27px 27px;
-    background-position: 30px center;
+    background-position: 30px 14px;
     margin-left: 257px;
+    margin-top: -11px;
   }
 
   .catalog-companions__button--absolute {
     position: absolute;
-    top: 155px;
-    left: 240px;
+    top: 159px;
+    left: 235px;
   }
 
   .catalog-companions__heart-wrapper {
-    top: 170px;
-    left: 408px;
+    top: 173px;
+    left: 403px;
   }
 
   .catalog-companions__heart {
     width: 50px;
     height: 50px;
-    background-size: 20px 17px;
-    background-position: center;
+
+    &::after {
+      width: 20px;
+      height: 17px;
+      background-size: 20px 17px;
+    }
   }
 
   .catalog-companions__distance {
     font-size: 20px;
     line-height: 30px;
-    margin-left: 8px;
+    margin-left: 7px;
+    margin-top: 10px;
+  }
+
+  .catalog-companions__smolov-distance--first {
+    display: none;
+  }
+
+  .catalog-companions__smolov-distance--second {
+    display: inline;
   }
 
   .catalog-companions__subtitle--hidden {
     display: none;
   }
 
-  .catalog-companions__transport-wrapper {
-    margin-left: auto;
-    margin-right: 37px;
-    margin-top: 25px;
-  }
-
   .catalog-companions__list {
-    margin: 0;
+    margin-top: 15px;
+    margin-left: 35px;
   }
 
   .catalog-companions__list-item {
@@ -335,58 +517,133 @@
     background-size: 20px 21px;
   }
 
-  .catalog-companions__wishes-wrapper {
-    order: 3;
-    margin-left: 9px;
+  .catalog-companions__transport-wrapper {
+    width: auto;
+    margin-left: auto;
+    margin-top: 13px;
+    margin-right: 42px;
   }
 
-  .catalog-companions__wishes-wrapper p {
-    margin: 0;
-    margin-left: 74px;
+  .catalog-companions__attributes-wrapper {
+    flex-direction: column;
+    margin-left: auto;
+    width: 120px;
+    margin-top: 0;
+  }
+
+  .catalog-companions__wishes-wrapper {
+    order: 3;
+    margin-top: -9px;
   }
 
   .catalog-companions__level-wrapper {
-    width: 100%;
-    margin-top: 10px;
+    width: 60px;
+    margin-top: 6px;
+    margin-left: 35px;
+  }
+
+  .catalog-companions__card--demin .catalog-companions__transport-wrapper,
+  .catalog-companions__card--rogovaya .catalog-companions__transport-wrapper {
+    margin-top: -3px;
+  }
+
+  .catalog-companions__subtitle--wishes {
+    width: 118px;
+    margin: 0;
+    margin-left: 71px;
   }
 
   .catalog-companions__level {
     margin: 0;
-    margin-left: auto;
-    margin-right: 25px;
     width: 60px;
     height: 60px;
+
+    &::after {
+      width: 54px;
+      height: 54px;
+    }
+  }
+
+  .catalog-companions__number {
+    top: -7px;
+    left: 17px;
+    line-height: 24px;
+    color: #1d2e5b;
+  }
+
+  .catalog-companions__caption {
+    display: inline;
+    left: -10px;
+    bottom: 9px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-companions {
+    margin-top: 47px;
+  }
+
   .catalog-companions__card {
     width: 950px;
+    min-height: 285px;
     height: 285px;
     margin: 30px 60px;
+
+    &::after {
+      width: 1px;
+      height: 187px;
+      top: 49px;
+      left: 630px;
+      background-image: linear-gradient(to bottom, #ffffff 0, #edeff6 20%, #edeff6 80%, #ffffff 100%);
+    }
   }
 
   .catalog-companions__image {
+    width: 285px;
+    height: 285px;
     border-radius: 25px 0 0 25px;
     margin: 0;
   }
 
+  .catalog-companions__text-wrapper {
+    height: 285px;
+    margin-left: 0;
+  }
+
   .catalog-companions__attributes-wrapper {
+    position: absolute;
+    top: 168px;
+    left: 630px;
     width: 300px;
+    height: 70px;
     order: 4;
-    margin-left: auto;
-    margin-top: -120px;
+    margin: 0;
     flex-direction: row;
   }
 
-  .catalog-companions__text-wrapper {
-    margin-left: 0;
+  .catalog-companions__transport-wrapper {
+    width: auto;
+    margin-left: auto;
+    margin-top: 13px;
+    margin-right: 42px;
+  }
+
+  .catalog-companions__level-wrapper {
+    width: 60px;
+    margin-top: 15px;
+    margin-left: 7px;
+    margin-right: 44px;
+  }
+
+  .catalog-companions__card--demin .catalog-companions__level-wrapper,
+  .catalog-companions__card--rogovaya .catalog-companions__level-wrapper {
+    margin-top: 0;
   }
 
   .catalog-companions__username {
     width: 280px;
     margin-left: 0;
-    margin-top: 48px;
+    margin-top: 47px;
 
     &::after {
       order: -1;
@@ -396,7 +653,7 @@
   }
 
   .catalog-companions__tags {
-    margin-left: 59px;
+    margin-left: 61px;
   }
 
   .catalog-companions__wishes-wrapper {
@@ -408,28 +665,32 @@
     display: none;
   }
 
-  .catalog-companions__level-wrapper {
-    width: 60px;
-    margin-right: 44px;
-  }
-
   .catalog-companions__level {
     margin-right: 0;
     margin-left: 0;
   }
 
   .catalog-companions__button--absolute {
+    padding-top: 1px;
     top: 175px;
-    left: 325px;
+    left: 321px;
   }
 
   .catalog-companions__heart-wrapper {
     top: 189px;
-    left: 493px;
+    left: 490px;
   }
 
   .catalog-companions__button--more {
-    margin-left: 382px;
-    margin-top: 20px;
+    margin-left: 376px;
+    margin-top: 50px;
+  }
+
+  .catalog-companions__smolov-distance--first {
+    display: inline;
+  }
+
+  .catalog-companions__smolov-distance--second {
+    display: none;
   }
 }

@@ -1,11 +1,21 @@
 .page-header {
+  width: 100%;
+  background-color: @dark-blue;
+}
+
+.page-header__logo-image {
+  width: 100px;
+  height: 19px;
+}
+
+.page-header__wrapper {
   position: relative;
   width: @mobile-width;
   min-height: 73px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: @dark-blue;
+  margin: 0 auto;
 }
 
 .page-header--menu-opened {
@@ -14,10 +24,40 @@
 
 .page-header__logo {
   margin-top: 27px;
-  margin-left: 27px;
+  margin-left: 25px;
 }
 
-@media (max-width: @tablet-width) {
+.page-header__logo--inner {
+  margin-top: 20px;
+}
+
+// стили для скролл меню
+
+.page-header--scroll {
+  background-color: @white;
+  position: fixed;
+  z-index: 100;
+}
+
+.page-header__wrapper--scroll {
+  background-color: @white;
+  z-index: 100;
+  margin: 0 auto;
+  background-image: url("../img/logo-mobile-blue@1x.png");
+  background-repeat: no-repeat;
+  background-position: 27px 27px;
+
+  @media (min-resolution: @retina) {
+    background-image: url("../img/logo-mobile-blue@2x.png");
+    background-size: 100px 19px;
+  }
+}
+
+.page-header__wrapper--scroll .page-header__logo-image {
+  display: none;
+}
+
+@media (max-width: 767px) {
   .page-header__list {
     display: none;
   }
@@ -25,13 +65,34 @@
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: 100%;
+    background-color: @page-color;
+  }
+
+  .page-header--scroll {
+    background-color: @white;
+  }
+
+  .page-header__wrapper {
+    width: @tablet-width;
     min-height: 132px;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
     align-content: flex-start;
-    background-color: @page-color;
+  }
+
+  .page-header__wrapper--scroll {
+    background-image: url("../img/logo-tablet-blue@1x.png");
+    background-position: 39px 43px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-tablet-blue@2x.png");
+      background-size: 166px 42px;
+    }
+  }
+
+  .page-header--dark {
+    background-color: @dark-blue;
   }
 
   .page-header--menu-opened {
@@ -39,8 +100,13 @@
   }
 
   .page-header__logo {
-    margin-top: 40px;
+    margin-top: 45px;
     margin-left: 40px;
+  }
+
+  .page-header__logo-image {
+    width: 166px;
+    height: 42px;
   }
 
   .page-header__list {
@@ -50,27 +116,56 @@
     order: 1;
   }
 
+  .page-header__wrapper--scroll .page-header__list {
+    margin-left: 497px;
+  }
+
   .page-header__login {
     box-sizing: border-box;
     width: 188px;
     height: 50px;
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 10px;
     margin: 0;
+    margin-left: 3px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    width: 100%;
-    height: 90px;
-    flex-direction: row;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
     background-color: @dark-blue;
+  }
+
+  .page-header--scroll {
+    background-color: @white;
+  }
+
+  .page-header__wrapper {
+    width: @desktop-width;
+    min-height: 90px;
+  }
+
+  .page-header__wrapper--scroll {
+    height: 90px;
+    background-image: url("../img/logo-desktop-blue@1x.png");
+    background-position: 60px 20px;
+
+    @media (min-resolution: @retina) {
+      background-image: url("../img/logo-desktop-blue@2x.png");
+      background-size: 200px 52px;
+    }
   }
 
   .page-header__logo {
     margin-right: 0;
     margin-left: 60px;
+    margin-top: 47px;
+  }
+
+  .page-header__logo-image {
+    width: 200px;
+    height: 52px;
   }
 
   .page-header__list {

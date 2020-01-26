@@ -3,6 +3,7 @@
 @import "blocks/site-list.less";
 @import "blocks/user-list.less";
 @import "blocks/transport-list.less";
+@import "blocks/transport-checkboxes.less";
 @import "blocks/page-header.less";
 @import "blocks/main-navigation.less";
 @import "blocks/page-main.less";
@@ -25,60 +26,83 @@
 @import "blocks/map.less";
 @import "blocks/catalog-filter.less";
 @import "blocks/pagination.less";
+@import "blocks/filter-group.less";
+@import "blocks/my-card.less";
+@import "blocks/plans.less";
+@import "blocks/add-plan.less";
+@import "blocks/calendar.less";
+@import "blocks/card-flags.less";
+@import "blocks/yellow-button.less";
 
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans.woff");
+  src:
+    url("../fonts/bloggersans.woff") format("woff"),
+    url("../fonts/bloggersans.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-bold.woff");
+  src:
+    url("../fonts/bloggersans-bold.woff") format("woff"),
+    url("../fonts/bloggersans-bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-medium.woff");
+  src:
+    url("../fonts/bloggersans-medium.woff") format("woff"),
+    url("../fonts/bloggersans-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-light.woff");
+  src:
+    url("../fonts/bloggersans-light.woff") format("woff"),
+    url("../fonts/bloggersans-light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-italic.woff");
+  src:
+    url("../fonts/bloggersans-italic.woff") format("woff"),
+    url("../fonts/bloggersans-italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-bolditalic.woff");
+  src:
+    url("../fonts/bloggersans-bolditalic.woff") format("woff"),
+    url("../fonts/bloggersans-bolditalic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-mediumitalic.woff");
+  src:
+    url("../fonts/bloggersans-mediumitalic.woff") format("woff"),
+    url("../fonts/bloggersans-mediumitalic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: @font;
-  src: url("../fonts/bloggersans-lightitalic.woff");
+  src:
+    url("../fonts/bloggersans-lightitalic.woff") format("woff"),
+    url("../fonts/bloggersans-lightitalic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }

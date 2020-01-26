@@ -1,18 +1,23 @@
 .address {
   position: relative;
-  min-height: 546px;
+  min-height: 446px;
+  z-index: 0;
+}
+
+.address__bg-wrapper {
+  position: relative;
+  background-color: @yellow;
+  border-radius: 0 0 30px 30px;
   z-index: 0;
 }
 
 .address__list {
-  position: relative;
+  width: @mobile-width;
   box-sizing: border-box;
   min-height: 255px;
-  background-color: @yellow;
+  margin: 0 auto;
   margin-top: -50px;
-  padding-top: 80px;
-  z-index: 0;
-  border-radius: 0 0 30px 30px;
+  padding-top: 68px;
 }
 
 .address__list-item:first-child {
@@ -48,9 +53,113 @@
 }
 
 .address-button {
+  box-sizing: border-box;
   width: 270px;
   height: 62px;
-  padding-top: 20px;
+  padding-top: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 3px solid @page-color;
   margin-left: 25px;
+  margin-top: 16px;
+
+  &:hover,
+  &:focus {
+    background-color: @page-color;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.address-button:hover::after,
+.address-button:focus::after {
+  background-image: url("../img/triangle-arrow-right-white.svg");
+}
+
+.address-button:active::after {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .address__list {
+    width: @tablet-width;
+    min-height: 375px;
+    padding-top: 89px;
+  }
+
+  .address__bg-wrapper {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .address__list-item:first-child {
+    margin-left: 75px;
+    margin-bottom: 35px;
+
+    &::before {
+      width: 67px;
+      height: 67px;
+      margin-top: 9px;
+      background-size: 21px 31px;
+      background-position: center 20px;
+    }
+  }
+
+  .address__list-text {
+    width: 430px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-left: 26px;
+  }
+
+  .address-button {
+    box-sizing: border-box;
+    width: 618px;
+    height: 81px;
+    padding-top: 22px;
+    padding-left: 33px;
+    padding-right: 33px;
+    margin-left: 75px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 24px;
+    color: @page-color;
+
+    &::after {
+      margin-top: 5px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .address__list {
+    display: flex;
+    width: @desktop-width;
+    min-height: 250px;
+    padding-top: 105px;
+  }
+
+  .address__list-item:first-child {
+    margin-left: 284px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      margin-top: 0;
+      background-size: 28px 43px;
+      background-position: center 26px;
+    }
+  }
+
+  .address__list-text {
+    margin-left: 29px;
+  }
+
+  .address-button {
+    width: 324px;
+    margin-left: 148px;
+    margin-top: 3px;
+  }
 }

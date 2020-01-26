@@ -1,10 +1,15 @@
 .registation {
   position: relative;
-  min-height: 550px;
   background-color: @page-color;
   margin-top: -180px;
   z-index: 1;
   border-radius: 0 0 30px 30px;
+}
+
+.registation-wrapper {
+  width: @mobile-width;
+  min-height: 543px;
+  margin: 0 auto;
 }
 
 .registation__title {
@@ -14,7 +19,7 @@
   line-height: 24px;
   text-align: center;
   color: @dark-orange;
-  padding-top: 115px;
+  padding-top: 111px;
 }
 
 .registation__text-wrapper {
@@ -22,7 +27,8 @@
 }
 
 .registation__text-wrapper--bottom {
-  margin-top: 32px;
+  margin-top: 28px;
+  margin-left: 53px;
 }
 
 .registation__text {
@@ -36,14 +42,36 @@
   margin: 0;
 }
 
+.registation__text--first {
+  width: 160px;
+  text-indent: 16px;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.registation__text--bottom {
+  width: 212px;
+  text-align: center;
+}
+
 .registation__login {
   color: @yellow;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: #ff8d30;
+  }
+
+  &:active {
+    color: rgba(255, 141, 48, 0.3);
+  }
 }
 
 .registation__form {
+  position: relative;
   display: flex;
-  margin-top: 25px;
+  margin-top: 29px;
 }
 
 .registation__field {
@@ -65,6 +93,43 @@
   color: rgba(68, 68, 68, 0.3);
 }
 
+.registation__field:hover::placeholder {
+  color: rgba(68, 68, 68, 0.5);
+}
+
+.registation__field:active,
+.registation__field:focus {
+  background-color: @page-color;
+  border: 4px solid @white;
+  color: @white;
+}
+
+.registation__field:focus:invalid {
+  border: none;
+  background-color: #ffefef;
+}
+
+.registation__field:focus:invalid::placeholder {
+  visibility: hidden;
+}
+
+.registation__invalid {
+  display: none;
+  position: absolute;
+  top: 22px;
+  left: 50px;
+  font-family: @font, @font-secondary;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: left;
+  color: #ff0000;
+}
+
+.registation__field:focus:invalid + .registation__invalid {
+  display: inline-block;
+}
+
 .registation__submit-text {
   display: none;
 }
@@ -75,6 +140,10 @@
   width: 60px;
   height: 62px;
   margin-left: -10px;
+
+  &::after {
+    margin-left: 2px;
+  }
 }
 
 .registation__list-text {
@@ -83,5 +152,214 @@
 
 .registation__list {
   margin-left: 25px;
-  margin-top: 36px;
+  margin-top: 30px;
+}
+
+.registation__tel:hover .registation__list-text,
+.registation__tel:focus .registation__list-text,
+.registation__mail:hover .registation__list-text,
+.registation__mail:focus .registation__list-text {
+  color: #ffbd30;
+}
+
+.registation__tel:active .registation__list-text,
+.registation__mail:active .registation__list-text {
+  color: rgba(255, 189, 48, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .registation {
+    margin-top: -220px;
+    height: 774px;
+    border-radius: 0 0 60px 60px;
+  }
+
+  .registation-wrapper {
+    width: @tablet-width;
+    min-height: 785px;
+  }
+
+  .registation__title {
+    font-size: 45px;
+    line-height: 45px;
+    padding-top: 95px;
+  }
+
+  .registation__text-wrapper {
+    margin-left: 80px;
+    margin-top: 58px;
+  }
+
+  .registation__text-wrapper--bottom {
+    margin-left: 84px;
+    margin-top: 54px;
+  }
+
+  .registation__text {
+    width: 610px;
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .registation__text--bottom {
+    width: 610px;
+    text-align: left;
+  }
+
+  .registation__text--first {
+    text-indent: 0;
+    text-align: left;
+    margin-left: 49px;
+  }
+
+  .registation__text-break {
+    display: none;
+  }
+
+  .registation__form {
+    margin-top: 67px;
+    margin-left: 50px;
+  }
+
+  .registation__field {
+    width: 536px;
+    height: 81px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  .registation__submit {
+    width: 82px;
+    height: 81px;
+    margin-left: 0;
+    border-radius: 0 20px 20px 0;
+    padding-left: 35px;
+  }
+
+  .registation__list {
+    margin-left: 75px;
+    margin-top: 54px;
+  }
+
+  .registation__invalid {
+    top: 28px;
+    left: 60px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .registation__field::placeholder {
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .registation {
+    height: 810px;
+  }
+
+  .registation-wrapper {
+    width: @desktop-width;
+  }
+
+  .registation__title {
+    padding-top: 126px;
+  }
+
+  .registation__text-wrapper {
+    margin-left: 416px;
+    margin-top: 58px;
+  }
+
+  .registation__text-wrapper--bottom {
+    margin-top: 66px;
+  }
+
+  .registation__form {
+    margin-top: 60px;
+    margin-left: 107px;
+  }
+
+  .registation__field {
+    width: 850px;
+  }
+
+  .registation__text--bottom {
+    width: auto;
+    margin-top: -4px;
+    margin-left: -6px;
+  }
+
+  .registation__text--large {
+    font-size: 29.5px;
+    line-height: 40.5px;
+  }
+
+  .registation__submit {
+    width: 323px;
+    padding-right: 35px;
+  }
+
+  .registation__submit-text {
+    display: inline;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .registation__list-item a::before {
+    top: -20px;
+    background-color: #121936;
+    width: 90px;
+    height: 90px;
+    background-size: 36px 36px;
+  }
+
+  .registation__tel::before {
+    background-image: url("../img/contacts-phone.svg");
+  }
+
+  .registation__mail::before {
+    background-image: url("../img/contacts-mail.svg");
+  }
+
+  .registation__tel:hover::before,
+  .registation__tel:focus::before {
+    background-color: #121936;
+    background-image: url("../img/contacts-phone-hover.svg");
+  }
+
+  .registation__tel:active::before {
+    background-image: url("../img/contacts-phone-active.svg");
+  }
+
+  .registation__mail:hover::before,
+  .registation__mail:focus::before {
+    background-color: #121936;
+    background-image: url("../img/contacts-mail-hover.svg");
+  }
+
+  .registation__mail:active::before {
+    background-image: url("../img/contacts-mail-active.svg");
+  }
+
+  .registation__list {
+    display: flex;
+    margin-top: 56px;
+    margin-left: 283px;
+  }
+
+  .registation__mail {
+    margin-left: 80px;
+  }
+
+  .registation__list-text {
+    display: inline;
+  }
+
+  .registation__tel,
+  .registation__mail {
+    width: 360px;
+    padding-left: 122px;
+  }
 }

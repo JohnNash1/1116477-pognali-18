@@ -4,6 +4,7 @@
 }
 
 .wishes-list__item {
+  display: flex;
   font-family: @font, @font-secondary;
   font-size: 15px;
   font-weight: 500;
@@ -11,6 +12,62 @@
   text-align: left;
   color: #1d2e5b;
   text-transform: uppercase;
+  margin-bottom: 10px;
+
+  &::before {
+    margin-right: 15px;
+    content: "";
+    display: block;
+    width: 26px;
+    height: 18px;
+    background-size: 26px 18px;
+  }
+}
+
+.wishes-list__item:last-child {
+  margin-bottom: 0;
+}
+
+.wishes-list__item--sri-lanka::before {
+  background-image: url("../img/flag-sri-lanka.svg");
+}
+
+.wishes-list__item--thailand::before {
+  background-image: url("../img/flag-thailand.svg");
+}
+
+.wishes-list__item--seychelles::before {
+  background-image: url("../img/flag-seychelles.svg");
+}
+
+.wishes-list__item--belgium::before {
+  background-image: url("../img/flag-belgium.svg");
+}
+
+.wishes-list__item--czech::before {
+  background-image: url("../img/flag-czech.svg");
+}
+
+.wishes-list__item--usa::before {
+  background-image: url("../img/flag-usa.svg");
+}
+
+.wishes-list__item--australia::before {
+  background-image: url("../img/flag-australia.svg");
+}
+
+.wishes-list__item--dominica::before {
+  background-image: url("../img/flag-dominica.svg");
+}
+
+.wishes-list__item--united-kingdom::before {
+  background-image: url("../img/flag-united-kingdom.svg");
+}
+
+.wishes-list__item--germany::before {
+  background-image: url("../img/flag-germany.svg");
+  background-position: 0 -4px;
+  background-size: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,23 +78,47 @@
   .wishes-list__item {
     font-size: 20px;
     line-height: 30px;
-    margin-left: 74px;
-    margin-top: 21px;
+    margin: 0;
+    margin-right: 27px;
+
+    &::before {
+      margin-top: 2px;
+      margin-right: 12px;
+      width: 35px;
+      height: 24px;
+      background-size: 35px 24px;
+    }
+  }
+
+  .wishes-list__item--australia {
+    margin-left: -3px;
+  }
+
+  .wishes-list__item--dominica {
+    margin-left: -2px;
+  }
+
+  .wishes-list__item--germany::before {
+    background-size: 100%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .wishes-list {
     flex-direction: column;
-    margin-top: 45px;
-    margin-left: 80px;
+    margin-top: 41px;
+    margin-left: 35px;
   }
 
   .wishes-list__item {
     font-size: 20px;
     line-height: 30px;
-    margin-left: 74px;
+    margin-left: 69px;
     margin-top: 7px;
-    margin-right: 60px;
+    // margin-right: 60px;
+
+    &::before {
+      margin-right: 17px;
+    }
   }
 }

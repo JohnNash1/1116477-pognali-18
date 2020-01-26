@@ -1,0 +1,126 @@
+.card-flags {
+  position: absolute;
+  top: 258px;
+  left: 63px;
+  display: flex;
+  justify-content: space-between;
+  width: 143px;
+  z-index: 1;
+}
+
+.card-flags--demin {
+  left: 91px;
+  width: 87px;
+}
+
+.card-flag {
+  width: 35px;
+  height: 24px;
+  background-size: 35px 24px;
+
+  &--sri-lanka {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--thailand {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--seychelles {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--belgium {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
+  }
+}
+
+.card-flag__tooltip {
+  .transport-list__tooltip();
+  width: auto;
+  top: 37px;
+}
+
+.card-flag__tooltip-text {
+  .transport-list__tooltip-text();
+  margin-right: 23px;
+}
+
+.card-flag__tooltip--sri-lanka {
+  left: -52px;
+
+  &::before {
+    margin-left: 63px;
+  }
+}
+
+.card-flag__tooltip--thailand {
+  left: 12px;
+
+  &::before {
+    margin-left: 53px;
+  }
+}
+
+.card-flag__tooltip--seychelles {
+  left: 62px;
+
+  &::before {
+    margin-left: 56px;
+  }
+}
+
+.card-flag__tooltip--belgium {
+  left: -38px;
+
+  &::before {
+    margin-left: 50px;
+  }
+}
+
+.card-flag__tooltip--czech {
+  left: 22px;
+
+  &::before {
+    margin-left: 42px;
+  }
+}
+
+.card-flag:hover .card-flag__tooltip--sri-lanka {
+  display: block;
+}
+
+.card-flag:hover .card-flag__tooltip--thailand {
+  display: block;
+}
+
+.card-flag:hover .card-flag__tooltip--seychelles {
+  display: block;
+}
+
+.card-flag:hover .card-flag__tooltip--belgium {
+  display: block;
+}
+
+.card-flag:hover .card-flag__tooltip--czech {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .card-flags {
+    top: 273px;
+    left: 71px;
+  }
+
+  .card-flags--demin {
+    left: 99px;
+  }
+
+  .card-flag__tooltip--czech {
+    left: 33px;
+  }
+}
