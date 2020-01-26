@@ -98,3 +98,18 @@ if (foodButton) {
     };
   });
 };
+
+var transportButton = document.querySelector(".filter-group__transport-button");
+var transportWrapper = document.querySelector(".filter-group__transport-wrapper");
+
+if (transportButton) {
+  transportButton.addEventListener("click", function () {
+    transportWrapper.classList.toggle("filter-group__wrapper--closed");
+    if (transportButton.classList.contains("filter-group__button--opened")) {
+      transportButton.classList.remove("filter-group__button--opened");
+    }
+    else {
+      transportButton.classList.add("filter-group__button--opened");
+    };
+  });
+};

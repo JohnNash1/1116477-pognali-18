@@ -165,14 +165,26 @@
 }
 
 .catalog-filter__list-item--country {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.catalog-filter__country {
   font-family: @font, @font-secondary;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
   color: #444444;
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
+
+  &:hover,
+  &:focus {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .catalog-filter__close-button {
@@ -324,11 +336,8 @@
   }
 
   .catalog-filter__country {
-    font-family: @font, @font-secondary;
     font-size: 20px;
     line-height: 30px;
-    text-align: left;
-    color: #444444;
   }
 
   .catalog-filter__coutries-wrapper--active .catalog-filter__country-list {
@@ -345,14 +354,6 @@
 
   .catalog-filter__coutries-wrapper:nth-child(-n+5) .catalog-filter__letter {
     border: none;
-  }
-
-  .catalog-filter__list-item--country {
-    font-size: 20px;
-    line-height: 30px;
-    padding: 0;
-    margin-bottom: 0;
-    margin-top: 0;
   }
 
   .catalog-filter__close-button {
