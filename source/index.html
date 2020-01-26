@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header">
@@ -120,7 +119,7 @@
             <p class="directions__text">Мы не продаем туры<br> и ничего не рекламируем. Люди сами пишут о странах,
               куда хотели бы отправиться и чем можно там заняться.</p>
           </div>
-          <div class="directions_card-wrapper">
+          <div class="directions__card-wrapper">
             <div class="travel-card travel-card--thailand">
               <picture class="travel-card__picture">
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg, img/thailand-desktop@2x.jpg 2x">
@@ -154,7 +153,7 @@
                 <p class="travel-card__text travel-card__number travel-card__number--czech">5326</p>
               </div>
             </div>
-            <div class="travel-card__shadow"></div>
+            <div class="directions__shadow"></div>
           </div>
           <a class="directions__button button yellow-button" href="source/form.html">Показать все</a>
         </div>
@@ -288,17 +287,17 @@
             </li>
           </ul>
         </div>
+        <div class="adding-profile__busines">
+          <p class="adding-profile__title adding-profile__busines-title">Бизнес-тарифы</p>
+          <ul class="adding-profile__busines-list site-list">
+            <li class="adding-profile__text adding-profile__busines-text">Реклама у блоггера<br class="adding-profile__break"><span>300 000 руб./пост</span></li>
+            <li class="adding-profile__text adding-profile__busines-text">Накрутка подписчиков<br class="adding-profile__break"><span> от 1 руб./шт.</span></li>
+            <li class="adding-profile__text adding-profile__busines-text">Лайки от ботов<br class="adding-profile__break"><span> от 20 коп./лайк</span></li>
+            <li class="adding-profile__text adding-profile__busines-text">Ваш продакт-плейсмент<br class="adding-profile__break"><span> Индивидуально</span></li>
+          </ul>
+          <button class="adding-profile__close" type="button">Закрыть окно</button>
+        </div>
       </section>
-      <div class="adding-profile__busines">
-        <p class="adding-profile__title adding-profile__busines-title">Бизнес-тарифы</p>
-        <ul class="adding-profile__busines-list site-list">
-          <li class="adding-profile__text adding-profile__busines-text">Реклама у блоггера<br class="adding-profile__break"><span>300 000 руб./пост</span></li>
-          <li class="adding-profile__text adding-profile__busines-text">Накрутка подписчиков<br class="adding-profile__break"><span> от 1 руб./шт.</span></li>
-          <li class="adding-profile__text adding-profile__busines-text">Лайки от ботов<br class="adding-profile__break"><span> от 20 коп./лайк</span></li>
-          <li class="adding-profile__text adding-profile__busines-text">Ваш продакт-плейсмент<br class="adding-profile__break"><span> Индивидуально</span></li>
-        </ul>
-        <button class="adding-profile__close" type="button">Закрыть окно</button>
-      </div>
       <section class="registation">
         <div class="registation-wrapper">
           <h2 class="registation__title">Заинтересовались?</h2>
@@ -312,7 +311,7 @@
             <button class="registation__submit button yellow-button" type="submit"><span class="registation__submit-text">Регистрация</span></button>
           </form>
           <div class="registation__text-wrapper registation__text-wrapper--bottom">
-            <p class="registation__text registation__text--bottom">Остались вопросы?<br class="registation__text-break"> <span class="registation__text--large">Мы с радостью на них ответим!</span></p>
+            <p class="registation__text registation__text--bottom">Остались вопросы?<br class="registation__text-break"> <span class="registation__text-large">Мы с радостью на них ответим!</span></p>
           </div>
           <ul class="registation__list contacts-list site-list">
             <li class="registation__list-item contacts-list__item">

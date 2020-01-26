@@ -22,7 +22,9 @@
 
 .catalog-filter__wrapper--closed .catalog-filter__list,
 .catalog-filter__wrapper--closed .catalog-filter__letters,
-.catalog-filter__wrapper--closed .catalog-filter__close-button {
+.catalog-filter__wrapper--closed .catalog-filter__close-button,
+.catalog-filter--nojs .catalog-filter__close-button,
+.catalog-filter--nojs .catalog-filter__button, {
   display: none;
 }
 
@@ -36,6 +38,10 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+}
+
+.catalog-filter--nojs {
+  position: static;
 }
 
 .catalog-filter__title {
@@ -251,7 +257,8 @@
   }
 
   .catalog-filter__wrapper--closed .catalog-filter__list--continents,
-  .catalog-filter__wrapper--opened .catalog-filter__list--continents {
+  .catalog-filter__wrapper--opened .catalog-filter__list--continents,
+  .catalog-filter--nojs .catalog-filter__list--continents {
     display: flex;
     margin-left: 49px;
     order: 0;
@@ -458,7 +465,7 @@
     margin-bottom: 5px;
   }
 
-  .catalog-filter__button {
+  .catalog-filter__wrapper .catalog-filter__button {
     margin-left: 366px;
   }
 

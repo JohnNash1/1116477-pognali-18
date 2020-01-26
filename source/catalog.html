@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header page-header--dark">
@@ -69,8 +68,8 @@
         <h1 class="catalog-main__title">Попутчики</h1>
         <a class="catalog-main__back" href="index.html">На главную</a>
       </div>
-      <section class="catalog-filter">
-        <div class="catalog-filter__wrapper catalog-filter__wrapper--closed">
+      <section class="catalog-filter catalog-filter--nojs">
+        <div class="catalog-filter__wrapper">
           <h2 class="catalog-filter__title">Фильтрация по странам</h2>
           <button class="catalog-filter__button" type="button"></button>
           <ul class="catalog-filter__list catalog-filter__list--continents site-list">
@@ -398,7 +397,7 @@
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Хобби</p>
               <button class="filter-group__button filter-group__hobby-button" type="button"></button>
-              <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--hobby">
                 <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
                 <label class="filter-group__label-text" for="sport">Спортзал</label>
                 <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
@@ -412,7 +411,7 @@
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Музыка</p>
               <button class="filter-group__button filter-group__music-button" type="button"></button>
-              <div class="filter-group__music-wrapper filter-group__wrapper--closed">
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--music">
                 <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
                 <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
                 <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
@@ -426,7 +425,7 @@
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Еда</p>
               <button class="filter-group__button filter-group__food-button" type="button"></button>
-              <div class="filter-group__food-wrapper filter-group__wrapper--closed">
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--food">
                 <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
                 <label class="filter-group__label-text" for="meat">Мясоед</label>
                 <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
@@ -440,7 +439,7 @@
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Транспорт</p>
               <button class="filter-group__button filter-group__transport-button" type="button"></button>
-              <div class="filter-group__transport-wrapper transport-checkboxes filter-group__wrapper--closed">
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--transport transport-checkboxes">
                 <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
                 <label class="filter-group__label-transport filter-group__label-transport--plane transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
                 <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
@@ -600,7 +599,7 @@
             <a class="catalog-companions__button catalog-companions__button--absolute button yellow-button" href="call.html">Позвать!</a>
             <div class="catalog-companions__heart-wrapper">
               <button class="catalog-companions__heart"></button>
-              <p class="catalog-companions__text catalog-companions__distance"><span class="catalog-companions__smolov-distance--first">1700</span><span class="catalog-companions__smolov-distance--second">150</span></p>
+              <p class="catalog-companions__text catalog-companions__distance"><span class="catalog-companions__distance-first">1700</span><span class="catalog-companions__distance-second">150</span></p>
             </div>
           </div>
           <div class="catalog-companions__card catalog-companions__card--rogovaya">

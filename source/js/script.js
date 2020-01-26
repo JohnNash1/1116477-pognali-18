@@ -29,6 +29,8 @@ var filterMenu = document.querySelector(".catalog-filter__wrapper");
 var catalogFilter = document.querySelector(".catalog-filter");
 
 if (filterButton) {
+  filterMenu.classList.add("catalog-filter__wrapper--closed")
+  catalogFilter.classList.remove("catalog-filter--nojs");
   filterButton.addEventListener("click", function () {
     if (filterMenu.classList.contains("catalog-filter__wrapper--closed")) {
       filterMenu.classList.remove("catalog-filter__wrapper--closed");
@@ -53,11 +55,12 @@ if (filterButton) {
 
 
 var hobbyButton = document.querySelector(".filter-group__hobby-button");
-var hobbyWrapper = document.querySelector(".filter-group__hobby-wrapper");
+var hobbyWrapper = document.querySelector(".filter-group__checkbox-wrapper--hobby");
 
 if(hobbyButton) {
+  hobbyWrapper.classList.add("filter-group__checkbox-wrapper--closed");
   hobbyButton.addEventListener("click", function () {
-    hobbyWrapper.classList.toggle("filter-group__wrapper--closed");
+    hobbyWrapper.classList.toggle("filter-group__checkbox-wrapper--closed");
     if (hobbyButton.classList.contains("filter-group__button--opened")) {
       hobbyButton.classList.remove("filter-group__button--opened");
     }
@@ -69,11 +72,12 @@ if(hobbyButton) {
 
 
 var musicButton = document.querySelector(".filter-group__music-button");
-var musicWrapper = document.querySelector(".filter-group__music-wrapper");
+var musicWrapper = document.querySelector(".filter-group__checkbox-wrapper--music");
 
 if (musicButton) {
+  musicWrapper.classList.add("filter-group__checkbox-wrapper--closed");
   musicButton.addEventListener("click", function () {
-    musicWrapper.classList.toggle("filter-group__wrapper--closed");
+    musicWrapper.classList.toggle("filter-group__checkbox-wrapper--closed");
     if (musicButton.classList.contains("filter-group__button--opened")) {
       musicButton.classList.remove("filter-group__button--opened");
     }
@@ -85,11 +89,12 @@ if (musicButton) {
 
 
 var foodButton = document.querySelector(".filter-group__food-button");
-var foodWrapper = document.querySelector(".filter-group__food-wrapper");
+var foodWrapper = document.querySelector(".filter-group__checkbox-wrapper--food");
 
 if (foodButton) {
+  foodWrapper.classList.add("filter-group__checkbox-wrapper--closed");
   foodButton.addEventListener("click", function () {
-    foodWrapper.classList.toggle("filter-group__wrapper--closed");
+    foodWrapper.classList.toggle("filter-group__checkbox-wrapper--closed");
     if (foodButton.classList.contains("filter-group__button--opened")) {
       foodButton.classList.remove("filter-group__button--opened");
     }
@@ -100,11 +105,12 @@ if (foodButton) {
 };
 
 var transportButton = document.querySelector(".filter-group__transport-button");
-var transportWrapper = document.querySelector(".filter-group__transport-wrapper");
+var transportWrapper = document.querySelector(".filter-group__checkbox-wrapper--transport");
 
 if (transportButton) {
+  transportWrapper.classList.add("filter-group__checkbox-wrapper--closed");
   transportButton.addEventListener("click", function () {
-    transportWrapper.classList.toggle("filter-group__wrapper--closed");
+    transportWrapper.classList.toggle("filter-group__checkbox-wrapper--closed");
     if (transportButton.classList.contains("filter-group__button--opened")) {
       transportButton.classList.remove("filter-group__button--opened");
     }
