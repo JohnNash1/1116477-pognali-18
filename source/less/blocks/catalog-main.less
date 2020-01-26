@@ -11,6 +11,7 @@
   position: relative;
   border-radius: 0 0 20px 20px;
   background-color: @dark-blue;
+  z-index: 101;
 }
 
 .catalog-main__title {
@@ -25,8 +26,8 @@
   text-align: left;
   color: @white;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-left: 27px;
+  padding-top: 17px;
+  padding-left: 25px;
 
   &::after {
     content: "";
@@ -35,7 +36,7 @@
     height: 5px;
     background-color: @dark-orange;
     border-radius: 2.4px;
-    margin-top: 7px;
+    margin-top: 9px;
   }
 }
 
@@ -104,6 +105,11 @@
     width: 100%;
   }
 
+  .catalog-main__bg-wrapper {
+    height: 219px;
+    border-radius: 0 0 60px 60px;
+  }
+
   .catalog-main__wrapper {
     width: @tablet-width;
   }
@@ -114,7 +120,7 @@
     font-size: 60px;
     line-height: 70px;
     padding-top: 83px;
-    padding-left: 77px;
+    padding-left: 74px;
     border-radius: 0 0 60px 60px;
 
     &::after {
@@ -122,6 +128,7 @@
       height: 8px;
       border-radius: 4px;
       margin-top: 62px;
+      z-index: 101;
     }
   }
 
@@ -129,6 +136,7 @@
     width: 688px;
     min-height: 530px;
     margin-left: 40px;
+    margin-top: 46px;
 
     &::after {
       content: "";
@@ -197,10 +205,15 @@
     width: @desktop-width;
   }
 
+  .catalog-main__bg-wrapper {
+    height: 225px;
+  }
+
   .catalog-main__title {
     width: @desktop-width;
-    padding-top: 82px;
-    padding-left: 129px;
+    height: 225px;
+    padding-top: 88px;
+    padding-left: 126px;
 
     &::after {
       margin-top: 63px;
@@ -211,6 +224,7 @@
     width: 285px;
     order: 1;
     margin-top: 77px;
+    margin-left: 25px;
     padding-bottom: 47px;
 
     &::after {
@@ -235,7 +249,7 @@
   }
 
   .catalog-main__back {
-    top: 110px;
+    top: 115px;
     left: 1141px;
   }
 }

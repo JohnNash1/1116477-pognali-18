@@ -10,15 +10,15 @@
   <body>
     <header class="page-header page-header--dark">
       <div class="page-header__wrapper">
-        <a href="index.html" class="page-header__logo">
+        <a href="index.html" class="page-header__logo page-header__logo--inner">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
             <source class="page-header__logo-tablet" media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
             <img class="page-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" alt="Погнали">
           </picture>
         </a>
         <nav class="main-navigation main-navigation--nojs main-navigation--closed">
-          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+          <button class="main-navigation__toggle main-navigation__toggle--inner" type="button"><span class="visually-hidden">Меню</span></button>
           <div class="main-navigation__wrapper">
             <ul class="main-navigation__list main-navigation__list--menu site-list">
               <li class="main-navigation__list-item">
@@ -77,7 +77,7 @@
               <p class="my-card__caption">level</p>
             </div>
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+              <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
               <img class="my-card__photo" src="img/demin-tablet@1x.jpg" srcset="img/demin-tablet@2x.jpg 2x" alt="аватар">
             </picture>
           </div>
@@ -139,7 +139,7 @@
                 <ul class="add-plan__plans-list site-list">
                   <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Даты</a></li>
                   <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step2">Маршрут</a></li>
-                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Разрешения</a></li>
+                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Развлечения</a></li>
                 </ul>
               </div>
               <div class="add-plan__conditions-wrapper">
@@ -200,9 +200,9 @@
                   <button class="calendar__day" type="button" disabled>23</button>
                   <button class="calendar__day calendar__day--wider" type="button" disabled>24</button>
                   <button class="calendar__day" type="button" disabled>25</button>
-                  <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--current" type="button">26<span class="calendar__day-text"><br> Заезд</span></button>
+                  <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--current calendar__day--with-caption" type="button">26<span class="calendar__day-text"><br> Заезд</span></button>
                   <button class="calendar__day calendar__day--active" type="button">27</button>
-                  <button class="calendar__day calendar__day--wider calendar__day--active" type="button">28<span class="calendar__day-text"><br> Выезд</span></button>
+                  <button class="calendar__day calendar__day--wider calendar__day--active calendar__day--with-caption" type="button">28<span class="calendar__day-text"><br> Выезд</span></button>
                   <button class="calendar__day calendar__day--free" type="button">29</button>
                   <button class="calendar__day calendar__day--free" type="button">30</button>
                   <button class="calendar__day calendar__day--wider calendar__day--free" type="button">31</button>
@@ -215,17 +215,17 @@
               </section>
               <a class="add-plan__button button yellow-button" href="#step2">Следующий шаг</a>
             </div>
-            <div class="add-plan__wrapper" id="step2">
+            <div class="add-plan__wrapper add-plan__wrapper--step2" id="step2">
               <div class="add-plan__flex-wrapper">
                 <div class="add-plan__text-wrapper">
                   <p class="add-plan__text add-plan__text--bold">Шаг 2.<br class="add-plan__break"> Маршрут</p>
                   <p class="add-plan__text add-plan__description-text">Укажите страны, которые вы хотели бы
-                    посетить.<br class="add-plan__first-break"> Это может<br class="add-plan__description-break"> быть одна или сразу несколько.</p>
+                    посетить.<br class="add-plan__first-break"> Это может<br class="add-plan__rout-break"> быть одна или сразу несколько.</p>
                 </div>
                 <ul class="add-plan__plans-list site-list">
                   <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
                   <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Маршрут</a></li>
-                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Разрешения</a></li>
+                  <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step3">Развлечения</a></li>
                 </ul>
               </div>
               <div class="add-plan__country-wrapper">
@@ -297,7 +297,7 @@
                 <a class="add-plan__back-button" href="#step1">На шаг назад</a>
               </div>
             </div>
-            <div class="add-plan__wrapper" id="step3">
+            <div class="add-plan__wrapper add-plan__wrapper--step3" id="step3">
               <div class="add-plan__flex-wrapper">
                 <div class="add-plan__text-wrapper">
                   <p class="add-plan__text add-plan__text--bold">Шаг 3.<br class="add-plan__break"> Развлечения</p>
@@ -307,7 +307,7 @@
                 <ul class="add-plan__plans-list site-list">
                   <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step1">Даты</a></li>
                   <li class="add-plan__plans-item"><a class="add-plan__plans-anchor" href="#step2">Маршрут</a></li>
-                  <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Разрешения</a></li>
+                  <li class="add-plan__plans-item add-plan__plans-active"><a class="add-plan__plans-anchor add-plan__plans-anchor--active">Развлечения</a></li>
                 </ul>
               </div>
               <div class="add-plan__textarea-wrapper">
@@ -335,7 +335,7 @@
       <div class="page-footer__wrapper">
         <a class="page-footer__logo">
           <picture>
-            <source media="(min-width: 1200px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
             <img class="page-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" alt="Погнали">
           </picture>

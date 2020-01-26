@@ -27,14 +27,22 @@
   margin-left: 25px;
 }
 
+.page-header__logo--inner {
+  margin-top: 20px;
+}
+
 // стили для скролл меню
+
+.page-header--scroll {
+  background-color: @white;
+  position: fixed;
+  z-index: 100;
+}
 
 .page-header__wrapper--scroll {
   background-color: @white;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%, 0);
   z-index: 100;
+  margin: 0 auto;
   background-image: url("../img/logo-mobile-blue@1x.png");
   background-repeat: no-repeat;
   background-position: 27px 27px;
@@ -58,6 +66,10 @@
 @media (min-width: @tablet-width) {
   .page-header {
     background-color: @page-color;
+  }
+
+  .page-header--scroll {
+    background-color: @white;
   }
 
   .page-header__wrapper {
@@ -125,6 +137,10 @@
     background-color: @dark-blue;
   }
 
+  .page-header--scroll {
+    background-color: @white;
+  }
+
   .page-header__wrapper {
     width: @desktop-width;
     min-height: 90px;
@@ -132,8 +148,6 @@
 
   .page-header__wrapper--scroll {
     height: 90px;
-    left: 0;
-    transform: none;
     background-image: url("../img/logo-desktop-blue@1x.png");
     background-position: 60px 20px;
 
