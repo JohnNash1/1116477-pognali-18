@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Направления</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header page-header--dark">
@@ -46,13 +45,13 @@
             </ul>
             <ul class="main-navigation__list social-list site-list">
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__fb" href="#"></a>
+                <a class="social-list__anchor social-list__fb" href="#" aria-label="сервис погнали на фейсбуке"></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__vk" href="#"></a>
+                <a class="social-list__anchor social-list__vk" href="#" aria-label="сервис погнали в вк"></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__instagram" href="#"></a>
+                <a class="social-list__anchor social-list__instagram" href="#" aria-label="сервис погнали в инстаграм"></a>
               </li>
             </ul>
           </div>
@@ -90,13 +89,13 @@
             <fieldset class="my-card__transport-fieldset">
               <legend class="my-card__transport-title">Транспорт</legend>
               <div class="my-card__transport-wrapper transport-checkboxes">
-                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked aria-label="авиаперелёт">
                 <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
-                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked aria-label="автотранспорт">
                 <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
-                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle" aria-label="велосипед">
                 <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
-                <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
+                <input class="visually-hidden" type="checkbox" name="running" id="running" checked aria-label="пешком">
                 <label class="my-card__label-transport transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
               </div>
             </fieldset>
@@ -145,21 +144,21 @@
               <div class="add-plan__conditions-wrapper">
                 <label class="add-plan__conditions-label" for="comrades">Ищу попутчиков:<span class="add-plan__conditions-label--opacity">чел.</span></label>
                 <input class="add-plan__conditions" type="number" name="companions-quantity" value="2" id="comrades">
-                <button class="add-plan__quantity" type="button"></button>
-                <button class="add-plan__quantity add-plan__quantity--plus" type="button"></button>
+                <button class="add-plan__quantity" type="button" aria-label="убавить"></button>
+                <button class="add-plan__quantity add-plan__quantity--plus" type="button" aria-label="прибавить"></button>
                 <label class="add-plan__conditions-label add-plan__conditions-label--order" for="duration">Длительность:<span class="add-plan__conditions-label--opacity">дн.</span></label>
                 <input class="add-plan__conditions add-plan__conditions--order" type="number" name="duration" value="2" id="duration">
-                <button class="add-plan__quantity add-plan__duration-quantity" type="button"></button>
-                <button class="add-plan__quantity add-plan__duration-quantity add-plan__quantity--plus" type="button"></button>
+                <button class="add-plan__quantity add-plan__duration-quantity" type="button" aria-label="убавить"></button>
+                <button class="add-plan__quantity add-plan__duration-quantity add-plan__quantity--plus" type="button" aria-label="прибавить"></button>
                 <input class="add-plan__children" type="checkbox" name="children" id="children" checked>
                 <label class="add-plan__children-label" for="children">Можно с детьми</label>
               </div>
               <section class="calendar">
                 <h2 class="visually-hidden">Календарь</h2>
                 <div class="calendar__month">
-                  <button class="calendar__month-switch" type="button"></button>
+                  <button class="calendar__month-switch" type="button" aria-label="предыдущий месяц"></button>
                   <span class="calendar__month-text">Март 2019</span>
-                  <button class="calendar__month-switch calendar__month-switch--right" type="button"></button>
+                  <button class="calendar__month-switch calendar__month-switch--right" type="button" aria-label="следующий месяц"></button>
                 </div>
                 <div class="calendar__wrapper">
                   <div class="calendar__weekday">П<span class="calendar__weekday--tablet">н</span></div>
@@ -232,7 +231,7 @@
                 <input class="add-plan__country-select" type="text" name="Bosnia" value="Босния и Герцеговина" readonly>
                 <div class="add-plan__cover add-plan__select-cover"></div>
                 <div class="add-plan__flag add-plan__bosnia"></div>
-                <button class="add-plan__close-button" type="button"></button>
+                <button class="add-plan__close-button" type="button" aria-label="убрать страну"></button>
               </div>
               <div class="add-plan__circle"></div>
               <div class="add-plan__arrow"></div>
@@ -240,13 +239,13 @@
                 <input class="add-plan__country-select" type="text" name="czech" value="Чехия" readonly>
                 <div class="add-plan__cover add-plan__select-cover add-plan__czech-cover"></div>
                 <div class="add-plan__flag add-plan__czech"></div>
-                <button class="add-plan__close-button" type="button"></button>
+                <button class="add-plan__close-button" type="button" aria-label="убрать страну"></button>
               </div>
               <div class="add-plan__circle add-plan__circle--czech"></div>
               <div class="add-plan__arrow add-plan__arrow--czech"></div>
               <div class="add-plan__choose-wrapper">
                 <button class="add-plan__add-country add-plan__choose-country" type="button">Выберите страну</button>
-                <button class="add-plan__close-button" type="button"></button>
+                <button class="add-plan__close-button" type="button" aria-label="отменить добаление страны"></button>
                 <div class="add-plan__circle add-plan__circle--choose"></div>
               </div>
               <div class="add-plan__drop-menu">
@@ -342,13 +341,13 @@
         </a>
         <ul class="page-footer__list page-footer__list--social site-list">
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--fb" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--fb" href="#" aria-label="сервис погнали на фейсбуке"></a>
           </li>
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--vk" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--vk" href="#" aria-label="сервис погнали в вк"></a>
           </li>
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--instagram" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--instagram" href="#" aria-label="сервис погнали в инстаграм"></a>
           </li>
         </ul>
         <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>

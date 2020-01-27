@@ -55,7 +55,7 @@
   transform: rotate(180deg);
 }
 
-.filter-group__wrapper--closed {
+.filter-group__checkbox-wrapper--closed {
   display: none;
 }
 
@@ -110,7 +110,7 @@ input:checked + .filter-group__label-text::before {
   background-position: center;
 }
 
-.filter-group__transport-wrapper {
+.filter-group__checkbox-wrapper--transport {
   margin-left: 15px;
   margin-top: 10px;
   margin-bottom: 13px;
@@ -284,7 +284,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 5px;
   }
 
-  .filter-group__transport-wrapper {
+  .filter-group__checkbox-wrapper--transport {
     margin-left: 21px;
     margin-top: 5px;
     margin-bottom: 0;
@@ -313,11 +313,11 @@ input[type="number"]::-webkit-outer-spin-button {
   }
 
   .filter-group__range-slider--left {
-    left: 60px;
+    left: 90px;
 
     &:hover,
     &:focus {
-      left: 56px;
+      left: 86px;
     }
   }
 
@@ -348,10 +348,10 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: 7px;
   }
 
-  .filter-group__wrapper--closed,
-  .filter-group__hobby-wrapper,
-  .filter-group__music-wrapper,
-  .filter-group__food-wrapper {
+  .filter-group__checkbox-wrapper--closed,
+  .filter-group__checkbox-wrapper--hobby,
+  .filter-group__checkbox-wrapper--music,
+  .filter-group__checkbox-wrapper--food {
     display: flex;
   }
 
@@ -361,9 +361,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @media (min-width: @desktop-width) {
-  .filter-group__hobby-wrapper,
-  .filter-group__music-wrapper,
-  .filter-group__food-wrapper,
+  .filter-group__checkbox-wrapper--hobby,
+  .filter-group__checkbox-wrapper--music,
+  .filter-group__checkbox-wrapper--food,
   .filter-group__wrapper {
     display: block;
   }
@@ -376,7 +376,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-top: -18px;
   }
 
-  .filter-group__wrapper--closed {
+  .filter-group__checkbox-wrapper--closed {
     display: none;
   }
 
@@ -403,7 +403,7 @@ input[type="number"]::-webkit-outer-spin-button {
     margin-bottom: 15px;
   }
 
-  .filter-group__transport-wrapper {
+  .filter-group__checkbox-wrapper--transport {
     margin-left: 30px;
     margin-top: 15px;
     margin-bottom: 15px;

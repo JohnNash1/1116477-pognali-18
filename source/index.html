@@ -4,8 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Погнали</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/bloggersans.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-light.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-italic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-bolditalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-mediumitalic.woff2" as="font">
+    <link rel="preload" href="fonts/bloggersans-lightitalic.woff2" as="font">
   </head>
   <body>
     <header class="page-header">
@@ -46,13 +53,13 @@
             </ul>
             <ul class="main-navigation__list social-list site-list">
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__fb" href="#"></a>
+                <a class="social-list__anchor social-list__fb" href="#" aria-label="сервис погнали в фейсбуке"></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__vk" href="#"></a>
+                <a class="social-list__anchor social-list__vk" href="#" aria-label="сервис погнали в вк"></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__instagram" href="#"></a>
+                <a class="social-list__anchor social-list__instagram" href="#" aria-label="сервис погнали в инстаграм"></a>
               </li>
             </ul>
           </div>
@@ -75,10 +82,10 @@
           </picture>
           <ul class="page-main__list site-list">
             <li class="page-main__list-item">
-              <a class="page-main__tel" href="tel:+88005558628"></a>
+              <a class="page-main__tel" href="tel:+88005558628" aria-label="позвонить нам"></a>
             </li>
             <li class="page-main__list-item">
-              <a class="page-main__e-mail" href="mailto:mail@htmlacademy.ru"></a>
+              <a class="page-main__e-mail" href="mailto:mail@htmlacademy.ru" aria-label="написать нам"></a>
             </li>
             <li class="page-main__list-item">
               <a class="page-main__login" href="login.html">Авторизация</a>
@@ -100,7 +107,6 @@
       <section class="about-service">
         <div class="about-service__wrapper">
           <div class="about-service__text-wrapper">
-            <div class="about-service__square"></div>
             <h2 class="about-service__title">О сервисе</h2>
             <p class="about-service__text">Любое путешествие веселее<br class="about-service__text-break"> с попутчиками, которые на одной волне с тобой!
               Делитесь своими идеями путешествий<br class="about-service__text-break--tablet"> и черпайте вдохновение в чужих. </p>
@@ -120,7 +126,7 @@
             <p class="directions__text">Мы не продаем туры<br> и ничего не рекламируем. Люди сами пишут о странах,
               куда хотели бы отправиться и чем можно там заняться.</p>
           </div>
-          <div class="directions_card-wrapper">
+          <div class="directions__card-wrapper">
             <div class="travel-card travel-card--thailand">
               <picture class="travel-card__picture">
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg, img/thailand-desktop@2x.jpg 2x">
@@ -154,7 +160,6 @@
                 <p class="travel-card__text travel-card__number travel-card__number--czech">5326</p>
               </div>
             </div>
-            <div class="travel-card__shadow"></div>
           </div>
           <a class="directions__button button yellow-button" href="source/form.html">Показать все</a>
         </div>
@@ -288,17 +293,17 @@
             </li>
           </ul>
         </div>
+        <div class="adding-profile__busines">
+          <p class="adding-profile__title adding-profile__busines-title">Бизнес-тарифы</p>
+          <ul class="adding-profile__busines-list site-list">
+            <li class="adding-profile__text adding-profile__busines-text">Реклама у блоггера<br class="adding-profile__break"><span>300 000 руб./пост</span></li>
+            <li class="adding-profile__text adding-profile__busines-text">Накрутка подписчиков<br class="adding-profile__break"><span> от 1 руб./шт.</span></li>
+            <li class="adding-profile__text adding-profile__busines-text">Лайки от ботов<br class="adding-profile__break"><span> от 20 коп./лайк</span></li>
+            <li class="adding-profile__text adding-profile__busines-text">Ваш продакт-плейсмент<br class="adding-profile__break"><span> Индивидуально</span></li>
+          </ul>
+          <button class="adding-profile__close" type="button">Закрыть окно</button>
+        </div>
       </section>
-      <div class="adding-profile__busines">
-        <p class="adding-profile__title adding-profile__busines-title">Бизнес-тарифы</p>
-        <ul class="adding-profile__busines-list site-list">
-          <li class="adding-profile__text adding-profile__busines-text">Реклама у блоггера<br class="adding-profile__break"><span>300 000 руб./пост</span></li>
-          <li class="adding-profile__text adding-profile__busines-text">Накрутка подписчиков<br class="adding-profile__break"><span> от 1 руб./шт.</span></li>
-          <li class="adding-profile__text adding-profile__busines-text">Лайки от ботов<br class="adding-profile__break"><span> от 20 коп./лайк</span></li>
-          <li class="adding-profile__text adding-profile__busines-text">Ваш продакт-плейсмент<br class="adding-profile__break"><span> Индивидуально</span></li>
-        </ul>
-        <button class="adding-profile__close" type="button">Закрыть окно</button>
-      </div>
       <section class="registation">
         <div class="registation-wrapper">
           <h2 class="registation__title">Заинтересовались?</h2>
@@ -307,12 +312,12 @@
             <p class="registation__text">Уже зарегистрированы? Тогда скорее <a class="registation__login" href="login.html">авторизуйтесь</a>.</p>
           </div>
           <form class="registation__form" action="https://echo.htmlacademy.ru/courses" method="post">
-            <input class="registation__field" type="email" name="email" placeholder="E-mail" required>
+            <input class="registation__field" type="email" name="email" placeholder="E-mail" required aria-label="укажите e-mail для регистрации">
             <span class="registation__invalid">Введите e-mail</span>
             <button class="registation__submit button yellow-button" type="submit"><span class="registation__submit-text">Регистрация</span></button>
           </form>
           <div class="registation__text-wrapper registation__text-wrapper--bottom">
-            <p class="registation__text registation__text--bottom">Остались вопросы?<br class="registation__text-break"> <span class="registation__text--large">Мы с радостью на них ответим!</span></p>
+            <p class="registation__text registation__text--bottom">Остались вопросы?<br class="registation__text-break"> <span class="registation__text-large">Мы с радостью на них ответим!</span></p>
           </div>
           <ul class="registation__list contacts-list site-list">
             <li class="registation__list-item contacts-list__item">
@@ -352,13 +357,13 @@
         </a>
         <ul class="page-footer__list page-footer__list--social site-list">
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--fb" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--fb" href="#" aria-label="сервис погнали на фейсбуке"></a>
           </li>
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--vk" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--vk" href="#" aria-label="сервис погнали в вк"></a>
           </li>
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--instagram" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--instagram" href="#" aria-label="сервис погнали в инстаграм"></a>
           </li>
         </ul>
         <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>

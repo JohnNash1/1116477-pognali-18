@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Попутчики</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header class="page-header page-header--dark">
@@ -46,13 +45,13 @@
             </ul>
             <ul class="main-navigation__list social-list site-list">
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__fb" href="#"></a>
+                <a class="social-list__anchor social-list__fb" href="#" aria-label="сервис погнали на фейсбуке"></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__vk" href="#"></a>
+                <a class="social-list__anchor social-list__vk" href="#" aria-label="сервис погнали в вк"></a>
               </li>
               <li class="social-list__item">
-                <a class="social-list__anchor social-list__instagram" href="#"></a>
+                <a class="social-list__anchor social-list__instagram" href="#" aria-label="сервис погнали в инстаграм"></a>
               </li>
             </ul>
           </div>
@@ -69,10 +68,10 @@
         <h1 class="catalog-main__title">Попутчики</h1>
         <a class="catalog-main__back" href="index.html">На главную</a>
       </div>
-      <section class="catalog-filter">
-        <div class="catalog-filter__wrapper catalog-filter__wrapper--closed">
+      <section class="catalog-filter catalog-filter--nojs">
+        <div class="catalog-filter__wrapper">
           <h2 class="catalog-filter__title">Фильтрация по странам</h2>
-          <button class="catalog-filter__button" type="button"></button>
+          <button class="catalog-filter__button" type="button" aria-label="открыть фильтр по странам"></button>
           <ul class="catalog-filter__list catalog-filter__list--continents site-list">
             <li class="catalog-filter__list-item">
               <a class="catalog-filter__continent catalog-filter__continent--active">Европа</a>
@@ -397,8 +396,8 @@
           <fieldset class="filter-group">
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Хобби</p>
-              <button class="filter-group__button filter-group__hobby-button" type="button"></button>
-              <div class="filter-group__hobby-wrapper filter-group__wrapper--closed">
+              <button class="filter-group__button filter-group__hobby-button" type="button" aria-label="открыть секцию хобби"></button>
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--hobby">
                 <input class="visually-hidden" type="checkbox" name="sport" id="sport" checked>
                 <label class="filter-group__label-text" for="sport">Спортзал</label>
                 <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
@@ -411,8 +410,8 @@
           <fieldset class="filter-group">
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Музыка</p>
-              <button class="filter-group__button filter-group__music-button" type="button"></button>
-              <div class="filter-group__music-wrapper filter-group__wrapper--closed">
+              <button class="filter-group__button filter-group__music-button" type="button" aria-label="открыть секцию музыка"></button>
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--music">
                 <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
                 <label class="filter-group__label-text" for="hardrock">Тяжёлый рок</label>
                 <input class="visually-hidden" type="checkbox" name="rusrap" id="rusrap">
@@ -425,8 +424,8 @@
           <fieldset class="filter-group">
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Еда</p>
-              <button class="filter-group__button filter-group__food-button" type="button"></button>
-              <div class="filter-group__food-wrapper filter-group__wrapper--closed">
+              <button class="filter-group__button filter-group__food-button" type="button" aria-label="открыть секцию еда"></button>
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--food">
                 <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
                 <label class="filter-group__label-text" for="meat">Мясоед</label>
                 <input class="visually-hidden" type="checkbox" name="proper-nutrition" id="proper-nutrition">
@@ -439,15 +438,15 @@
           <fieldset class="filter-group">
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Транспорт</p>
-              <button class="filter-group__button filter-group__transport-button" type="button"></button>
-              <div class="filter-group__transport-wrapper transport-checkboxes filter-group__wrapper--closed">
-                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked>
+              <button class="filter-group__button filter-group__transport-button" type="button" aria-label="открыть секцию транспорт"></button>
+              <div class="filter-group__checkbox-wrapper filter-group__checkbox-wrapper--transport transport-checkboxes">
+                <input class="visually-hidden" type="checkbox" name="plane" id="plane" checked aria-label="авиаперелёт">
                 <label class="filter-group__label-transport filter-group__label-transport--plane transport-checkboxes__label-transport transport-checkboxes__label-transport--plane" for="plane"></label>
-                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked>
+                <input class="visually-hidden" type="checkbox" name="bus" id="bus" checked aria-label="автотранспорт">
                 <label class="filter-group__label-transport filter-group__label-transport--bus transport-checkboxes__label-transport transport-checkboxes__label-transport--bus" for="bus"></label>
-                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle">
+                <input class="visually-hidden" type="checkbox" name="bicycle" id="bicycle" aria-label="велосипед">
                 <label class="filter-group__label-transport filter-group__label-transport--bicycle transport-checkboxes__label-transport transport-checkboxes__label-transport--bicycle" for="bicycle"></label>
-                <input class="visually-hidden" type="checkbox" name="running" id="running" checked>
+                <input class="visually-hidden" type="checkbox" name="running" id="running" checked aria-label="пешком">
                 <label class="filter-group__label-transport filter-group__label-transport--running transport-checkboxes__label-transport transport-checkboxes__label-transport--running" for="running"></label>
               </div>
             </div>
@@ -455,7 +454,7 @@
           <fieldset class="filter-group">
             <div class="filter-group__wrapper">
               <p class="filter-group__title">Левел</p>
-              <button class="filter-group__button filter-group__button--opened" type="button"></button>
+              <button class="filter-group__button filter-group__button--opened" type="button" aria-label="открыть секцию левел"></button>
               <div class="filter-group__number-wrapper">
                 <input class="filter-group__number" type="number" name="levelfrom" value="30">
                 <div class="filter-group__slash-wrapper">
@@ -512,7 +511,7 @@
             </div>
             <a class="catalog-companions__button catalog-companions__button--absolute button yellow-button" href="call.html">Позвать!</a>
             <div class="catalog-companions__heart-wrapper">
-              <button class="catalog-companions__heart catalog-companions__heart--active" type="button"></button>
+              <button class="catalog-companions__heart catalog-companions__heart--active" type="button" aria-label="поставить лайк"></button>
               <p class="catalog-companions__text catalog-companions__distance">1,5 М</p>
             </div>
           </div>
@@ -555,7 +554,7 @@
             </div>
             <a class="catalog-companions__button catalog-companions__button--absolute button yellow-button" href="call.html">Позвать!</a>
             <div class="catalog-companions__heart-wrapper">
-              <button class="catalog-companions__heart"></button>
+              <button class="catalog-companions__heart" aria-label="поставить лайк"></button>
               <p class="catalog-companions__text catalog-companions__distance">150</p>
             </div>
           </div>
@@ -599,8 +598,8 @@
             </div>
             <a class="catalog-companions__button catalog-companions__button--absolute button yellow-button" href="call.html">Позвать!</a>
             <div class="catalog-companions__heart-wrapper">
-              <button class="catalog-companions__heart"></button>
-              <p class="catalog-companions__text catalog-companions__distance"><span class="catalog-companions__smolov-distance--first">1700</span><span class="catalog-companions__smolov-distance--second">150</span></p>
+              <button class="catalog-companions__heart" aria-label="поставить лайк"></button>
+              <p class="catalog-companions__text catalog-companions__distance"><span class="catalog-companions__distance-first">1700</span><span class="catalog-companions__distance-second">150</span></p>
             </div>
           </div>
           <div class="catalog-companions__card catalog-companions__card--rogovaya">
@@ -642,7 +641,7 @@
             </div>
             <a class="catalog-companions__button catalog-companions__button--absolute button yellow-button" href="call.html">Позвать!</a>
             <div class="catalog-companions__heart-wrapper">
-              <button class="catalog-companions__heart"></button>
+              <button class="catalog-companions__heart" aria-label="поставить лайк"></button>
               <p class="catalog-companions__text catalog-companions__distance">23</p>
             </div>
           </div>
@@ -651,24 +650,24 @@
             <div class="pagination__list-wrapper">
               <ul class="pagination__list pagination__list--pages site-list">
                 <li class="pagination__list-item pagination__list-item--active">
-                  <a class="pagination__anchor">1</a>
+                  <a class="pagination__anchor" aria-label="первая страница">1</a>
                 </li>
                 <li class="pagination__list-item">
-                  <a class="pagination__anchor" href="#">2</a>
+                  <a class="pagination__anchor" href="#" aria-label="вторая страница">2</a>
                 </li>
                 <li class="pagination__list-item">
-                  <a class="pagination__anchor" href="#">3</a>
+                  <a class="pagination__anchor" href="#" aria-label="третья страница">3</a>
                 </li>
                 <li class="pagination__list-item">
-                  <a class="pagination__anchor" href="#">4</a>
+                  <a class="pagination__anchor" href="#" aria-label="четвёртая страница">4</a>
                 </li>
               </ul>
               <ul class="pagination__list site-list">
                 <li>
-                  <a class="pagination__button pagination__button--left button" href=""></a>
+                  <a class="pagination__button pagination__button--left button" href="" aria-label="предыдущая страница"></a>
                 </li>
                 <li>
-                  <a class="pagination__button pagination__button--right button" href=""></a>
+                  <a class="pagination__button pagination__button--right button" href="" aria-label="следующая страница"></a>
                 </li>
               </ul>
             </div>
@@ -687,13 +686,13 @@
         </a>
         <ul class="page-footer__list page-footer__list--social site-list">
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--fb" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--fb" href="#" aria-label="сервис погнали на фейсбуке"></a>
           </li>
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--vk" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--vk" href="#" aria-label="сервис погнали в вк"></a>
           </li>
           <li class="page-footer__list-item">
-            <a class="page-footer__anchor page-footer__anchor--instagram" href="#"></a>
+            <a class="page-footer__anchor page-footer__anchor--instagram" href="#" aria-label="сервис погнали в инстаграм"></a>
           </li>
         </ul>
         <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
